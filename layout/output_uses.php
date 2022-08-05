@@ -17,20 +17,24 @@
               </div>
               <div class="col-4">
                   <p>Max Demand:</p>
-                  <p>Battery Size:</p>
-                  <p>Battery Price:</p>
+                  <p>Peak Usage:</p>
+                  <p>Off Peak Usage:</p>
+                  <p>New Max Demand:</p>
               </div>
 
               <div class="col-4">
+              <p> Battery Size:</p>
+              <p>Battery Price:</p>
                   <p>Year Leased:</p>
                   <p>Unit Installed:</p>
               </div>
 
           </div>
+          <!-- card -->
           <div class="row">
               <h6 class="my-4">Overall Summary</h6>
               <div class="col-md-4 mt-4 pt-2">
-                  <div class="service rounded px-4 py-md-5 py-3 active">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
                       <h6 class="my-4">Total Current Bill</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
@@ -39,7 +43,7 @@
                   </div>
               </div>
               <div class="col-md-4 mt-4 pt-2">
-                  <div class="service rounded px-4 py-md-5 py-3 active">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
                       <h6 class="my-4">Total New Bill</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
@@ -48,7 +52,7 @@
                   </div>
               </div>
               <div class="col-md-4 mt-4 pt-2">
-                  <div class="service rounded px-4 py-md-5 py-3 active">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
                       <h6 class="my-4">Total Investment Cost</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
@@ -57,7 +61,7 @@
                   </div>
               </div>
               <div class="col-md-4 mt-4 pt-2">
-                  <div class="service rounded px-4 py-md-5 py-3 active">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
                       <h6 class="my-4">Total Saving</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
@@ -65,8 +69,16 @@
                   </div>
               </div>
               <div class="col-md-4 mt-4 pt-2">
-                  <div class="service rounded px-4 py-md-5 py-3 active">
-                      <h6 class="my-4">ROI</h6>
+                  <div class="service rounded px-4 py-md-4 py-3 active">
+                      <h6 class="my-4">Payback</h6>
+                      <p class="text-muted mb-4">
+                          Some quick example text
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4 mt-4 pt-2">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
+                      <h6 class="my-4">Verdict</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
                       </p>

@@ -1,16 +1,18 @@
    <!-- start feature -->
    <style>
        .right {
+
            text-align-last: end;
+
        }
    </style>
-   <section class="section bg-light overflow-hidden hide" id="dpower">
+   <section class="section bg-light overflow-hidden hide" id="duses">
        <div class="container">
            <div class="row align-items-center">
                <div class="col-lg-12 mt-lg-0 mt-5 pt-lg-0 pt-4">
                    <div class="row">
                        <div class="col-9">
-                           <h3 class="fw-semibold lh-base mb-4">POWERVOULT CALCULATOR</h3>
+                           <h3 class="fw-semibold lh-base mb-4">USES CALCULATOR</h3>
                        </div>
                        <div class="col-3 right"> <a href="#feature" class="btn btn-danger lh-base mb-4">Reset
                            </a></div>
@@ -73,9 +75,36 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Import Duty</label>
+                           <div class="input-group">
+                               <input type="number" min="1" max="10" value="5" class="form-control" id="" placeholder="">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Ground Transport/Warehouse Storage</label>
+                           <div class="input-group">
+                               <input type="number" min="0" max="20" value="3" class="form-control" id="" placeholder="">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Battery Installation Fee</label>
+                           <div class="input-group">
+                               <input type="number" min="1" max="10" value="1" class="form-control" id="" placeholder="">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Maintenance & Tech Support Fee</label>
                            <div class="input-group">
-                               <input type="number" min="0" max="400" value="311" class="form-control" id="" placeholder="">
+                               <input type="number" min="0" max="1000" value="622" class="form-control" id="" placeholder="">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -100,9 +129,18 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Number of Powervault to install</label>
+                           <label class="fw-medium form-label">New Max Demand</label>
                            <div class="input-group">
-                               <input type="number" min="1" max="2" class="form-control" value="1" id="" placeholder="">
+                               <input type="number" min="1" max="6" class="form-control" value="1" id="" placeholder="">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">kW</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Number of USES to install</label>
+                           <div class="input-group">
+                               <input type="number" min="1" max="6" class="form-control" value="1" id="" placeholder="">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">unit</span>
                                </div>
@@ -111,9 +149,8 @@
                    </div>
                </div>
            </div>
-           <a href="#opower" id="calculate_power" class="btn btn-primary mt-4">Calculate <i data-feather="arrow-right" class="icon-xs icon"></i>
+           <a href="#ouses" id="calculate_uses"  class="btn btn-primary mt-4">Calculate <i data-feather="arrow-right" class="icon-xs icon"></i>
            </a>
        </div>
    </section>
-
    <!-- end feature -->

@@ -1,3 +1,7 @@
+
+<?php
+    setcookie("Auction_Item", "Luxury Car", time() + 2 * 24 * 60 * 60);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,14 +14,14 @@
     <meta content="Themesdesign" name="author" />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
     <!-- tinyslider -->
-    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
 
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="67">
@@ -36,14 +40,24 @@
         }
 
         .hide {
-        display: none;
-    }
+            display: none;
+        }
+
+        .input-group-text {
+            border: none;
+        }
+
+        .form-check-input[type=radio] {
+            visibility: hidden;
+        }
+
+
     </style>
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
         <div class="container">
             <a href="layout-1.html" class="navbar-brand me-5">
-                <img src="images/logo/logo1.png" class="logo-dark" alt="" height="42" />
+                <img src="assets/images/logo/logo1.png" class="logo-dark" alt="" height="42" />
             </a>
             <a href="javascript:void(0)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,21 +98,21 @@
     </nav>
     <!-- end navbar -->
 
-    <?php include 'home.php';?>
-
- 
+    <?php include 'layout/home.php';?>
 
 
-    <?php include 'details_power.php';?>
-    <?php include 'details_uses.php';?>
 
-    <?php include 'output_power.php';?>
-    <?php include 'output_uses.php';?>
- 
 
-   
+    <?php include 'layout/details_power.php';?>
+    <?php include 'layout/details_uses.php';?>
 
-  
+    <?php include 'layout/output_power.php';?>
+    <?php include 'layout/output_uses.php';?>
+
+
+    <?php include 'layout/output_details_power.php';?>
+
+
 
     <!-- start subscription -->
     <!-- <section class="service-section overflow-hidden" id="contact">
@@ -122,7 +136,7 @@
     </section> -->
     <!-- end subscription -->
 
-    
+
 
 
 
@@ -186,35 +200,35 @@
     </div>
     <!-- end modal -->
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- feather icon -->
-    <script src="js/feather.js"></script>
+    <script src="assets/js/feather.js"></script>
 
     <!-- client-slider -->
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/tiny.init.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/tiny.init.js"></script>
 
     <!-- moving letter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="js/text-animation.init.js"></script>
+    <script src="assets/js/text-animation.init.js"></script>
 
-    <script src="js/app.js"></script>
+    <script src="assets/js/app.js"></script>
 
-   <!-- button click -->
-   <script>
-$(document).ready(function(){
-  $("#calculate_uses").click(function(){
-    $('#ouses').show();
+    <!-- button click -->
+    <script>
+        $(document).ready(function () {
+            $("#calculate_uses").click(function () {
+                $('#ouses').show();
                 $('#opower').hide();
-  });
-  $("#calculate_power").click(function(){
-    $('#ouses').hide();
-                $('#opower').show(); 
-  });
-});
-</script>
- 
+            });
+            $("#calculate_power").click(function () {
+                $('#ouses').hide();
+                $('#opower').show();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

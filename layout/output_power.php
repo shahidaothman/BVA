@@ -29,7 +29,7 @@
 
           </div>
           <div class="row">
-              <h6 class="my-4">Overall Summary</h6>
+              <h6 class="mb-2 mt-4">Overall Summary</h6>
               <div class="col-md-4 mt-4 pt-2">
                   <div class="service rounded px-4 py-md-4 py-3 active">
                       <h6 class="my-4">Total Current Bill</h6>
@@ -67,18 +67,29 @@
               </div>
               <div class="col-md-4 mt-4 pt-2">
                   <div class="service rounded px-4 py-md-4 py-3 active">
-                      <h6 class="my-4">ROI</h6>
+                      <h6 class="my-4">Payback</h6>
                       <p class="text-muted mb-4">
                           Some quick example text
                       </p>
                   </div>
               </div>
-              <div class="mt-5">
-                  <a href="#dpower" class="btn btn-danger lh-base mb-4">Edit Parameter</a>
+              <div class="col-md-4 mt-4 pt-2">
+                  <div class="service rounded px-4 py-md-4 py-3 active">
+                      <h6 class="my-4">Verdict</h6>
+                      <p class="text-muted mb-4">
+                          Some quick example text
+                      </p>
+                  </div>
               </div>
 
+
           </div>
-      </div>
+          <div class="row">
+              <div class="mt-5">
+                  <a href="#odpower" id="go_details" class="btn btn-success lh-base mb-4">More Details</a>
+              </div>
+          </div>
+
 
   </section>
   <!-- end servies -->

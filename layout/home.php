@@ -3,16 +3,24 @@
     .myDiv {
         display: none;
     }
+
+    .category {
+        border: 1px solid;
+        border-radius: 4px;
+        text-align: -webkit-center;
+        padding: 1em;
+        font-size: 18px;
+    }
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
         <div class="row align-items-center text-center text-lg-start">
             <div class="col-lg-10 mt-4 pt-2">
-                <h6 class="text-primary mb-3">Connect With People</h6>
+                <!-- <h6 class="text-primary mb-3">Connect With People</h6> -->
                 <h1 class="ml11">
                     FORECAST YOUR ELECTRICITY BILL
                 </h1>
-                <h5 class="my-4">& Boost Your Company</h5>
+                <!-- <h5 class="my-4">& Boost Your Company</h5> -->
                 <p class="text-muted mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit <br> maxime vitae
                     labore aliquam odit est illo ducimus, dolores neque expedita.</p>
 
@@ -24,19 +32,19 @@
                 </div> -->
 
         </div>
+
+
+
         <div class="row">
             <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
             <div class="col-md-6 mb-3">
-                <label class="fw-medium form-label" for="name">Country</label>
-                <select class="form-select form-control" aria-label="Default select example" placeholder="Your email">
-                    <option value="1">One</option>
-                </select>
+                <?php include 'php/dd_country.php'; ?>
             </div>
             <!-- end col -->
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="email">Region</label>
-                <select class="form-select form-control" aria-label="Default select example" placeholder="Your email">
-                    <option value="1">One</option>
+                <select class="form-select form-control" aria-label="Default select example" placeholder="Your email" readonly>
+                    <option value="1">--Select Region--</option>
                 </select>
                 <!-- <input type="email" class="form-control" placeholder="Your email" id="email"> -->
             </div>
@@ -46,100 +54,43 @@
         <div class="row my-3">
             <label class="fw-medium form-label" for="email">Select Product</label>
             <div class="col-6">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-uses" value="uses">
-                    <label class="form-check-label">USES</label>
+                <div class="category" id="r_uses">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-uses" value="uses">
+                        <label class="form-check-label">USES</label>
+                    </div>
                 </div>
+
             </div>
             <div class="col-6">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-power" value="power">
-                    <label class="form-check-label">Powervault</label>
+                <div class="category" id="r_power">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-power" value="power">
+                        <label class="form-check-label">Powervault</label>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="row my-3 hide box uses">
-            <div class="col-md-6 mb-3 ">
+        <!-- uses -->
+        <div class="row  hide box uses">
+            <div class="col-md-6  ">
                 <label class="fw-medium form-label">Tariff Group</label>
-                <select class="form-select form-control" id="tariff_uses">
-                    <option value="default_uses">---Pelase select tariff---</option>
-                    <option value="tariff_B">Tariff B</option>
-                    <option value="set_uses">Set Own Tariff Uses</option>
-                </select>
+                <?php include 'php/dd_u_tariff.php'; ?>
             </div>
         </div>
 
-        <div class="row my-3">
-            <div class="col-md-6 mb-3 hide box power">
+        <!-- powervault -->
+        <div class="row hide box power">
+            <div class="col-md-6 ">
                 <label class="fw-medium form-label">Tariff Group</label>
-                <select class="form-select form-control" id="tariff_power">
-                    <option value="default_power">---Pelase select tariff---</option>
-                    <option value="tariff_A">Tariff A</option>
-                    <option value="set_power">Set Own Tariff Power</option>
-                </select>
+                <?php include 'php/dd_p_tariff.php'; ?>
             </div>
         </div>
 
-        <!-- <div class="row my-3 myDiv" id="showset_tariff"> -->
-        <div class="row my-3 myDiv " id="showset_uses">
-            <label class="fw-medium form-label">Key In Your Tariff</label>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">Tariff Type</th>
-                        <th scope="col">Local Rate</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Maximum Demand</th>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Maximum Demand"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Peak Hour</th>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Peak Hour">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Off Peak Hour</th>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Off Peak Hour"></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-
-        <!-- <div class="row my-3 myDiv" id="showtariff_A"> -->
-        <div class="row my-3 myDiv " id="showset_power">
-            <label class="fw-medium form-label">Key In Your Tariff</label>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col" colspan="2">Tariff Type</th>
-                        <th scope="col" rowspan="2">Local Rate</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Minimum Charge </th>
-                        <th scope="row">Maximum Charge </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Minimum Charge"></td>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Maximum Charge"></td>
-                        <td><input type="text" class="form-control" name="" id="" placeholder="Insert Local Rate">
-                        </td>
-                    </tr>
 
 
-                </tbody>
-            </table>
-        </div>
-
-        <div class="row my-5">
+        <div class="row my-4">
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Monthly Average Consumption</label>
                 <div class="input-group">
@@ -150,9 +101,9 @@
                 </div>
             </div>
             <div class="col-md-6 mb-3">
-                <label class="fw-medium form-label" for="name">Peak Demand</label>
+                <label class="fw-medium form-label" for="name">Max Demand</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="" placeholder="Insert Peak Demand">
+                    <input type="text" class="form-control" id="p_demand" placeholder="Insert Max Demand">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -161,7 +112,7 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Peak Usage</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="" placeholder="Insert Peak Usage">
+                    <input type="text" class="form-control" id="p_peak" placeholder="Insert Peak Usage">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -170,7 +121,7 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Off Peak Usage</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="" placeholder="Insert Off Peak Usage">
+                    <input type="text" class="form-control" id="p_offpeak" placeholder="Insert Off Peak Usage">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -187,6 +138,40 @@
 <!-- end hero -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- radio click -->
+<script>
+    $(document).ready(function() {
+        $("#r_power").click(function() {
+            $("#r_power").css({
+                "background-color": "#57c297",
+                "color": "white"
+            });
+            $("#r_uses").css({
+                "background-color": "white",
+                "color": "black"
+            });
+            $("#product-power").click();
+
+        });
+    });
+
+    $(document).ready(function() {
+        $("#r_uses").click(function() {
+            $("#r_uses").css({
+                "background-color": "#57c297",
+                "color": "white"
+            });
+            $("#r_power").css({
+                "background-color": "white",
+                "color": "black"
+            });
+            // $("#product-uses").prop("checked", true);
+            $("#product-uses").click();
+        });
+    });
+</script>
+
 <script>
     // radio button
     $(document).ready(function() {
@@ -201,17 +186,23 @@
             $('#dpower').hide();
             $('#duses').hide();
             if (inputValue == "uses") {
-                $('#showset_power').hide();
+
                 $("#tariff_power").val("default_power").change();
                 $('#go_uses').show();
                 $('#go_power').hide();
+                $("#p_demand").attr('readonly', false);
+                $("#p_peak").attr('readonly', false);
+                $("#p_offpeak").attr('readonly', false);
 
 
             } else {
-                $('#showset_uses').hide();
+
                 $("#tariff_uses").val("default_uses").change();
                 $('#go_uses').hide();
                 $('#go_power').show();
+                $("#p_demand").attr('readonly', true);
+                $("#p_peak").attr('readonly', true);
+                $("#p_offpeak").attr('readonly', true);
 
             }
 
@@ -229,6 +220,16 @@
         $("#go_power").click(function() {
             $('#duses').hide();
             $('#dpower').show();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $("#go_details").click(function() {
+            $('#oduses').hide();
+            $('#odpower').show();
         });
     });
 </script>
