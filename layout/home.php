@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ad4855a90a2101960c10ab5ac26d7503969663b
 <!-- start hero -->
 <style>
     .myDiv {
@@ -12,6 +15,7 @@
         padding: 1em;
         font-size: 18px;
     }
+<<<<<<< HEAD
 
     .fw-400 {
         font-weight: 400;
@@ -52,6 +56,8 @@
 
 
 
+=======
+>>>>>>> 2ad4855a90a2101960c10ab5ac26d7503969663b
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
@@ -135,8 +141,13 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Monthly Average Consumption</label>
                 <div class="input-group">
+<<<<<<< HEAD
                     <input type="text" class="form-control" id="mac" placeholder="Insert Monthly Average Consumption">
                     <div class="input-group-prepend" >
+=======
+                    <input type="text" class="form-control" placeholder="Insert Monthly Average Consumption">
+                    <div class="input-group-prepend">
+>>>>>>> 2ad4855a90a2101960c10ab5ac26d7503969663b
                         <span class="input-group-text">kWh</span>
                     </div>
                 </div>
