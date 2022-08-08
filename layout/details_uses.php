@@ -129,7 +129,16 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Number of Powervault to install</label>
+                           <label class="fw-medium form-label">New Max Demand</label>
+                           <div class="input-group">
+                               <input type="number" min="1" max="6" class="form-control" value="1" id="" placeholder="">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">kW</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Number of USES to install</label>
                            <div class="input-group">
                                <input type="number" min="1" max="6" class="form-control" value="1" id="" placeholder="">
                                <div class="input-group-prepend">
