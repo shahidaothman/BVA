@@ -310,14 +310,26 @@
                 data: $(this).serialize(),
                 dataType: "json",
                 success: function(data) {
+                    $('#current_bill').html(data.total_tahunan);
+                    $('#new_bill').html(data.new_total_tahunan);
+                    $('#investment_cost').html(data.investment_cost);
+                    $('#total_saving').html(data.saving_cost);
                     //    var jsonData = JSON.parse(response);
                     // user is logged in successfully in the back-end
                     // let's redirect
                     //    if (jsonData.success == "1") {
                     //   alert("success");
                     //   alert(data.id);
-               
-                    // alert("total" + data.total);    
+alert ("hello" + data.new_total_tahunan);
+                    // alert("battery_size" + data.battery_size +
+                    //     "battery_price" + data.battery_price +
+                    //     "shipment_cost" + data.shipment_cost +
+                    //     "insurance_cost" + data.insurance_cost +
+                    //     "backend_cost" + data.backend_cost +
+                    //     "investment" + data.investment_cost +
+                    //     "t1" + data.t1 +
+                    //     "t2" + data.t2 +
+                    //     "saving_cost" + data.saving_cost );
                     //  alert("current" + data.new_total);
                     //    } 
                     //    else {

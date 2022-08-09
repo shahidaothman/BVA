@@ -9,10 +9,28 @@ if (!$conn) {
         $tariff_id = $_GET['tariff_power'];
 
         // details
-        $solar_capacity = $_GET['psc'];
+        $psc = $_GET['psc'];
+        $pyl = $_GET['pyl'];
+        $pnp  = $_GET['pnp'];
+        $pbp = $_GET['pbp'];
+        $pscb = $_GET['pscb'] / 100;
+        $pspc = $_GET['pspc'];
+        $pbs = $_GET['pbs'];
+        $pmt = $_GET['pmt'];
+        $psif = $_GET['psif'] / 100;
+        $pbsf = $_GET['pbsf'] / 100;
 
-        $mge =  $solar_capacity * 5 * 30;
+        // calculate bill
+        $mge =  $psc * 5 * 30;
         $mgg = $mac_db - $mge;
+
+
+
+        // $vtscy = (($vtsc * 0.03) * $pyl) + $vtsc;
+
+        //---------------------------------------------------------//
+        //--------------CALCULATE BILL-----------------------------//
+        //---------------------------------------------------------//
 
         // Current Bill
         if ($mac_db <= 200) {
@@ -75,7 +93,7 @@ if (!$conn) {
                 }
             }
 
-            $total_tahunan = 12 * $total;
+            $total_tahunan = 12 * $total * $pyl;
         } else {
             echo "No matching records are found.";
         }
@@ -110,19 +128,56 @@ if (!$conn) {
                     $new_total = 0;
                 }
             }
-            $total_tahunan_baru = 12 * $new_total;
+            $total_tahunan_baru = 12 * $new_total * $pyl;
         } else {
             echo "No matching records are found.";
         }
 
+        //---------------------------------------------------------//
+        //--------------CALCULATE TOTAL INVESTMENT ----------------//
+        //---------------------------------------------------------//
+
+
+        $vbs = ($pbs * $pnp);
+        $vbp = ($pbp * $pnp);
+        $vscbs = ($vbp * $pscb);
+        $vsi = ($pspc + $vbp) * $psif;
+        $vps = ($pspc + $vbp) * $pbsf;
+
+        $vtsc = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * $pyl));
+
+        //---------------------------------------------------------//
+        //--------------CALCULATE TOTAL SAVING ----------------//
+        //---------------------------------------------------------//
+        $vtscy = (($vtsc * 0.03) * $pyl) + $vtsc;
+        $vld = $vtscy * 0.1;
+        $vl = ($vtscy - $vld) / ($pyl - 1);
+        //---------------------------------------------------------//
+        //---------------------------OUTPUT -----------------------//
+        //---------------------------------------------------------//
         $result = array(
-            "id" => $mac_db, 
-            "tarif_id" => $sub_id, 
-            "total" => $total,    
-            "psc" => $solar_capacity, 
-            "new_tariff" => $mgg ,  
-            "new_tariff_id" => $sub_new_id,  
-                     "new_total" => $new_total
+            "average_watt" => $mac_db,
+            // current bill
+            "tarif_id" => $sub_id,
+            "total" => $total,
+            "total_tahunan" =>  $total_tahunan,
+            // new bill
+            "psc" => $psc,
+            "new_tariff" => $mgg,
+            "new_tariff_id" => $sub_new_id,
+            "new_total" => $new_total,
+            "new_total_tahunan" => $total_tahunan_baru,
+            // total investment
+            "battery_size" => $vbs,
+            "battery_price" => $vbp,
+            "shipment_cost" => $vscbs,
+            "insurance_cost" => $vsi,
+            "backend_cost" => $vps,
+            "investment_cost" => $vtsc,
+            // total saving
+            "t1" => $vtscy,
+            "t2" => $vld,
+            "saving_cost" => $vl,
         );
         // $json = json_encode($result);
         echo json_encode($result);

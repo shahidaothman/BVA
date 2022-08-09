@@ -66,8 +66,8 @@
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Current Bill</h6>
-                                      <p class="text-muted mb-4">
-                                          Some quick example text
+                                      <p class="text-muted mb-4" id="current_bill">
+                                         
                                       </p>
 
                                   </div>
@@ -75,8 +75,8 @@
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total New Bill</h6>
-                                      <p class="text-muted mb-4">
-                                          Some quick example text
+                                      <p class="text-muted mb-4" id="new_bill">
+                                         
                                       </p>
 
                                   </div>
@@ -84,7 +84,7 @@
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Investment Cost</h6>
-                                      <p class="text-muted mb-4">
+                                      <p class="text-muted mb-4" id="investment_cost">
                                           Some quick example text
                                       </p>
 
@@ -93,7 +93,7 @@
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Saving</h6>
-                                      <p class="text-muted mb-4">
+                                      <p class="text-muted mb-4" id="total_saving">
                                           Some quick example text
                                       </p>
                                   </div>

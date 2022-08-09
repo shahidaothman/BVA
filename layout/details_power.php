@@ -23,7 +23,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Year of Lease</label>
                                <div class="input-group">
-                                   <input class="form-control" id="yl" placeholder="Insert Year of Lease" type="number" min="1" max="10" required>
+                                   <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">Year</span>
                                    </div>
@@ -41,7 +41,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Solar Panel Cost</label>
                                <div class="input-group">
-                                   <input type="text" class="form-control" id="spc" placeholder="Insert Solar Panel Cost" required>
+                                   <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">USD</span>
                                    </div>
@@ -50,7 +50,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Battery Size</label>
                                <div class="input-group">
-                                   <input type="text" class="form-control" id="bs" placeholder="" value="14" required>
+                                   <input type="text" class="form-control" id="bs" name="pbs" placeholder="" value="14" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">kWh</span>
                                    </div>
@@ -59,7 +59,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Battery Price</label>
                                <div class="input-group">
-                                   <input type="text" class="form-control" id="bp" placeholder="Insert battery Price" required>
+                                   <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">USD</span>
                                    </div>
@@ -68,7 +68,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Shipment Cost for Battery</label>
                                <div class="input-group">
-                                   <input type="number" min="0" max="3" value="3" class="form-control" id="scb" placeholder="" required>
+                                   <input type="number" min="0" max="3" value="3" class="form-control" id="scb" name="pscb" placeholder="" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">%</span>
                                    </div>
@@ -77,7 +77,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Maintenance & Tech Support Fee</label>
                                <div class="input-group">
-                                   <input type="number" min="0" max="400" value="311" class="form-control" id="mt" placeholder="" required>
+                                   <input type="number" min="0" max="400" value="311" class="form-control" id="mt" name="pmt" placeholder="" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">USD</span>
                                    </div>
@@ -86,7 +86,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">System Insurance Fee</label>
                                <div class="input-group">
-                                   <input type="number" min="0" max="20" class="form-control" value="3" id="sif" placeholder="" required>
+                                   <input type="number" min="0" max="20" class="form-control" value="3" id="sif" name="psif" placeholder="" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">%</span>
                                    </div>
@@ -95,7 +95,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Backend Support Fee</label>
                                <div class="input-group">
-                                   <input ttype="number" min="0" max="20" class="form-control" value="11" id="bsf" placeholder="" required>
+                                   <input ttype="number" min="0" max="20" class="form-control" value="11" id="bsf" name="pbsf" placeholder="" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">%</span>
                                    </div>
@@ -104,7 +104,7 @@
                            <div class="col-md-4 mb-3">
                                <label class="fw-medium form-label">Number of Powervault to install</label>
                                <div class="input-group">
-                                   <input type="number" min="1" max="2" class="form-control" value="1" id="np" placeholder="" required>
+                                   <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" required>
                                    <div class="input-group-prepend">
                                        <span class="input-group-text">unit</span>
                                    </div>
