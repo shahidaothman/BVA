@@ -340,14 +340,14 @@
                     // alert (year);
                     while (x <= year) {
                         // $('#t_test').html(x);
-                        if (x <= 1) {
+                        if (x == 1) {
                             $('#exampleid').append("<tr>\
 										<td>Year " + x + " (Deposit 10%)</td>\
                                         <td>" + leasing_depo + "</td>\
 										</tr>");
                             // console.log(x);
                             x++;
-                        } else {
+                        } else if (x <= year) {
 
                             $('#exampleid').append("<tr>\
 										<td>Year " + x + "</td>\
@@ -365,7 +365,7 @@
                     var monthly_lease = data.monthly_lease;
                     var saving_1year = monthly - monthly_lease - leasing_depo;
                     var saving_year = monthly - monthly_lease - leasing;
-                    
+
                     var payback = 0;
 
                     while (y <= 25) {
@@ -379,6 +379,11 @@
                                         <td>" + saving_1year + "</td>\
                                         <td>" + payback + "</td>\
 										</tr>");
+
+                            $('#1y_nb').html(monthly_lease);
+                            $('#1y_ic').html(payback);
+                            $('#1y_ts').html(saving_1year);
+                            $('#1y_lease').html(leasing_depo);
                             y++;
                         } else if (y <= year) {
                             var payback = saving_year + payback;
@@ -390,18 +395,62 @@
                                         <td>" + saving_year + "</td>\
                                         <td>" + payback + "</td>\
 										</tr>");
+
+                            if (y == 5) {
+                                $('#5y_nb').html(monthly_lease);
+                                $('#5y_ic').html(payback);
+                                $('#5y_ts').html(saving_year);
+                                $('#5y_lease').html(leasing);
+                            } else if (y == 10) {
+                                $('#10y_nb').html(monthly_lease);
+                                $('10y_ic').html(payback);
+                                $('#10y_ts').html(saving_year);
+                                $('#10y_lease').html(leasing);
+                            }
+
                             y++;
                         } else if (y > year) {
                             var saving_nyear = monthly - monthly_lease - 0;
                             var payback = saving_nyear + payback;
+                            var leasing = 0;
                             $('#t_projection').append("<tr>\
 										<td> " + y + "</td>\
                                         <td>" + monthly + "</td>\
                                         <td>" + monthly_lease + "</td>\
-                                        <td>" + 0.00 + "</td>\
+                                        <td>" + leasing + "</td>\
                                         <td>" + saving_nyear + "</td>\
                                         <td>" + payback + "</td>\
 										</tr>");
+
+                            if (y == 5) {
+                                $('#5y_nb').html(monthly_lease);
+                                $('#5y_ic').html(payback);
+                                $('#5y_ts').html(saving_nyear);
+                                $('#5y_lease').html(leasing);;
+                            } else if (y == 10) {
+                                $('#10y_nb').html(monthly_lease);
+                                $('10y_ic').html(payback);
+                                $('#10y_ts').html(saving_nyear);
+                                $('#10y_lease').html(leasing);
+                            } else if (y == 15) {
+                                $('#15y_nb').html(monthly_lease);
+                                $('#15y_ic').html(payback);
+                                $('#15y_ts').html(saving_nyear);
+                                $('#15y_lease').html(leasing);
+                            } else if (y == 20) {
+                                $('#20y_nb').html(monthly_lease);
+                                $('20y_ic').html(payback);
+                                $('#20y_ts').html(saving_nyear);
+                                $('#20y_lease').html(leasing);
+                            }
+
+                            else if (y == 25) {
+                                $('#25y_nb').html(monthly_lease);
+                                $('25y_ic').html(payback);
+                                $('#25y_ts').html(saving_nyear);
+                                $('#25y_lease').html(leasing);
+                            }
+
                             y++;
                         }
                     }
