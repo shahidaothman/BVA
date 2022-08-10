@@ -358,7 +358,6 @@
 
                         }
                     }
-
                     // projection
                     var y = 1;
                     var monthly = data.monthly;

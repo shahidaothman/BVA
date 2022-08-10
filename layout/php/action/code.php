@@ -39,7 +39,7 @@ vl = Leasing Cost
 
 <!-- saving -->
 ((FCB1BL*0.03) x J) + FCB1BL
-[FCB1] vtscy = ((vtsc * 0.03) * pyl ) + vtsc
+[FCB1] vtscy =  
 
 [FCB2Depo] vld = vtscy * 0.1
 [FCB2] vl = (vtscy - vld) / (pyl - 1)

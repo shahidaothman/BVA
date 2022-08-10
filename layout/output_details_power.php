@@ -24,9 +24,9 @@
                       </tr>
                       <tr>
                           <th scope="col">Tariff Used Without Powervault</th>
-                          <th scope="col">Tariff Used Without Powervault</th>
-                          <th scope="col">Tariff Used Without Powervault</th>
-                          <th scope="col">Tariff Used Without Powervault</th>
+                          <th scope="col">Rate (USD)</th>
+                          <th scope="col">Tariff Used With Powervault</th>
+                          <th scope="col">Rate (USD)</th>
                       </tr>
                   </thead>
                   <tbody>

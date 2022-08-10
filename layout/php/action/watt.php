@@ -156,16 +156,30 @@ if (!$conn) {
         $vl = ($vtscy - $vld) / ($pyl - 1);
 
         //---------------------------------------------------------//
-        //---------------------------System Cost Table -----------------------//
+        //-----------------------Tariff compare Table -------------//
         //---------------------------------------------------------//
 
+        // current bill calculation
+        $query_summary = "SELECT * FROM tariff_sub WHERE tariff_sub_id =  '" . $tariff_id . "'";
+        $summary_tariff = mysqli_query($conn, $query_summary);
 
+        if (mysqli_num_rows($summary_tariff) > 0) {
+            // echo "here";
+            while ($summary = mysqli_fetch_array($summary_tariff)) {
+                $test= $summary['tariff_id'];
+
+                echo ($test);
+                echo("here");
+            }
+        }
 
         //---------------------------------------------------------//
         //---------------------------OUTPUT -----------------------//
         //---------------------------------------------------------//
         $result = array(
             "average_watt" => $mac_db,
+            // "tariff" => $tariff_id,
+            "test" => $test,
             // details
             "solar_panel_cost" => $pspc,
             "system_maintain" => $pmt,
