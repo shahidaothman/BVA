@@ -92,6 +92,7 @@ if (!$conn) {
             }
 
             // $total_tahunan = 12 * $total * $pyl;
+            $total_bulanan = 12 * $total;
             $total_tahunan = 12 * $total * 25;
         } else {
             echo "No matching records are found.";
@@ -128,6 +129,7 @@ if (!$conn) {
                 }
             }
             // $total_tahunan_baru = 12 * $new_total * $pyl;
+            $total_bulanan_baru = 12 * $new_total;
             $total_tahunan_baru = 12 * $new_total * 25;
         } else {
             echo "No matching records are found.";
@@ -169,14 +171,13 @@ if (!$conn) {
             "system_maintain" => $pmt,
             "monthly_generation_RE" => $mge,
             "monthly_grid" => $mgg,
-
+            "year_lease" => $pyl,
             // current bill
             "tarif_id" => $sub_id,
             "total" => $total,
             "total_tahunan" =>  $total_tahunan,
             // new bill
             "solar_capacity" => $psc,
-
             "new_tariff_id" => $sub_new_id,
             "new_total" => $new_total,
             "new_total_tahunan" => $total_tahunan_baru,
@@ -191,6 +192,9 @@ if (!$conn) {
             "year_leasing" => $vtscy,
             "depo_cost" => $vld,
             "leasing_cost" => $vl,
+            // projection
+            "monthly_lease" => $total_bulanan_baru,
+            "monthly" =>  $total_bulanan,
         );
         // $json = json_encode($result);
         echo json_encode($result);

@@ -330,8 +330,81 @@
                     $('#t_mgr').html(data.monthly_generation_RE);
                     $('#t_mgg').html(data.monthly_grid);
 
-                    $('#t_vld').html(data.depo_cost);
-                    $('#t_vl').html(data.leasing_cost);
+                    // $('#t_vld').html(data.depo_cost);
+                    // $('#t_vl').html(data.leasing_cost);
+
+                    var year = data.year_lease;
+                    var leasing = data.leasing_cost;
+                    var leasing_depo = data.depo_cost
+                    var x = 1;
+                    // alert (year);
+                    while (x <= year) {
+                        // $('#t_test').html(x);
+                        if (x <= 1) {
+                            $('#exampleid').append("<tr>\
+										<td>Year " + x + " (Deposit 10%)</td>\
+                                        <td>" + leasing_depo + "</td>\
+										</tr>");
+                            // console.log(x);
+                            x++;
+                        } else {
+
+                            $('#exampleid').append("<tr>\
+										<td>Year " + x + "</td>\
+                                        <td>" + leasing + "</td>\
+										</tr>");
+                            console.log(x);
+                            x++;
+
+                        }
+                    }
+
+                    // projection
+                    var y = 1;
+                    var monthly = data.monthly;
+                    var monthly_lease = data.monthly_lease;
+                    var saving_1year = monthly - monthly_lease - leasing_depo;
+                    var saving_year = monthly - monthly_lease - leasing;
+                    
+                    var payback = 0;
+
+                    while (y <= 25) {
+                        if (y == 1) {
+                            var payback = saving_1year + payback;
+                            $('#t_projection').append("<tr>\
+										<td> " + y + "</td>\
+                                        <td>" + monthly + "</td>\
+                                        <td>" + monthly_lease + "</td>\
+                                        <td>" + leasing_depo + "</td>\
+                                        <td>" + saving_1year + "</td>\
+                                        <td>" + payback + "</td>\
+										</tr>");
+                            y++;
+                        } else if (y <= year) {
+                            var payback = saving_year + payback;
+                            $('#t_projection').append("<tr>\
+										<td> " + y + "</td>\
+                                        <td>" + monthly + "</td>\
+                                        <td>" + monthly_lease + "</td>\
+                                        <td>" + leasing + "</td>\
+                                        <td>" + saving_year + "</td>\
+                                        <td>" + payback + "</td>\
+										</tr>");
+                            y++;
+                        } else if (y > year) {
+                            var saving_nyear = monthly - monthly_lease - 0;
+                            var payback = saving_nyear + payback;
+                            $('#t_projection').append("<tr>\
+										<td> " + y + "</td>\
+                                        <td>" + monthly + "</td>\
+                                        <td>" + monthly_lease + "</td>\
+                                        <td>" + 0.00 + "</td>\
+                                        <td>" + saving_nyear + "</td>\
+                                        <td>" + payback + "</td>\
+										</tr>");
+                            y++;
+                        }
+                    }
 
                     //    var jsonData = JSON.parse(response);
                     // user is logged in successfully in the back-end

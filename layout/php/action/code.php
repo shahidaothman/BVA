@@ -25,7 +25,7 @@ vps = value part sparing or helpdesk and backend support
 vtsc = value total system cost
 vtscy = value total system cost years (include leasing charge)
 vld = Leasing Deposit
-vl = Leasing
+vl = Leasing Cost
 
 <!-- investment -->
 [D] vbs = (pbs * pnp)
