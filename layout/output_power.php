@@ -285,7 +285,7 @@
                               <h6 class="mb-2 mt-4">20 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
-                                      <h6 class="my-4">Total New Bill For 1 Year</h6>
+                                      <h6 class="my-4">Total New Bill For 20 Year</h6>
                                       <p class="text-muted mb-4" id="20y_nb">
 
                                       </p>

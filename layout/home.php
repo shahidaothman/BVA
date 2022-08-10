@@ -429,7 +429,7 @@
                                 $('#5y_lease').html(leasing);;
                             } else if (y == 10) {
                                 $('#10y_nb').html(monthly_lease);
-                                $('10y_ic').html(payback);
+                                $('#10y_ic').html(payback);
                                 $('#10y_ts').html(saving_nyear);
                                 $('#10y_lease').html(leasing);
                             } else if (y == 15) {
@@ -439,14 +439,12 @@
                                 $('#15y_lease').html(leasing);
                             } else if (y == 20) {
                                 $('#20y_nb').html(monthly_lease);
-                                $('20y_ic').html(payback);
+                                $('#20y_ic').html(payback);
                                 $('#20y_ts').html(saving_nyear);
                                 $('#20y_lease').html(leasing);
-                            }
-
-                            else if (y == 25) {
+                            } else if (y == 25) {
                                 $('#25y_nb').html(monthly_lease);
-                                $('25y_ic').html(payback);
+                                $('#25y_ic').html(payback);
                                 $('#25y_ts').html(saving_nyear);
                                 $('#25y_lease').html(leasing);
                             }
