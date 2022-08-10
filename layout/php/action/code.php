@@ -16,7 +16,7 @@ tariff_power / tariff_id - Tariff Group
 
 
 mge - value monthly generation RE
-mgg - value tariff after powervault
+mgg - value tariff after powervault (Monthly Generation Grid (kWH))
 vbp = value battery price
 vbs = value battery size
 vscbs = value shipment cost for battery storage
@@ -44,12 +44,8 @@ vl = Leasing
 [FCB2Depo] vld = vtscy * 0.1
 [FCB2] vl = (vtscy - vld) / (pyl - 1)
 
-
 <!-- [D] n_pbs = (pbs * pnp)
 [E] n_pbp = (pbp * pnp)
 [F] n_pscb = n_pbp * pscb
 [H] n_psif = (pspc + pbp) * psif
 [I] n_pbsf = (pspc + pbp) * pbsf -->
-
-
-

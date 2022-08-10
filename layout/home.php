@@ -312,15 +312,34 @@
                 success: function(data) {
                     $('#current_bill').html(data.total_tahunan);
                     $('#new_bill').html(data.new_total_tahunan);
-                    $('#investment_cost').html(data.investment_cost);
-                    $('#total_saving').html(data.saving_cost);
+                    $('#investment_cost').html(data.system_cost);
+                    $('#total_saving').html(data.leasing_cost);
+                    // table
+                    $('#t_sc').html(data.solar_capacity);
+                    $('#t_sp').html(data.solar_panel_cost);
+                    $('#t_bs').html(data.battery_size);
+                    $('#t_bp').html(data.battery_price);
+                    $('#t_scb').html(data.shipment_cost);
+                    $('#t_sm').html(data.system_maintain);
+                    $('#t_si').html(data.insurance_cost);
+                    $('#t_ps').html(data.backend_cost);
+                    $('#t_tsc').html(data.system_cost);
+                    $('#t_tscl').html(data.year_leasing);
+
+                    $('#t_mac').html(data.average_watt);
+                    $('#t_mgr').html(data.monthly_generation_RE);
+                    $('#t_mgg').html(data.monthly_grid);
+
+                    $('#t_vld').html(data.depo_cost);
+                    $('#t_vl').html(data.leasing_cost);
+
                     //    var jsonData = JSON.parse(response);
                     // user is logged in successfully in the back-end
                     // let's redirect
                     //    if (jsonData.success == "1") {
                     //   alert("success");
                     //   alert(data.id);
-alert ("hello" + data.new_total_tahunan);
+                    // alert("hello" + data.new_total_tahunan);
                     // alert("battery_size" + data.battery_size +
                     //     "battery_price" + data.battery_price +
                     //     "shipment_cost" + data.shipment_cost +

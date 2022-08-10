@@ -24,8 +24,6 @@ if (!$conn) {
         $mge =  $psc * 5 * 30;
         $mgg = $mac_db - $mge;
 
-
-
         // $vtscy = (($vtsc * 0.03) * $pyl) + $vtsc;
 
         //---------------------------------------------------------//
@@ -93,7 +91,8 @@ if (!$conn) {
                 }
             }
 
-            $total_tahunan = 12 * $total * $pyl;
+            // $total_tahunan = 12 * $total * $pyl;
+            $total_tahunan = 12 * $total * 25;
         } else {
             echo "No matching records are found.";
         }
@@ -128,7 +127,8 @@ if (!$conn) {
                     $new_total = 0;
                 }
             }
-            $total_tahunan_baru = 12 * $new_total * $pyl;
+            // $total_tahunan_baru = 12 * $new_total * $pyl;
+            $total_tahunan_baru = 12 * $new_total * 25;
         } else {
             echo "No matching records are found.";
         }
@@ -152,18 +152,31 @@ if (!$conn) {
         $vtscy = (($vtsc * 0.03) * $pyl) + $vtsc;
         $vld = $vtscy * 0.1;
         $vl = ($vtscy - $vld) / ($pyl - 1);
+
+        //---------------------------------------------------------//
+        //---------------------------System Cost Table -----------------------//
+        //---------------------------------------------------------//
+
+
+
         //---------------------------------------------------------//
         //---------------------------OUTPUT -----------------------//
         //---------------------------------------------------------//
         $result = array(
             "average_watt" => $mac_db,
+            // details
+            "solar_panel_cost" => $pspc,
+            "system_maintain" => $pmt,
+            "monthly_generation_RE" => $mge,
+            "monthly_grid" => $mgg,
+
             // current bill
             "tarif_id" => $sub_id,
             "total" => $total,
             "total_tahunan" =>  $total_tahunan,
             // new bill
-            "psc" => $psc,
-            "new_tariff" => $mgg,
+            "solar_capacity" => $psc,
+
             "new_tariff_id" => $sub_new_id,
             "new_total" => $new_total,
             "new_total_tahunan" => $total_tahunan_baru,
@@ -173,11 +186,11 @@ if (!$conn) {
             "shipment_cost" => $vscbs,
             "insurance_cost" => $vsi,
             "backend_cost" => $vps,
-            "investment_cost" => $vtsc,
+            "system_cost" => $vtsc,
             // total saving
-            "t1" => $vtscy,
-            "t2" => $vld,
-            "saving_cost" => $vl,
+            "year_leasing" => $vtscy,
+            "depo_cost" => $vld,
+            "leasing_cost" => $vl,
         );
         // $json = json_encode($result);
         echo json_encode($result);

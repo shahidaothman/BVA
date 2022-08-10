@@ -98,55 +98,59 @@
                       <thead>
                           <tr>
                               <th scope="col">System Cost</th>
-                              <th scope="col">1 Powervault</th>
-                              <th scope="col">2 Powervault</th>
+                              <th scope="col">x Powervault</th>
+                             
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
                               <th scope="row">Solar Capacity(kWh)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_sc"></td>
+                              
                           </tr>
                           <tr>
                               <th scope="row">Solar Panel (US$)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_sp"></td>
+                             
                           </tr>
                           <tr>
                               <th scope="row">Battery Size (kWh)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_bs"></td>
+                            
                           </tr>
                           <tr>
                               <th scope="row">Battery Price (US$)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_bp"></td>
+                             
                           </tr>
                           <tr>
                               <th scope="row">Shipment Cost for Battery Storage</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_scb"></td>
+                            
                           </tr>
                           <tr>
                               <th scope="row">System Maintenance and Tech Support (US$)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_sm"></td>
+                              
                           </tr>
                           <tr>
                               <th scope="row">System Insurance (US$)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_si"></td>
+                             
                           </tr>
                           <tr>
                               <th scope="row">Part Sparing/ Helpdesk and Backend Support (US$)</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_ps"></td>
+                              
                           </tr>
                           <tr>
                               <th scope="row">Total System Cost x Years</th>
-                              <td>5</td>
-                              <td>5</td>
+                              <td  id="t_tsc"></td>                        
+                          </tr>
+
+                          <tr>
+                              <th scope="row">Total System Cost x Years (if Lease)</th>
+                              <td  id="t_tscl"></td>                        
                           </tr>
 
                       </tbody>
@@ -167,51 +171,51 @@
                               </tr>
                               <tr>
                                   <td>Year 1 (Deposit 10%)</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>       
 
                               </tr>
                               <tr>
                                   <td>Year 2</td>
-                                  <td>5</td>
+                                  <td  id="t_vl"></td>       
                               </tr>
                               <tr>
                                   <td>Year 3</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 4</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 5</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 6</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 7</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 8</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 9</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                               <tr>
                                   <td>Year 10</td>
-                                  <td>5</td>
+                                  <td  id="t_vld"></td>  
 
                               </tr>
                           </thead>
@@ -225,25 +229,25 @@
                           <thead>
                               <tr>
                                   <th scope="col">System Cost</th>
-                                  <th scope="col">1 Powervault</th>
-                                  <th scope="col">2 Powervault</th>
+                                  <th scope="col">x Powervault</th>
+                                
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
                                   <th scope="row">Monthly Average Consumption (kWh)</th>
-                                  <td>5</td>
-                                  <td>5</td>
+                                  <td id="t_mac"></td>
+                                
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation RE (kWh)</th>
-                                  <td>5</td>
-                                  <td>5</td>
+                                  <td id="t_mgr"></td>
+                                 
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation Grid (kWH)</th>
-                                  <td>5</td>
-                                  <td>5</td>
+                                  <td id="t_mgg"></td>
+                                
                               </tr>
                           </tbody>
                       </table>
