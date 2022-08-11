@@ -193,7 +193,7 @@ if (!$conn) {
                     $usage =  $line["tariff_usage"];
                 }
 
-                $test[] = array('group' => $t_group, 'max' => $t_max, 'max_display' => $t_out, 'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
+                $test[] = array('group' => $t_group,  'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
                 // }
                 // else {
                 //     echo "end";
@@ -206,42 +206,42 @@ if (!$conn) {
         FROM tariff_sub 
         WHERE tariff_id =  '$tariff_id'
         AND  tariff_min_value <= '$mgg' ";
- 
-       $summary_tariff_1 = mysqli_query($conn, $query_summary_1);
-       $test_1 = array();
-//   echo $mgg;
-       if (mysqli_num_rows($summary_tariff_1) > 0) {
-        
-           // while ($summary = mysqli_fetch_array($summary_tariff)) {
-           //     $test[] = $summary;
-           //   echo ($mac_db);
-           //     echo json_encode($test);
-           // }
-           foreach ($summary_tariff_1 as $line_1) {
-               $t_max = $line_1["tariff_max_value"];
-               $t_min = $line_1["tariff_min_value"];
-               $t_group = $line_1["tariff_group_label"];
-               // $t_id = $line["tariff_sub_id"];
-               $usd = $line_1["usd_rate"];
 
-               if ($t_max > $mgg) {
-                   $t_out = $mgg - $t_min;
-                   $t_usd = $t_out *  $usd;
-                   $usage = $t_out;
-               } else {
-                   $t_out =  $t_max;
-                   $t_usd = $line_1["total_rate_usd"];
-                   $usage =  $line_1["tariff_usage"];
-               }
+        $summary_tariff_1 = mysqli_query($conn, $query_summary_1);
+        $test_1 = array();
+        //   echo $mgg;
+        if (mysqli_num_rows($summary_tariff_1) > 0) {
 
-               $test_1[] = array('group' => $t_group, 'max' => $t_max, 'max_display' => $t_out, 'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
-               // }
-               // else {
-               //     echo "end";
-               // }
-           }
-           // echo json_encode($test);
-       }
+            // while ($summary = mysqli_fetch_array($summary_tariff)) {
+            //     $test[] = $summary;
+            //   echo ($mac_db);
+            //     echo json_encode($test);
+            // }
+            foreach ($summary_tariff_1 as $line_1) {
+                $t_max = $line_1["tariff_max_value"];
+                $t_min = $line_1["tariff_min_value"];
+                $t_group = $line_1["tariff_group_label"];
+                // $t_id = $line["tariff_sub_id"];
+                $usd = $line_1["usd_rate"];
+
+                if ($t_max > $mgg) {
+                    $t_out = $mgg - $t_min;
+                    $t_usd = $t_out *  $usd;
+                    $usage = $t_out;
+                } else {
+                    $t_out =  $t_max;
+                    $t_usd = $line_1["total_rate_usd"];
+                    $usage =  $line_1["tariff_usage"];
+                }
+
+                $test_1[] = array('group' => $t_group, 'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
+                // }
+                // else {
+                //     echo "end";
+                // }
+            }
+            // echo json_encode($test);
+        }
 
         //---------------------------------------------------------//
         //---------------------------OUTPUT -----------------------//
@@ -283,6 +283,7 @@ if (!$conn) {
             // tariff table 
             "table" => $test,
             "table_1" => $test_1,
+            "table_2" => $test_1,
         );
         // $json = json_encode($result);
         echo json_encode($result);
