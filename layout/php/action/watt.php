@@ -172,14 +172,22 @@ if (!$conn) {
             //     echo json_encode($test);
             // }
             foreach ($summary_tariff as $line) {
-                $t_group = $line["tariff_group_label"];
-                $t_max = $line["tariff_max_value"];
-                $t_id = $line["tariff_sub_id"];
-                $usd = $line["usd_rate"];
-                $t_usd = $line["total_rate_usd"];
-                $test[] = array('group' => $t_group, 'max' => $t_max, 'id' => $t_id, 'rate' => $usd, 'total_rate_usd' => $t_usd);
-
-                
+                $t_max = $line["tariff_max_value"];  
+//                 echo $mac_db;
+//                     echo "__";
+//    echo $t_max;
+                if ($mac_db >= $t_max) {
+                  
+                 
+                    $t_group = $line["tariff_group_label"];
+                    $t_id = $line["tariff_sub_id"];
+                    $usd = $line["usd_rate"];
+                    $t_usd = $line["total_rate_usd"];
+                    $test[] = array('group' => $t_group, 'max' => $t_max, 'id' => $t_id, 'rate' => $usd, 'total_rate_usd' => $t_usd);
+                }
+                else {
+                    echo "end";
+                }
             }
             // echo json_encode($test);
         }
