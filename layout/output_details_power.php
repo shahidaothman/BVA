@@ -11,7 +11,17 @@
 
 
           <!-- Tariff Comparison -->
-
+<p id="table_test"></p>
+          <!-- <table id="table_test" class="table table-bordered table-responsive" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+</table> -->
+        
 
           <div class="row service rounded px-4 py-md-4 py-3 active">
               <table class="table table-bordered table-responsive">

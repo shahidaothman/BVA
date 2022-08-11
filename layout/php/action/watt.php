@@ -160,17 +160,28 @@ if (!$conn) {
         //---------------------------------------------------------//
 
         // current bill calculation
-        $query_summary = "SELECT * FROM tariff_sub WHERE tariff_sub_id =  '" . $tariff_id . "'";
+        $query_summary = "SELECT * FROM tariff_sub WHERE tariff_id =  '" . $tariff_id . "'";
         $summary_tariff = mysqli_query($conn, $query_summary);
+        $test = array();
 
         if (mysqli_num_rows($summary_tariff) > 0) {
             // echo "here";
-            while ($summary = mysqli_fetch_array($summary_tariff)) {
-                $test= $summary['tariff_id'];
+            // while ($summary = mysqli_fetch_array($summary_tariff)) {
+            //     $test[] = $summary;
+            //     echo ("here");
+            //     echo json_encode($test);
+            // }
+            foreach ($summary_tariff as $line) {
+                $t_group = $line["tariff_group_label"];
+                $t_max = $line["tariff_max_value"];
+                $t_id = $line["tariff_sub_id"];
+                $usd = $line["usd_rate"];
+                $t_usd = $line["total_rate_usd"];
+                $test[] = array('group' => $t_group, 'max' => $t_max, 'id' => $t_id, 'rate' => $usd, 'total_rate_usd' => $t_usd);
 
-                echo ($test);
-                echo("here");
+                
             }
+            // echo json_encode($test);
         }
 
         //---------------------------------------------------------//
@@ -179,7 +190,7 @@ if (!$conn) {
         $result = array(
             "average_watt" => $mac_db,
             // "tariff" => $tariff_id,
-            "test" => $test,
+            // "test" => $test,
             // details
             "solar_panel_cost" => $pspc,
             "system_maintain" => $pmt,
@@ -209,6 +220,9 @@ if (!$conn) {
             // projection
             "monthly_lease" => $total_bulanan_baru,
             "monthly" =>  $total_bulanan,
+
+            // tariff table 
+            "table" => $test,
         );
         // $json = json_encode($result);
         echo json_encode($result);

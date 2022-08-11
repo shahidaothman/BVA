@@ -216,7 +216,6 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Investment Cost For 10 Year</h6>
                                       <p class="text-muted mb-4" id="10y_ic">
-
                                       </p>
 
                                   </div>

@@ -330,6 +330,8 @@
                     $('#t_mgr').html(data.monthly_generation_RE);
                     $('#t_mgg').html(data.monthly_grid);
 
+                    $('#tesst').html(data.test);
+
                     // $('#t_vld').html(data.depo_cost);
                     // $('#t_vl').html(data.leasing_cost);
 
@@ -402,7 +404,7 @@
                                 $('#5y_lease').html(leasing);
                             } else if (y == 10) {
                                 $('#10y_nb').html(monthly_lease);
-                                $('10y_ic').html(payback);
+                                $('#10y_ic').html(payback);
                                 $('#10y_ts').html(saving_year);
                                 $('#10y_lease').html(leasing);
                             }
@@ -420,7 +422,6 @@
                                         <td>" + saving_nyear + "</td>\
                                         <td>" + payback + "</td>\
 										</tr>");
-
                             if (y == 5) {
                                 $('#5y_nb').html(monthly_lease);
                                 $('#5y_ic').html(payback);
@@ -447,10 +448,28 @@
                                 $('#25y_ts').html(saving_nyear);
                                 $('#25y_lease').html(leasing);
                             }
-
                             y++;
                         }
                     }
+var table = JSON.stringify(data.table.group)
+
+                    $('#table_test').html(table);
+                 
+                    // alert(JSON.stringify(data.table))
+
+                    // $('#table_test').append({
+                    //         "columns": [{
+                    //             data.table
+                    //             },
+                    //             {
+                    //                 data.: 'group'
+                    //             },
+                    //             {
+                    //                 table: 'max'
+                    //             }
+                    //         ]
+                    //     }
+                    // );
 
                     //    var jsonData = JSON.parse(response);
                     // user is logged in successfully in the back-end
@@ -474,6 +493,7 @@
                     //        alert('Invalid Credentials!');
                     //    }
                 }
+
             });
         });
     });
