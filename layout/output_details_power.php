@@ -1,5 +1,5 @@
   <!-- start services -->
-  <section class="section hide" id="odpower">
+  <section class="section hide bg-light" id="odpower">
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-12 mb-4">
@@ -248,7 +248,7 @@
               </div>
           </div>
           <!-- end full cost breakdown -->
-          <div>
+          <div class="py-5">
               <a href="#dpower" class="btn btn-warning lh-base mb-4">Edit Parameter</a>
               <a href="" class="btn btn-success lh-base mb-4">Download Report</a>
               <a href="" class="btn btn-danger lh-base mb-4">Reset Parameters</a>
