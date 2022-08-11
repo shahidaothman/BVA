@@ -11,7 +11,27 @@
 
 
           <!-- Tariff Comparison -->
-<p id="table_test"></p>
+          <!-- <p id="table_test"></p> -->
+
+          <table class="table table-bordered table-responsive">
+              <thead>
+                  <tr>
+                      <th scope="col" rowspan="2">Tariff Type</th>
+                      <th scope="col" rowspan="2">USD</th>
+                      <th scope="col" colspan="2">Before</th>
+                      <th scope="col" colspan="2">After</th>
+                  </tr>
+                  <tr>
+                      <th scope="col">Tariff Used Without Powervault</th>
+                      <th scope="col">Rate (USD)</th>
+                      <th scope="col">Tariff Used With Powervault</th>
+                      <th scope="col">Rate (USD)</th>
+                  </tr>
+              </thead>
+              <tbody id="table_test">
+
+              </tbody>
+          </table>
           <!-- <table id="table_test" class="table table-bordered table-responsive" width="100%" cellspacing="0">
     <thead>
         <tr>
@@ -21,7 +41,7 @@
         </tr>
     </thead>
 </table> -->
-        
+
 
           <div class="row service rounded px-4 py-md-4 py-3 active">
               <table class="table table-bordered table-responsive">

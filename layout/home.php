@@ -355,7 +355,7 @@
 										<td>Year " + x + "</td>\
                                         <td>" + leasing + "</td>\
 										</tr>");
-                            console.log(x);
+                            // console.log(x);
                             x++;
 
                         }
@@ -451,10 +451,17 @@
                             y++;
                         }
                     }
-var table = JSON.stringify(data.table.group)
+                    // var table = JSON.stringify(data.table.group)
+                    var table = jQuery.parseJSON(data.table);
+                    var group = table.group;
+                    var usage_t = table.usage_t;
 
-                    $('#table_test').html(table);
-                 
+                    console.log(group + usage_t);
+
+                    $('#table_test').html(data.table[0]);
+
+
+
                     // alert(JSON.stringify(data.table))
 
                     // $('#table_test').append({
