@@ -193,7 +193,7 @@ if (!$conn) {
                     $usage =  $line["tariff_usage"];
                 }
 
-                $test[] = array('group' => $t_group,  'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
+                $test[] = array('group' => $t_group,  'usage_t' => $usage, 'rate_t' => $usd, 'total_rate_t' => $t_usd);
                 // }
                 // else {
                 //     echo "end";
@@ -242,6 +242,14 @@ if (!$conn) {
             }
             // echo json_encode($test);
         }
+
+        $lookup = array_column($test_1, null, 'group');
+        foreach ($test as &$row) {
+            $row += $lookup[$row['group']] ?? [];
+        }
+
+        // echo $test;
+
 
         //---------------------------------------------------------//
         //---------------------------OUTPUT -----------------------//
