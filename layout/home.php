@@ -296,19 +296,19 @@
     });
 </script>
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         $("#calculate_power").click(function() {
             $("#table_test").remove();
             $("#exampleid").remove();
             $("#t_projection").remove();
-name();
+
         });
     });
-</script>
+</script> -->
 
 <script type="text/javascript">
-    function name() {
+    $(document).ready(function() {
         // var test = 0.048 * 200;
         // alert(test);
         $('#calculate_watt').submit(function(e) {
@@ -525,5 +525,5 @@ name();
 
             });
         });
-    }
+    });
 </script>

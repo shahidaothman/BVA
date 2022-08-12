@@ -248,5 +248,15 @@
 
   </section>
 
+<!-- <script>
+    $(document).ready(function() {
+        $("#edit_parameter").click(function() {
+            $("#table_test").remove();
+            $("#exampleid").remove();
+            $("#t_projection").remove();
+
+        });
+    });
+</script> -->
 
   <!-- end servies -->
