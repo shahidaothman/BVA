@@ -302,13 +302,13 @@
             $("#table_test").remove();
             $("#exampleid").remove();
             $("#t_projection").remove();
-
+name();
         });
     });
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    function name() {
         // var test = 0.048 * 200;
         // alert(test);
         $('#calculate_watt').submit(function(e) {
@@ -466,8 +466,6 @@
                     var z = data.table;
                     $.each(z, function(i, z) {
                         console.log(z.usage);
-
-
                         $('#table_test').append("<tr>\
                         <td> " + z.group + "</td>\
                         <td> " + z.rate_t + "</td>\
@@ -476,11 +474,7 @@
                         <td> " + z.usage + "</td>\
                         <td> " + z.total_rate + "</td>\
                         </tr>");
-
-
-
                     });
-
                     $('#table_test').append("<tr>\
                     <th colspan='2'>Total</th>\
                     <th> " + data.average_watt + "</th>\
@@ -488,8 +482,6 @@
                           <th> " + data.monthly_grid + "</th>\
                           <th> " + data.new_total + "</th>\
                     </th>");
-
-
                     var group = table.group;
                     var usage_t = table.usage_t;
 
@@ -533,5 +525,5 @@
 
             });
         });
-    });
+    }
 </script>
