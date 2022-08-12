@@ -13,7 +13,7 @@
           <!-- Tariff Comparison -->
           <!-- <p id="table_test"></p> -->
 
-          <table class="table table-bordered table-responsive">
+          <!-- <table class="table table-bordered table-responsive">
               <thead>
                   <tr>
                       <th scope="col" rowspan="2">Tariff Type</th>
@@ -31,7 +31,7 @@
               <tbody id="table_test">
 
               </tbody>
-          </table>
+          </table> -->
           <!-- <table id="table_test" class="table table-bordered table-responsive" width="100%" cellspacing="0">
     <thead>
         <tr>
@@ -59,49 +59,9 @@
                           <th scope="col">Rate (USD)</th>
                       </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="table_test">
 
-                      <tr>
-                          <th scope="row">1-200kWh</th>
-                          <td>0.05</td>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
-                      </tr>
-                      <tr>
-                          <th scope="row">201-300 kWh</th>
-                          <td>0.05</td>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
 
-                      </tr>
-                      <tr>
-                          <th scope="row">301-600 kWh</th>
-                          <td>0.05</td>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
-                      </tr>
-                      <tr>
-                          <th scope="row">601-900 kWh</th>
-                          <td>0.05</td>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
-                      </tr>
-                      <tr>
-                          <th scope="row">901 kWh onwards</th>
-                          <td>0.05</td>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
-                      </tr>
                       <tr>
                           <th colspan="2">Total</th>
                           <td>200</td>

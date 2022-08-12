@@ -452,31 +452,39 @@
                         }
                     }
                     // var table = JSON.stringify(data.table.group)
-                    var table = jQuery.parseJSON(data.table);
+                    var table = JSON.stringify(data.table);
+                    var z = data.table;
+                    $.each(z, function(i, z) {
+                        console.log(z.usage);
+
+
+                        $('#table_test').append("<tr>\
+                        <td> " + z.group + "</td>\
+                        <td> " + z.rate_t + "</td>\
+                        <td> " + z.usage_t + "</td>\
+                        <td> " + z.total_rate_t + "</td>\
+                        <td> " + z.usage + "</td>\
+                        <td> " + z.total_rate + "</td>\
+                        </tr>");
+
+
+
+                    });
                     var group = table.group;
                     var usage_t = table.usage_t;
 
-                    console.log(group + usage_t);
+                    // console.log(group);
+                    // console.log(table);
 
-                    $('#table_test').html(data.table[0]);
+                    // $('#table_test').html(data.table);
 
 
 
                     // alert(JSON.stringify(data.table))
-
-                    // $('#table_test').append({
-                    //         "columns": [{
-                    //             data.table
-                    //             },
-                    //             {
-                    //                 data.: 'group'
-                    //             },
-                    //             {
-                    //                 table: 'max'
-                    //             }
-                    //         ]
-                    //     }
-                    // );
+                    // $('#table_test').append("<tr>\
+                    // 					<td> " + JSON.stringify(data.table.group) + "</td>\
+                    //                     <td>" + JSON.stringify(data.table[1]) + "</td>\
+                    //               										</tr>");
 
                     //    var jsonData = JSON.parse(response);
                     // user is logged in successfully in the back-end
