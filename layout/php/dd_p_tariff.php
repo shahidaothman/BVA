@@ -14,7 +14,7 @@ $resultt = mysqli_query($conn, $sqlt);
             $id_tariff = $row['tariff_id'];
     ?>
             <!-- <option value="<?php echo $id; ?>"><?php echo $name; ?> </option> -->
-            <option value="<?php echo $id_tariff; ?>"><?php echo $name; ?> </option>
+            <option value="<?php echo $id_tariff; ?>" name="<?php echo $name; ?>"><?php echo $name; ?> </option>
     <?php
         }
 

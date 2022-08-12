@@ -239,12 +239,14 @@
           </div>
           <!-- end full cost breakdown -->
           <div class="py-5">
-              <a href="#dpower" class="btn btn-warning lh-base mb-4">Edit Parameter</a>
+              <a href="#dpower" id="edit_parameter" class="btn btn-warning lh-base mb-4">Edit Parameter</a>
               <a href="" class="btn btn-success lh-base mb-4">Download Report</a>
-              <a href="" class="btn btn-danger lh-base mb-4">Reset Parameters</a>
+              <a href="http://178.128.220.125/" class="btn btn-danger lh-base mb-4">Reset Parameters</a>
           </div>
 
       </div>
 
   </section>
+
+
   <!-- end servies -->

@@ -296,6 +296,16 @@
     });
 </script>
 
+<script>
+    $(document).ready(function() {
+        $("#calculate_power").click(function() {
+            $("#table_test").remove();
+            $("#exampleid").remove();
+            $("#t_projection").remove();
+
+        });
+    });
+</script>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -310,10 +320,10 @@
                 data: $(this).serialize(),
                 dataType: "json",
                 success: function(data) {
-                    $('#current_bill').html(data.total_tahunan);
-                    $('#new_bill').html(data.new_total_tahunan);
-                    $('#investment_cost').html(data.system_cost);
-                    $('#total_saving').html(data.leasing_cost);
+                    $('#current_bill').html(data.total_tahunan + ' ' + 'USD');
+                    $('#new_bill').html(data.new_total_tahunan + ' ' + 'USD');
+                    $('#investment_cost').html(data.system_cost + ' ' + 'USD');
+                    $('#total_saving').html(data.leasing_cost + ' ' + 'USD');
                     // table
                     $('#t_sc').html(data.solar_capacity);
                     $('#t_sp').html(data.solar_panel_cost);
@@ -381,10 +391,10 @@
                                         <td>" + payback + "</td>\
 										</tr>");
 
-                            $('#1y_nb').html(monthly_lease);
-                            $('#1y_ic').html(payback);
-                            $('#1y_ts').html(saving_1year);
-                            $('#1y_lease').html(leasing_depo);
+                            $('#1y_nb').html(monthly_lease + ' ' + 'USD');
+                            $('#1y_ic').html(payback + ' ' + 'USD');
+                            $('#1y_ts').html(saving_1year + ' ' + 'USD');
+                            $('#1y_lease').html(leasing_depo + ' ' + 'USD');
                             y++;
                         } else if (y <= year) {
                             var payback = saving_year + payback;
@@ -398,15 +408,15 @@
 										</tr>");
 
                             if (y == 5) {
-                                $('#5y_nb').html(monthly_lease);
-                                $('#5y_ic').html(payback);
-                                $('#5y_ts').html(saving_year);
-                                $('#5y_lease').html(leasing);
+                                $('#5y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#5y_ic').html(payback + ' ' + 'USD');
+                                $('#5y_ts').html(saving_year + ' ' + 'USD');
+                                $('#5y_lease').html(leasing + ' ' + 'USD');
                             } else if (y == 10) {
-                                $('#10y_nb').html(monthly_lease);
-                                $('#10y_ic').html(payback);
-                                $('#10y_ts').html(saving_year);
-                                $('#10y_lease').html(leasing);
+                                $('#10y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#10y_ic').html(payback + ' ' + 'USD');
+                                $('#10y_ts').html(saving_year + ' ' + 'USD');
+                                $('#10y_lease').html(leasing + ' ' + 'USD');
                             }
 
                             y++;
@@ -423,30 +433,30 @@
                                         <td>" + payback + "</td>\
 										</tr>");
                             if (y == 5) {
-                                $('#5y_nb').html(monthly_lease);
-                                $('#5y_ic').html(payback);
-                                $('#5y_ts').html(saving_nyear);
-                                $('#5y_lease').html(leasing);;
+                                $('#5y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#5y_ic').html(payback + ' ' + 'USD');
+                                $('#5y_ts').html(saving_nyear + ' ' + 'USD');
+                                $('#5y_lease').html(leasing + ' ' + 'USD');
                             } else if (y == 10) {
-                                $('#10y_nb').html(monthly_lease);
-                                $('#10y_ic').html(payback);
-                                $('#10y_ts').html(saving_nyear);
-                                $('#10y_lease').html(leasing);
+                                $('#10y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#10y_ic').html(payback + ' ' + 'USD');
+                                $('#10y_ts').html(saving_nyear + ' ' + 'USD');
+                                $('#10y_lease').html(leasing + ' ' + 'USD');
                             } else if (y == 15) {
-                                $('#15y_nb').html(monthly_lease);
-                                $('#15y_ic').html(payback);
-                                $('#15y_ts').html(saving_nyear);
-                                $('#15y_lease').html(leasing);
+                                $('#15y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#15y_ic').html(payback + ' ' + 'USD');
+                                $('#15y_ts').html(saving_nyear + ' ' + 'USD');
+                                $('#15y_lease').html(leasing + ' ' + 'USD');
                             } else if (y == 20) {
-                                $('#20y_nb').html(monthly_lease);
-                                $('#20y_ic').html(payback);
-                                $('#20y_ts').html(saving_nyear);
-                                $('#20y_lease').html(leasing);
+                                $('#20y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#20y_ic').html(payback + ' ' + 'USD');
+                                $('#20y_ts').html(saving_nyear + ' ' + 'USD');
+                                $('#20y_lease').html(leasing + ' ' + 'USD');
                             } else if (y == 25) {
-                                $('#25y_nb').html(monthly_lease);
-                                $('#25y_ic').html(payback);
-                                $('#25y_ts').html(saving_nyear);
-                                $('#25y_lease').html(leasing);
+                                $('#25y_nb').html(monthly_lease + ' ' + 'USD');
+                                $('#25y_ic').html(payback + ' ' + 'USD');
+                                $('#25y_ts').html(saving_nyear + ' ' + 'USD');
+                                $('#25y_lease').html(leasing + ' ' + 'USD');
                             }
                             y++;
                         }
@@ -470,6 +480,16 @@
 
 
                     });
+
+                    $('#table_test').append("<tr>\
+                    <th colspan='2'>Total</th>\
+                    <th> " + data.average_watt + "</th>\
+                          <th> " + data.total + "</th>\
+                          <th> " + data.monthly_grid + "</th>\
+                          <th> " + data.new_total + "</th>\
+                    </th>");
+
+
                     var group = table.group;
                     var usage_t = table.usage_t;
 
@@ -507,6 +527,8 @@
                     //    else {
                     //        alert('Invalid Credentials!');
                     //    }
+                    window.location.href = "#opower";
+
                 }
 
             });

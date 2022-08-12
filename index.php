@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Stabig - Responsive Landing page</title>
+    <title>BVA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Premium Bootstrap 5 Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />

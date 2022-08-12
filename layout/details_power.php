@@ -13,9 +13,9 @@
                            <div class="col-9">
                                <h3 class="fw-semibold lh-base mb-4">POWERVAULT CALCULATOR</h3>
                            </div>
-                           <div class="col-3 right"> <a href="#feature" class="btn btn-danger lh-base mb-4">Reset
+                           <!-- <div class="col-3 right"> <a href="#home" class="btn btn-danger lh-base mb-4">Reset
                                </a>
-                           </div>
+                           </div> -->
                        </div>
 
                        <!-- <h5 class="text-muted fw-normal">We're always here to help you.</h5> -->
@@ -126,7 +126,8 @@
        $(document).ready(function() {
            $("#calculate_power").click(function() {
                // Basic
-               var tariff = $('#tariff_power').val();
+            //    var tariff = $('#tariff_power').val();
+            var tariff =  $('#tariff_power').find('option:selected').attr("name");
                var mac = $('#mac').val();
                // alert (mac);
                // Details

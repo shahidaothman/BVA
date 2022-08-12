@@ -102,15 +102,15 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Payback</h6>
                                       <p class="text-muted mb-4">
-                                          Some quick example text
+                                         NA
                                       </p>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Verdict</h6>
-                                      <p class="text-muted mb-4">
-                                          Some quick example text
+                                      <p class="text-danger mb-4">
+                                         Not Recommended
                                       </p>
                                   </div>
                               </div>
@@ -205,7 +205,7 @@
                               <h6 class="mb-2 mt-4">10 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
-                                      <h6 class="my-4">Total New Bill For 1 Year</h6>
+                                      <h6 class="my-4">Total New Bill For 10 Year</h6>
                                       <p class="text-muted mb-4" id="10y_nb">
 
                                       </p>
@@ -353,7 +353,6 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Current Lease per Year</h6>
                                       <p class="text-muted mb-4" id="25y_lease">
-
                                       </p>
                                   </div>
                               </div>
