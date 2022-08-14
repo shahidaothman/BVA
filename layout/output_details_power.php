@@ -82,7 +82,7 @@
                       <thead>
                           <tr>
                               <th scope="col">System Cost</th>
-                              <th scope="col">x Powervault</th>
+                              <th scope="col"> <span id="pnp"></span>Powervault</th>
 
                           </tr>
                       </thead>
@@ -177,7 +177,7 @@
                           <thead>
                               <tr>
                                   <th scope="col">System Cost</th>
-                                  <th scope="col">x Powervault</th>
+                                  <th scope="col"> <span id="onp"></span>Powervault</th>
 
                               </tr>
                           </thead>

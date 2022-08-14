@@ -378,7 +378,13 @@
                     var saving_year = monthly - monthly_lease - leasing;
 
                     var payback = 0;
-                    var sum = 0;
+
+                    var sum_wop = 0;
+                    var sum_wp = 0;
+                    var sum_lease = 0;
+                    var sum_save = 0;
+                    var sum_payback = 0;
+
 
                     while (y <= 25) {
                         if (y == 1) {
@@ -392,13 +398,19 @@
                                         <td>" + payback + "</td>\
 										</tr>");
 
+                            sum_wop += monthly;
+                            sum_wp += monthly_lease;
+                            sum_lease += leasing_depo;
+                            sum_save += saving_1year;
+                            sum_payback += payback;
+
                             $('#1y_nb').html(monthly_lease + ' ' + 'USD');
                             $('#1y_ic').html(payback + ' ' + 'USD');
                             $('#1y_ts').html(saving_1year + ' ' + 'USD');
                             $('#1y_lease').html(leasing_depo + ' ' + 'USD');
 
-                            sum += monthly;
                             y++;
+
                         } else if (y <= year) {
                             var payback = saving_year + payback;
                             $('#t_projection').append("<tr>\
@@ -410,19 +422,33 @@
                                         <td>" + payback + "</td>\
 										</tr>");
 
+                            sum_wop += monthly;
+                            sum_wp += monthly_lease;
+                            sum_lease += leasing;
+                            sum_save += saving_year;
+                            sum_payback += payback;
+
                             if (y == 5) {
-                                $('#5y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#5y_ic').html(payback + ' ' + 'USD');
-                                $('#5y_ts').html(saving_year + ' ' + 'USD');
-                                $('#5y_lease').html(leasing + ' ' + 'USD');
+                                // $('#5y_nb').html(monthly_lease + ' ' + 'USD');
+                                // $('#5y_ic').html(payback + ' ' + 'USD');
+                                // $('#5y_ts').html(saving_year + ' ' + 'USD');
+                                // $('#5y_lease').html(leasing + ' ' + 'USD');
+                                $('#5y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#5y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#5y_ts').html(sum_save + ' ' + 'USD');
+                                $('#5y_lease').html(sum_lease + ' ' + 'USD');
+
                             } else if (y == 10) {
-                                $('#10y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#10y_ic').html(payback + ' ' + 'USD');
-                                $('#10y_ts').html(saving_year + ' ' + 'USD');
-                                $('#10y_lease').html(leasing + ' ' + 'USD');
+                                $('#10y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#10y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#10y_ts').html(sum_save + ' ' + 'USD');
+                                $('#10y_lease').html(sum_lease + ' ' + 'USD');
                             }
-                            sum += monthly;
+
+
+
                             y++;
+
                         } else if (y > year) {
                             var saving_nyear = monthly - monthly_lease - 0;
                             var payback = saving_nyear + payback;
@@ -435,40 +461,58 @@
                                         <td>" + saving_nyear + "</td>\
                                         <td>" + payback + "</td>\
 										</tr>");
+
+                            sum_wop += monthly;
+                            sum_wp += monthly_lease;
+                            sum_lease += leasing;
+                            sum_save += saving_nyear;
+                            sum_payback += payback;
+
                             if (y == 5) {
-                                $('#5y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#5y_ic').html(payback + ' ' + 'USD');
-                                $('#5y_ts').html(saving_nyear + ' ' + 'USD');
-                                $('#5y_lease').html(leasing + ' ' + 'USD');
+                                // $('#5y_nb').html(monthly_lease + ' ' + 'USD');
+                                // $('#5y_ic').html(payback + ' ' + 'USD');
+                                // $('#5y_ts').html(saving_nyear + ' ' + 'USD');
+                                // $('#5y_lease').html(leasing + ' ' + 'USD');
+                                $('#5y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#5y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#5y_ts').html(sum_save + ' ' + 'USD');
+                                $('#5y_lease').html(sum_lease + ' ' + 'USD');
                             } else if (y == 10) {
-                                $('#10y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#10y_ic').html(payback + ' ' + 'USD');
-                                $('#10y_ts').html(saving_nyear + ' ' + 'USD');
-                                $('#10y_lease').html(leasing + ' ' + 'USD');
+                                $('#10y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#10y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#10y_ts').html(sum_save + ' ' + 'USD');
+                                $('#10y_lease').html(sum_lease + ' ' + 'USD');
                             } else if (y == 15) {
-                                $('#15y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#15y_ic').html(payback + ' ' + 'USD');
-                                $('#15y_ts').html(saving_nyear + ' ' + 'USD');
-                                $('#15y_lease').html(leasing + ' ' + 'USD');
+                                $('#15y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#15y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#15y_ts').html(sum_save + ' ' + 'USD');
+                                $('#15y_lease').html(sum_lease + ' ' + 'USD');
                             } else if (y == 20) {
-                                $('#20y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#20y_ic').html(payback + ' ' + 'USD');
-                                $('#20y_ts').html(saving_nyear + ' ' + 'USD');
-                                $('#20y_lease').html(leasing + ' ' + 'USD');
+                                $('#20y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#20y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#20y_ts').html(sum_save + ' ' + 'USD');
+                                $('#20y_lease').html(sum_lease + ' ' + 'USD');
                             } else if (y == 25) {
-                                $('#25y_nb').html(monthly_lease + ' ' + 'USD');
-                                $('#25y_ic').html(payback + ' ' + 'USD');
-                                $('#25y_ts').html(saving_nyear + ' ' + 'USD');
-                                $('#25y_lease').html(leasing + ' ' + 'USD');
+                                $('#25y_nb').html(sum_wp + ' ' + 'USD');
+                                $('#25y_ic').html(sum_payback + ' ' + 'USD');
+                                $('#25y_ts').html(sum_save + ' ' + 'USD');
+                                $('#25y_lease').html(sum_lease + ' ' + 'USD');
                             }
+
+
+
                             y++;
-                            sum += monthly;
+
                         }
 
                     }
                     $('#t_projection').append("<tr>\
-										<th> Total </th>\
-                                        <td>" + sum + "</td>\
+										<th> Total (USD) </th>\
+                                        <th>" + sum_wop + "</th>\
+                                        <th>" + sum_wp + "</th>\
+                                        <th>" + sum_lease + "</th>\
+                                        <th>" + sum_save + "</th>\
+                                        <th>" + sum_payback + "</th>\
                                       	</tr>");
                     // var table = JSON.stringify(data.table.group)
                     var table = JSON.stringify(data.table);

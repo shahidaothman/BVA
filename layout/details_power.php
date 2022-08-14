@@ -149,6 +149,7 @@
                var bsf = $('#bsf').val();
                var np = $('#np').val();
                var spc = $('#spc').val();
+               var pnp = $('#np').val();
 
                //    Output
                //Basic
@@ -165,6 +166,8 @@
                $("#s_bsf").html(" " + bsf + " %");
                $("#s_np").html(" " + np + " unit");
                $("#s_spc").html(" " + spc + " USD");
+               $("#pnp").html(pnp + " ");
+               $("#onp").html(pnp + " ");
            });
 
            //    // calculate total current bill 

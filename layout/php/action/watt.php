@@ -257,7 +257,7 @@ if (!$conn) {
         $result = array(
             "average_watt" => $mac_db,
             // "tariff" => $tariff_id,
-            // "test" => $test,
+            "pnp" => $pnp,
             // details
             "solar_panel_cost" => $pspc,
             "system_maintain" => $pmt,
