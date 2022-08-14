@@ -49,6 +49,10 @@
     #exTab3 .nav-pills>li.active>a {
         color: white;
     }
+
+    .b_green {
+        background: #12cc9a;
+    }
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
@@ -515,7 +519,7 @@
                     var fslease = parseFloat(sum_lease.toFixed(2));
                     var fspayback = parseFloat(sum_save.toFixed(2));
 
-                    $('#t_projection').append("<tr>\
+                    $('#t_projection').append("<tr class='b_green'>\
 										<th> Total (USD) </th>\
                                         <th>" + fswop + "</th>\
                                         <th>" + fswp + "</th>\
