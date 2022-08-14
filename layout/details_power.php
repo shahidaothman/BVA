@@ -34,7 +34,7 @@
                            <div class="input-group">
                                <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" required>
                                <div class="input-group-prepend">
-                                   <span class="input-group-text">kWh</span>
+                                   <span class="input-group-text">kWp</span>
                                </div>
                            </div>
                        </div>

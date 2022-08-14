@@ -527,14 +527,22 @@
                     var table = JSON.stringify(data.table);
                     var z = data.table;
                     $.each(z, function(i, z) {
-                        console.log(z.usage);
+                        // console.log(z.usage);
+
+                        if (z.usage === undefined || z.total_rate === undefined) {
+                            var usage = 0;
+                            var usage_rate = 0;
+                        } else {
+                            var usage = z.usage;
+                            var usage_rate = z.total_rate;
+                        }
                         $('#table_test').append("<tr>\
                         <td> " + z.group + "</td>\
                         <td> " + z.rate_t + "</td>\
                         <td> " + z.usage_t + "</td>\
                         <td> " + z.total_rate_t + "</td>\
-                        <td> " + z.usage + "</td>\
-                        <td> " + z.total_rate + "</td>\
+                        <td> " + usage + "</td>\
+                        <td> " + usage_rate + "</td>\
                         </tr>");
                     });
                     $('#table_test').append("<tr>\

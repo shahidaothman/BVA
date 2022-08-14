@@ -47,16 +47,16 @@
               <table class="table table-bordered table-responsive">
                   <thead>
                       <tr>
-                          <th scope="col" rowspan="2">Tariff Type</th>
-                          <th scope="col" rowspan="2">USD</th>
+                          <th scope="col" rowspan="2">Tariff Label</th>
+                          <th scope="col" rowspan="2">Tariff Rate (USD)</th>
                           <th scope="col" colspan="2">Before</th>
                           <th scope="col" colspan="2">After</th>
                       </tr>
                       <tr>
                           <th scope="col">Tariff Used Without Powervault</th>
-                          <th scope="col">Rate (USD)</th>
+                          <th scope="col">Bill w/o Powervault (USD)</th>
                           <th scope="col">Tariff Used With Powervault</th>
-                          <th scope="col">Rate (USD)</th>
+                          <th scope="col">Bill w Powervault (USD)</th>
                       </tr>
                   </thead>
                   <div id="table_header">
