@@ -129,6 +129,8 @@
            $("#calculate_power").click(function() {
                $("#table_test").empty();
                $("#t_projection").empty();
+               $("#exampleid").empty();
+
 
                // Basic
                //    var tariff = $('#tariff_power').val();

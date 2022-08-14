@@ -378,6 +378,7 @@
                     var saving_year = monthly - monthly_lease - leasing;
 
                     var payback = 0;
+                    var sum = 0;
 
                     while (y <= 25) {
                         if (y == 1) {
@@ -395,6 +396,8 @@
                             $('#1y_ic').html(payback + ' ' + 'USD');
                             $('#1y_ts').html(saving_1year + ' ' + 'USD');
                             $('#1y_lease').html(leasing_depo + ' ' + 'USD');
+
+                            sum += monthly;
                             y++;
                         } else if (y <= year) {
                             var payback = saving_year + payback;
@@ -418,7 +421,7 @@
                                 $('#10y_ts').html(saving_year + ' ' + 'USD');
                                 $('#10y_lease').html(leasing + ' ' + 'USD');
                             }
-
+                            sum += monthly;
                             y++;
                         } else if (y > year) {
                             var saving_nyear = monthly - monthly_lease - 0;
@@ -459,8 +462,14 @@
                                 $('#25y_lease').html(leasing + ' ' + 'USD');
                             }
                             y++;
+                            sum += monthly;
                         }
+
                     }
+                    $('#t_projection').append("<tr>\
+										<th> Total </th>\
+                                        <td>" + sum + "</td>\
+                                      	</tr>");
                     // var table = JSON.stringify(data.table.group)
                     var table = JSON.stringify(data.table);
                     var z = data.table;
