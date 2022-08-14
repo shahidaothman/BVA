@@ -59,17 +59,11 @@
                           <th scope="col">Rate (USD)</th>
                       </tr>
                   </thead>
-                  <tbody id="table_test">
+                  <div id="table_header">
+                      <tbody id="table_test">
+                      </tbody>
+                  </div>
 
-
-                      <tr>
-                          <th colspan="2">Total</th>
-                          <td>200</td>
-                          <td>10</td>
-                          <td>200</td>
-                          <td>10</td>
-                      </tr>
-                  </tbody>
               </table>
           </div>
 
@@ -248,7 +242,7 @@
 
   </section>
 
-<!-- <script>
+  <!-- <script>
     $(document).ready(function() {
         $("#edit_parameter").click(function() {
             $("#table_test").remove();

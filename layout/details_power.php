@@ -6,118 +6,120 @@
    </style>
    <section class="section bg-light overflow-hidden hide" id="dpower">
        <div class="container">
-         
-               <div class="row align-items-center">
-                   <div class="col-lg-12 mt-lg-0 mt-5 pt-lg-0 pt-4">
-                       <div class="row">
-                           <div class="col-9">
-                               <h3 class="fw-semibold lh-base mb-4">POWERVAULT CALCULATOR</h3>
-                           </div>
-                           <!-- <div class="col-3 right"> <a href="#home" class="btn btn-danger lh-base mb-4">Reset
+
+           <div class="row align-items-center">
+               <div class="col-lg-12 mt-lg-0 mt-5 pt-lg-0 pt-4">
+                   <div class="row">
+                       <div class="col-9">
+                           <h3 class="fw-semibold lh-base mb-4">POWERVAULT CALCULATOR</h3>
+                       </div>
+                       <!-- <div class="col-3 right"> <a href="#home" class="btn btn-danger lh-base mb-4">Reset
                                </a>
                            </div> -->
-                       </div>
+                   </div>
 
-                       <!-- <h5 class="text-muted fw-normal">We're always here to help you.</h5> -->
-                       <div class="row my-5">
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Year of Lease</label>
-                               <div class="input-group">
-                                   <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">Year</span>
-                                   </div>
+                   <!-- <h5 class="text-muted fw-normal">We're always here to help you.</h5> -->
+                   <div class="row my-5">
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Year of Lease</label>
+                           <div class="input-group">
+                               <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">Year</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Solar Capacity</label>
-                               <div class="input-group">
-                                   <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">kWh</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Solar Capacity</label>
+                           <div class="input-group">
+                               <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">kWh</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Solar Panel Cost</label>
-                               <div class="input-group">
-                                   <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">USD</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Solar Panel Cost</label>
+                           <div class="input-group">
+                               <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">USD</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Battery Size</label>
-                               <div class="input-group">
-                                   <input type="text" class="form-control" id="bs" name="pbs" placeholder="" value="14" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">kWh</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Battery Size</label>
+                           <div class="input-group">
+                               <input type="text" class="form-control" id="bs" name="pbs" placeholder="" value="14" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">kWh</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Battery Price</label>
-                               <div class="input-group">
-                                   <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">USD</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Battery Price</label>
+                           <div class="input-group">
+                               <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">USD</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Shipment Cost for Battery</label>
-                               <div class="input-group">
-                                   <input type="number" min="0" max="3" value="3" class="form-control" id="scb" name="pscb" placeholder="" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">%</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Shipment Cost for Battery</label>
+                           <div class="input-group">
+                               <input type="number" min="0" max="3" value="3" class="form-control" id="scb" name="pscb" placeholder="" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Maintenance & Tech Support Fee</label>
-                               <div class="input-group">
-                                   <input type="number" min="0" max="400" value="311" class="form-control" id="mt" name="pmt" placeholder="" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">USD</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Maintenance & Tech Support Fee</label>
+                           <div class="input-group">
+                               <input type="number" min="0" max="400" value="311" class="form-control" id="mt" name="pmt" placeholder="" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">USD</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">System Insurance Fee</label>
-                               <div class="input-group">
-                                   <input type="number" min="0" max="20" class="form-control" value="3" id="sif" name="psif" placeholder="" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">%</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">System Insurance Fee</label>
+                           <div class="input-group">
+                               <input type="number" min="0" max="20" class="form-control" value="3" id="sif" name="psif" placeholder="" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Backend Support Fee</label>
-                               <div class="input-group">
-                                   <input ttype="number" min="0" max="20" class="form-control" value="11" id="bsf" name="pbsf" placeholder="" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">%</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Backend Support Fee</label>
+                           <div class="input-group">
+                               <input ttype="number" min="0" max="20" class="form-control" value="11" id="bsf" name="pbsf" placeholder="" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">%</span>
                                </div>
                            </div>
-                           <div class="col-md-4 mb-3">
-                               <label class="fw-medium form-label">Number of Powervault to install</label>
-                               <div class="input-group">
-                                   <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" required>
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text">unit</span>
-                                   </div>
+                       </div>
+                       <div class="col-md-4 mb-3">
+                           <label class="fw-medium form-label">Number of Powervault to install</label>
+                           <div class="input-group">
+                               <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" required>
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">unit</span>
                                </div>
                            </div>
                        </div>
                    </div>
                </div>
-            
-               <!-- <a href="#opower" id="calculate_power" class="btn btn-primary mt-4">Calculate <i data-feather="arrow-right" class="icon-xs icon"></i>
+           </div>
+
+           <!-- <a href="#opower" id="calculate_power" class="btn btn-primary mt-4">Calculate <i data-feather="arrow-right" class="icon-xs icon"></i>
                </a> -->
-               <button  type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
-</button>
+           <!-- <button  type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
+</button> -->
+           <button type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
+           </button>
            </form>
        </div>
    </section>
@@ -125,9 +127,12 @@
    <script>
        $(document).ready(function() {
            $("#calculate_power").click(function() {
+               $("#table_test").empty();
+               $("#t_projection").empty();
+
                // Basic
-            //    var tariff = $('#tariff_power').val();
-            var tariff =  $('#tariff_power').find('option:selected').attr("name");
+               //    var tariff = $('#tariff_power').val();
+               var tariff = $('#tariff_power').find('option:selected').attr("name");
                var mac = $('#mac').val();
                // alert (mac);
                // Details
