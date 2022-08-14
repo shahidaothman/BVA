@@ -181,7 +181,8 @@ if (!$conn) {
                 $t_min = $line["tariff_min_value"];
                 $t_group = $line["tariff_group_label"];
                 // $t_id = $line["tariff_sub_id"];
-                $usd = $line["usd_rate"];
+
+                $usd =  round($line["usd_rate"], 2);
 
                 if ($t_max > $mac_db) {
                     $t_out = $mac_db - $t_min;
@@ -249,6 +250,28 @@ if (!$conn) {
         }
 
         // echo $test;
+        //---------------------------------------------------------//
+        //---------------------------FORMAT -----------------------//
+        //---------------------------------------------------------//
+        $fvld = round($vld, 2);
+        $fvl = round($vl, 2);
+
+        $ftotal_bulanan_baru = round($total_bulanan_baru, 2);
+        $ftotal_bulanan = round($total_bulanan, 2);
+        $ftotal_tahunan = round($total_tahunan, 2);
+        $ftotal_tahunan_baru  = round($total_tahunan_baru, 2);
+
+        $ftotal = round($total, 2);
+
+
+        $fvtsc = round($vtsc, 2);
+        $fvbp = round($vbp, 2);
+        $fvscbs = round($vscbs, 2);
+        $fvsi = round($vsi, 2);
+        $fvps = round($vps, 2);
+
+        $fvtscy = round($vtscy, 2);
+
 
 
         //---------------------------------------------------------//
@@ -266,27 +289,27 @@ if (!$conn) {
             "year_lease" => $pyl,
             // current bill
             "tarif_id" => $sub_id,
-            "total" => $total,
-            "total_tahunan" =>  $total_tahunan,
+            "total" => $ftotal,
+            "total_tahunan" =>  $ftotal_tahunan,
             // new bill
             "solar_capacity" => $psc,
             "new_tariff_id" => $sub_new_id,
             "new_total" => $new_total,
-            "new_total_tahunan" => $total_tahunan_baru,
+            "new_total_tahunan" => $ftotal_tahunan_baru,
             // total investment
             "battery_size" => $vbs,
-            "battery_price" => $vbp,
-            "shipment_cost" => $vscbs,
-            "insurance_cost" => $vsi,
-            "backend_cost" => $vps,
-            "system_cost" => $vtsc,
+            "battery_price" => $fvbp,
+            "shipment_cost" => $fvscbs,
+            "insurance_cost" => $fvsi,
+            "backend_cost" => $fvps,
+            "system_cost" => $fvtsc,
             // total saving
-            "year_leasing" => $vtscy,
-            "depo_cost" => $vld,
-            "leasing_cost" => $vl,
+            "year_leasing" => $fvtscy,
+            "depo_cost" => $fvld,
+            "leasing_cost" => $fvl,
             // projection
-            "monthly_lease" => $total_bulanan_baru,
-            "monthly" =>  $total_bulanan,
+            "monthly_lease" => $ftotal_bulanan_baru,
+            "monthly" =>  $ftotal_bulanan,
 
             // tariff table 
             "table" => $test,

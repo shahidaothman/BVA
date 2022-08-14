@@ -388,7 +388,8 @@
 
                     while (y <= 25) {
                         if (y == 1) {
-                            var payback = saving_1year + payback;
+                            var c = saving_1year + payback;
+                            var payback = parseFloat(c.toFixed(2));
                             $('#t_projection').append("<tr>\
 										<td> " + y + "</td>\
                                         <td>" + monthly + "</td>\
@@ -412,7 +413,8 @@
                             y++;
 
                         } else if (y <= year) {
-                            var payback = saving_year + payback;
+                            var c = saving_year + payback;
+                            var payback = parseFloat(c.toFixed(2));
                             $('#t_projection').append("<tr>\
 										<td> " + y + "</td>\
                                         <td>" + monthly + "</td>\
@@ -451,7 +453,8 @@
 
                         } else if (y > year) {
                             var saving_nyear = monthly - monthly_lease - 0;
-                            var payback = saving_nyear + payback;
+                            var c = saving_nyear + payback;
+                            var payback = parseFloat(c.toFixed(2));
                             var leasing = 0;
                             $('#t_projection').append("<tr>\
 										<td> " + y + "</td>\
@@ -506,12 +509,18 @@
                         }
 
                     }
+
+                    var fswop = parseFloat(sum_wop.toFixed(2));
+                    var fswp = parseFloat(sum_wp.toFixed(2));
+                    var fslease = parseFloat(sum_lease.toFixed(2));
+                    var fspayback = parseFloat(sum_save.toFixed(2));
+
                     $('#t_projection').append("<tr>\
 										<th> Total (USD) </th>\
-                                        <th>" + sum_wop + "</th>\
-                                        <th>" + sum_wp + "</th>\
-                                        <th>" + sum_lease + "</th>\
-                                        <th>" + sum_save + "</th>\
+                                        <th>" + fswop + "</th>\
+                                        <th>" + fswp + "</th>\
+                                        <th>" + fslease + "</th>\
+                                        <th>" + fspayback + "</th>\
                                         <th>" + sum_payback + "</th>\
                                       	</tr>");
                     // var table = JSON.stringify(data.table.group)
