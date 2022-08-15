@@ -216,7 +216,7 @@
                               <th scope="col">Current Expenses</th>
                               <th scope="col" colspan="2">New Expenses</th>
                               <th scope="col" rowspan="2">Saving</th>
-                              <th scope="col" rowspan="2">Payback Value</th>
+                              <!-- <th scope="col" rowspan="2">Payback Value</th> -->
                               <!-- <th scope="col" rowspan="2">Payback</th> -->
                           </tr>
                           <tr>

@@ -424,7 +424,6 @@
                                         <td>" + monthly_lease + "</td>\
                                         <td>" + leasing_depo + "</td>\
                                         <td>" + saving_1year + "</td>\
-                                        <td>" + payback + "</td>\
 										</tr>");
 
                             sum_wop += monthly;
@@ -449,7 +448,6 @@
                                         <td>" + monthly_lease + "</td>\
                                         <td>" + leasing + "</td>\
                                         <td>" + saving_year + "</td>\
-                                        <td>" + payback + "</td>\
 										</tr>");
 
                             sum_wop += monthly;
@@ -496,7 +494,6 @@
                                         <td>" + monthly_lease + "</td>\
                                         <td>" + leasing + "</td>\
                                         <td>" + saving_nyear + "</td>\
-                                        <td>" + payback + "</td>\
 										</tr>");
 
                             sum_wop += monthly;
@@ -559,7 +556,6 @@
                                         <th>" + fswp + "</th>\
                                         <th>" + fslease + "</th>\
                                         <th>" + fsaving + "</th>\
-                                        <th>" + sum_payback + "</th>\
                                       	</tr>");
                     // var table = JSON.stringify(data.table.group)
                     var table = JSON.stringify(data.table);
