@@ -327,7 +327,7 @@
                     $('#current_bill').html(data.total_tahunan + ' ' + 'USD');
                     $('#new_bill').html(data.new_total_tahunan + ' ' + 'USD');
                     $('#investment_cost').html(data.system_cost + ' ' + 'USD');
-                    $('#total_saving').html(data.leasing_cost + ' ' + 'USD');
+                    // $('#total_saving').html(data.leasing_cost + ' ' + 'USD');
                     // table
                     $('#t_sc').html(data.solar_capacity);
                     $('#t_sp').html(data.solar_panel_cost);
@@ -517,14 +517,14 @@
                     var fswop = parseFloat(sum_wop.toFixed(2));
                     var fswp = parseFloat(sum_wp.toFixed(2));
                     var fslease = parseFloat(sum_lease.toFixed(2));
-                    var fspayback = parseFloat(sum_save.toFixed(2));
+                    var fsaving = parseFloat(sum_save.toFixed(2));
 
                     $('#t_projection').append("<tr class='b_green'>\
 										<th> Total (USD) </th>\
                                         <th>" + fswop + "</th>\
                                         <th>" + fswp + "</th>\
                                         <th>" + fslease + "</th>\
-                                        <th>" + fspayback + "</th>\
+                                        <th>" + fsaving + "</th>\
                                         <th>" + sum_payback + "</th>\
                                       	</tr>");
                     // var table = JSON.stringify(data.table.group)
@@ -593,6 +593,8 @@
                     //    else {
                     //        alert('Invalid Credentials!');
                     //    }
+
+                      $('#total_saving').html(fsaving + ' ' + 'USD');
                     window.location.href = "#opower";
 
                 }
