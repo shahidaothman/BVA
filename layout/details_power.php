@@ -158,7 +158,7 @@
                // Details
                $("#s_psc").html(" " + p_s_c + " kWh");
                $("#s_yl").html(" " + yl + " Year");
-               $("#s_bs").html(" " + bs + " kWh");
+               $("#s_bs").html(" " + bs + " kWp");
                $("#s_bp").html(" " + bp + " USD");
                $("#s_scb").html(" " + scb + " %");
                $("#s_mt").html(" " + mt + " USD");

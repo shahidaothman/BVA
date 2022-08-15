@@ -389,6 +389,30 @@
                     var sum_save = 0;
                     var sum_payback = 0;
 
+                    var tic = data.system_cost_pyear;
+                    var tic1 = tic * 1;
+
+                    $('#1y_ic').html(tic1 + ' ' + 'USD');
+                    if (year >= 2) {
+                        var tic5 = tic * 5;
+                        $('#5y_ic').html(tic5 + ' ' + 'USD');
+                        $('#10y_ic').html(tic5 + ' ' + 'USD');
+                        $('#15y_ic').html(tic5 + ' ' + 'USD');
+                        $('#20y_ic').html(tic5 + ' ' + 'USD');
+                        $('#25y_ic').html(tic5 + ' ' + 'USD');
+
+                    } else if (year >= 10) {
+                        var tic5 = tic * 5;
+                        var tic10 = tic * 10;
+                        $('#5y_ic').html(tic5 + ' ' + 'USD');
+                        $('#10y_ic').html(tic10 + ' ' + 'USD');
+                        $('#15y_ic').html(tic10 + ' ' + 'USD');
+                        $('#20y_ic').html(tic10 + ' ' + 'USD');
+                        $('#25y_ic').html(tic10 + ' ' + 'USD');
+
+                    } 
+
+                    $('#10y_ic').html((tic * 10) + ' ' + 'USD');
 
                     while (y <= 25) {
                         if (y == 1) {
@@ -410,7 +434,7 @@
                             sum_payback += payback;
 
                             $('#1y_nb').html(monthly_lease + ' ' + 'USD');
-                            $('#1y_ic').html(payback + ' ' + 'USD');
+                            // $('#1y_ic').html(payback + ' ' + 'USD');
                             $('#1y_ts').html(saving_1year + ' ' + 'USD');
                             $('#1y_lease').html(leasing_depo + ' ' + 'USD');
 
@@ -434,21 +458,27 @@
                             sum_save += saving_year;
                             sum_payback += payback;
 
+
+                            var fsp = parseFloat(sum_payback.toFixed(2));
+                            var fswp = parseFloat(sum_wp.toFixed(2));
+                            var fslease = parseFloat(sum_lease.toFixed(2));
+                            var fsaving = parseFloat(sum_save.toFixed(2));
+
                             if (y == 5) {
                                 // $('#5y_nb').html(monthly_lease + ' ' + 'USD');
                                 // $('#5y_ic').html(payback + ' ' + 'USD');
                                 // $('#5y_ts').html(saving_year + ' ' + 'USD');
                                 // $('#5y_lease').html(leasing + ' ' + 'USD');
-                                $('#5y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#5y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#5y_ts').html(sum_save + ' ' + 'USD');
-                                $('#5y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#5y_nb').html(fswp + ' ' + 'USD');
+                                // $('#5y_ic').html(fsp + ' ' + 'USD');
+                                $('#5y_ts').html(fsaving + ' ' + 'USD');
+                                $('#5y_lease').html(fslease + ' ' + 'USD');
 
                             } else if (y == 10) {
-                                $('#10y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#10y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#10y_ts').html(sum_save + ' ' + 'USD');
-                                $('#10y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#10y_nb').html(fswp + ' ' + 'USD');
+                                // $('#10y_ic').html(fsp + ' ' + 'USD');
+                                $('#10y_ts').html(fsaving + ' ' + 'USD');
+                                $('#10y_lease').html(fslease + ' ' + 'USD');
                             }
 
 
@@ -475,35 +505,39 @@
                             sum_save += saving_nyear;
                             sum_payback += payback;
 
+                            var fsp = parseFloat(sum_payback.toFixed(2));
+                            var fswp = parseFloat(sum_wp.toFixed(2));
+                            var fslease = parseFloat(sum_lease.toFixed(2));
+                            var fsaving = parseFloat(sum_save.toFixed(2));
                             if (y == 5) {
                                 // $('#5y_nb').html(monthly_lease + ' ' + 'USD');
                                 // $('#5y_ic').html(payback + ' ' + 'USD');
                                 // $('#5y_ts').html(saving_nyear + ' ' + 'USD');
                                 // $('#5y_lease').html(leasing + ' ' + 'USD');
-                                $('#5y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#5y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#5y_ts').html(sum_save + ' ' + 'USD');
-                                $('#5y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#5y_nb').html(fswp + ' ' + 'USD');
+                                // $('#5y_ic').html(fsp + ' ' + 'USD');
+                                $('#5y_ts').html(fsaving + ' ' + 'USD');
+                                $('#5y_lease').html(fslease + ' ' + 'USD');
                             } else if (y == 10) {
-                                $('#10y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#10y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#10y_ts').html(sum_save + ' ' + 'USD');
-                                $('#10y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#10y_nb').html(fswp + ' ' + 'USD');
+                                // $('#10y_ic').html(fsp + ' ' + 'USD');
+                                $('#10y_ts').html(fsaving + ' ' + 'USD');
+                                $('#10y_lease').html(fslease + ' ' + 'USD');
                             } else if (y == 15) {
-                                $('#15y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#15y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#15y_ts').html(sum_save + ' ' + 'USD');
-                                $('#15y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#15y_nb').html(fswp + ' ' + 'USD');
+                                // $('#15y_ic').html(fsp + ' ' + 'USD');
+                                $('#15y_ts').html(fsaving + ' ' + 'USD');
+                                $('#15y_lease').html(fslease + ' ' + 'USD');
                             } else if (y == 20) {
-                                $('#20y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#20y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#20y_ts').html(sum_save + ' ' + 'USD');
-                                $('#20y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#20y_nb').html(fswp + ' ' + 'USD');
+                                // $('#20y_ic').html(fsp + ' ' + 'USD');
+                                $('#20y_ts').html(fsaving + ' ' + 'USD');
+                                $('#20y_lease').html(fslease + ' ' + 'USD');
                             } else if (y == 25) {
-                                $('#25y_nb').html(sum_wp + ' ' + 'USD');
-                                $('#25y_ic').html(sum_payback + ' ' + 'USD');
-                                $('#25y_ts').html(sum_save + ' ' + 'USD');
-                                $('#25y_lease').html(sum_lease + ' ' + 'USD');
+                                $('#25y_nb').html(fswp + ' ' + 'USD');
+                                // $('#25y_ic').html(fsp + ' ' + 'USD');
+                                $('#25y_ts').html(fsaving + ' ' + 'USD');
+                                $('#25y_lease').html(fslease + ' ' + 'USD');
                             }
 
 
@@ -594,7 +628,7 @@
                     //        alert('Invalid Credentials!');
                     //    }
 
-                      $('#total_saving').html(fsaving + ' ' + 'USD');
+                    $('#total_saving').html(fsaving + ' ' + 'USD');
                     window.location.href = "#opower";
 
                 }

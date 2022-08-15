@@ -223,6 +223,7 @@ if (!$conn) {
         $vsi = ($pspc + $vbp) * $psif;
         $vps = ($pspc + $vbp) * $pbsf;
 
+        $vtscpy = (($pspc + $vbp + $vscbs) + ($pmt + $vsi + $vps));
         $vtsc = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * $pyl));
 
         //---------------------------------------------------------//
@@ -379,6 +380,8 @@ if (!$conn) {
             "shipment_cost" => $fvscbs,
             "insurance_cost" => $fvsi,
             "backend_cost" => $fvps,
+
+            "system_cost_pyear" => $vtscpy,
             "system_cost" => $fvtsc,
             // total saving
             "year_leasing" => $fvtscy,
