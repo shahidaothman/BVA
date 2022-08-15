@@ -53,6 +53,14 @@
     .b_green {
         background: #12cc9a;
     }
+
+    .b_lgrey {
+        background: #ebebeb !important;
+    }
+
+    .b_dgrey {
+        background: #b9b9b9 !important;
+    }
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
@@ -389,30 +397,35 @@
                     var sum_save = 0;
                     var sum_payback = 0;
 
-                    var tic = data.system_cost_pyear;
-                    var tic1 = tic * 1;
-
+                    var tic1 = data.investment_1;
+                    var tic5 = data.investment_5;
+                    var tic10 = data.investment_10;
+                    var overall = data.system_cost;
                     $('#1y_ic').html(tic1 + ' ' + 'USD');
-                    if (year >= 2) {
-                        var tic5 = tic * 5;
+                    if (year <= 2) {
+
+                        $('#5y_ic').html(overall + ' ' + 'USD');
+                        $('#10y_ic').html(overall + ' ' + 'USD');
+                        $('#15y_ic').html(overall + ' ' + 'USD');
+                        $('#20y_ic').html(overall + ' ' + 'USD');
+                        $('#25y_ic').html(overall + ' ' + 'USD');
+                    } else if (year <= 5) {
                         $('#5y_ic').html(tic5 + ' ' + 'USD');
                         $('#10y_ic').html(tic5 + ' ' + 'USD');
                         $('#15y_ic').html(tic5 + ' ' + 'USD');
                         $('#20y_ic').html(tic5 + ' ' + 'USD');
                         $('#25y_ic').html(tic5 + ' ' + 'USD');
 
-                    } else if (year >= 10) {
-                        var tic5 = tic * 5;
-                        var tic10 = tic * 10;
+                    } else if (year == 10) {
                         $('#5y_ic').html(tic5 + ' ' + 'USD');
                         $('#10y_ic').html(tic10 + ' ' + 'USD');
                         $('#15y_ic').html(tic10 + ' ' + 'USD');
                         $('#20y_ic').html(tic10 + ' ' + 'USD');
                         $('#25y_ic').html(tic10 + ' ' + 'USD');
 
-                    } 
+                    }
 
-                    $('#10y_ic').html((tic * 10) + ' ' + 'USD');
+
 
                     while (y <= 25) {
                         if (y == 1) {

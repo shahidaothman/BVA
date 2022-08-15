@@ -47,16 +47,16 @@
               <table class="table table-bordered table-responsive">
                   <thead>
                       <tr>
-                          <th scope="col" rowspan="2">Tariff Label</th>
-                          <th scope="col" rowspan="2">Tariff Rate (USD)</th>
-                          <th scope="col" colspan="2">Before</th>
-                          <th scope="col" colspan="2">After</th>
+                          <th class="b_lgrey" scope="col" rowspan="2">Tariff Label</th>
+                          <th class="b_lgrey" scope="col" rowspan="2">Tariff Rate (USD)</th>
+                          <th class="b_lgrey" scope="col" colspan="2">Before</th>
+                          <th class="b_lgrey" scope="col" colspan="2">After</th>
                       </tr>
                       <tr>
-                          <th scope="col">Tariff Used Without Powervault</th>
-                          <th scope="col">Bill w/o Powervault (USD)</th>
-                          <th scope="col">Tariff Used With Powervault</th>
-                          <th scope="col">Bill w Powervault (USD)</th>
+                          <th class="b_lgrey" scope="col">Tariff Used Without Powervault</th>
+                          <th class="b_lgrey" scope="col">Bill w/o Powervault (USD)</th>
+                          <th class="b_lgrey" scope="col">Tariff Used With Powervault</th>
+                          <th class="b_lgrey" scope="col">Bill w Powervault (USD)</th>
                       </tr>
                   </thead>
                   <div id="table_header">
@@ -212,17 +212,17 @@
                   <table class="table table-bordered table-responsive">
                       <thead>
                           <tr>
-                              <th scope="col" rowspan="2">Year</th>
-                              <th scope="col">Current Expenses</th>
-                              <th scope="col" colspan="2">New Expenses</th>
-                              <th scope="col" rowspan="2">Saving</th>
+                              <th class="b_lgrey" scope="col" rowspan="2">Year</th>
+                              <th class="b_lgrey" scope="col">Current Expenses</th>
+                              <th class="b_lgrey" scope="col" colspan="2">New Expenses</th>
+                              <th class="b_lgrey" scope="col" rowspan="2">Saving</th>
                               <!-- <th scope="col" rowspan="2">Payback Value</th> -->
                               <!-- <th scope="col" rowspan="2">Payback</th> -->
                           </tr>
                           <tr>
-                              <th scope="col">Annual Electricity Bill (w/o powervault)</th>
-                              <th scope="col">Annual Electricity Bill (w powervault)</th>
-                              <th scope="col">Leasing</th>
+                              <th class="b_lgrey" scope="col">Annual Electricity Bill (w/o powervault)</th>
+                              <th class="b_lgrey" scope="col">Annual Electricity Bill (w powervault)</th>
+                              <th class="b_lgrey" scope="col">Leasing</th>
                           </tr>
                       </thead>
                       <tbody id="t_projection">

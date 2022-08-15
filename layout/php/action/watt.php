@@ -31,7 +31,7 @@ if (!$conn) {
         //---------------------------------------------------------//
         if ($tariff_id == 'pr_a') {
 
-         
+
             // Current Bill
             if ($mac_db <= 200) {
                 $sub_id = 'pr_a1';
@@ -139,19 +139,19 @@ if (!$conn) {
         }
         // TARIFF B
         elseif ($tariff_id == 'pc_b') {
-          
+
             if ($mac_db <= 200) {
                 $sub_id = 'pc_b1';
             } else {
                 $sub_id = 'pc_b2';
             }
-           
+
             if ($mgg <= 200) {
                 $sub_new_id = 'pc_b1';
             } else {
                 $sub_new_id = 'pc_b2';
             }
-         
+
             // current bill calculation
             $query_tb = "SELECT * FROM tariff_sub WHERE tariff_sub_id =  '" . $sub_id . "' ";
             $result_tariff_tb = mysqli_query($conn, $query_tb);
@@ -182,33 +182,33 @@ if (!$conn) {
                 echo "No matching records are found.";
             }
 
-             // New calculation
-             $new_query_tb = "SELECT * FROM tariff_sub WHERE tariff_sub_id =  '" . $sub_new_id . "' ";
-             $new_result_tariff_tb = mysqli_query($conn, $new_query_tb);
- 
-             if (mysqli_num_rows($new_result_tariff_tb) > 0) {
-                 // echo "here";
-                 while ($new_row = mysqli_fetch_array($new_result_tariff_tb)) {
-                     // foreach ($result_tariff as $row) {
-                     $ctru = $new_row['cumulative_total_rate_usd'];
-                     // $tru = $row['total_rate_usd'];
-                     $usdr = $new_row['usd_rate'];
-                     if ($mgg <= 200) {
-                         $new_total = $mgg * $usdr;
-                     } elseif ($mgg >= 201) {
-                         $temp = $mgg - 200;
-                         // echo $temp;
-                         $new_total = ($temp * $usdr) + $ctru;
-                     } else {
-                         $new_total = 0;
-                     }
-                 }
-                 // $total_tahunan_baru = 12 * $new_total * $pyl;
-                 $total_bulanan_baru = 12 * $new_total;
-                 $total_tahunan_baru = 12 * $new_total * 25;
-             } else {
-                 echo "No matching records are found.";
-             }
+            // New calculation
+            $new_query_tb = "SELECT * FROM tariff_sub WHERE tariff_sub_id =  '" . $sub_new_id . "' ";
+            $new_result_tariff_tb = mysqli_query($conn, $new_query_tb);
+
+            if (mysqli_num_rows($new_result_tariff_tb) > 0) {
+                // echo "here";
+                while ($new_row = mysqli_fetch_array($new_result_tariff_tb)) {
+                    // foreach ($result_tariff as $row) {
+                    $ctru = $new_row['cumulative_total_rate_usd'];
+                    // $tru = $row['total_rate_usd'];
+                    $usdr = $new_row['usd_rate'];
+                    if ($mgg <= 200) {
+                        $new_total = $mgg * $usdr;
+                    } elseif ($mgg >= 201) {
+                        $temp = $mgg - 200;
+                        // echo $temp;
+                        $new_total = ($temp * $usdr) + $ctru;
+                    } else {
+                        $new_total = 0;
+                    }
+                }
+                // $total_tahunan_baru = 12 * $new_total * $pyl;
+                $total_bulanan_baru = 12 * $new_total;
+                $total_tahunan_baru = 12 * $new_total * 25;
+            } else {
+                echo "No matching records are found.";
+            }
         }
 
 
@@ -226,6 +226,16 @@ if (!$conn) {
         $vtscpy = (($pspc + $vbp + $vscbs) + ($pmt + $vsi + $vps));
         $vtsc = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * $pyl));
 
+       
+            $vtsc1 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 1));
+      
+            $vtsc5 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 5));
+      
+            $vtsc10 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 10));
+     
+            $fvtsc1 = round($vtsc1, 2);
+            $fvtsc5 = round($vtsc5, 2);
+            $fvtsc10 = round($vtsc10, 2);
         //---------------------------------------------------------//
         //--------------CALCULATE TOTAL SAVING ----------------//
         //---------------------------------------------------------//
@@ -260,11 +270,11 @@ if (!$conn) {
                 $t_group = $line["tariff_group_label"];
                 // $t_id = $line["tariff_sub_id"];
 
-                $usd =  round($line["usd_rate"], 2);
-
+                // $usd =  round($line["usd_rate"], 2);
+                $usd =  $line["usd_rate"];
                 if ($t_max > $mac_db) {
                     $t_out = $mac_db - $t_min;
-                    $t_usd = $t_out *  $usd;
+                    $t_usd = ($t_out + 1) *  $usd;
                     $usage = $t_out + 1;
                 } else {
                     $t_out =  $t_max;
@@ -305,7 +315,7 @@ if (!$conn) {
 
                 if ($t_max > $mgg) {
                     $t_out = $mgg - $t_min;
-                    $t_usd = $t_out *  $usd;
+                    $t_usd = ($t_out + 1) *  $usd;
                     $usage = $t_out + 1;
                 } else {
                     $t_out =  $t_max;
@@ -313,7 +323,7 @@ if (!$conn) {
                     $usage =  $line_1["tariff_usage"];
                 }
 
-                $test_1[] = array('group' => $t_group, 'usage' => $usage, 'rate' => $usd, 'total_rate' => $t_usd);
+                $test_1[] = array('group' => $t_group, 'usage' => $usage, 'rate' => $usd, 'total_rate' => round($t_usd,2) );
                 // }
                 // else {
                 //     echo "end";
@@ -339,7 +349,8 @@ if (!$conn) {
         $ftotal_tahunan = round($total_tahunan, 2);
         $ftotal_tahunan_baru  = round($total_tahunan_baru, 2);
 
-        $ftotal = round($total, 2);
+        // $ftotal = round($total, 2);
+        $ftotal = $total;
 
 
         $fvtsc = round($vtsc, 2);
@@ -380,6 +391,10 @@ if (!$conn) {
             "shipment_cost" => $fvscbs,
             "insurance_cost" => $fvsi,
             "backend_cost" => $fvps,
+
+            "investment_1" =>  $fvtsc1,
+            "investment_5" =>  $fvtsc5,
+            "investment_10" =>  $fvtsc10,
 
             "system_cost_pyear" => $vtscpy,
             "system_cost" => $fvtsc,
