@@ -1,13 +1,13 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // var test = 0.048 * 200;
-        // alert(test);
+
         $('#c_power').submit(function(e) {
             // console.log($(this).serialize());
             e.preventDefault();
             $.ajax({
                 type: "GET",
-                url: 'layout/php/action/watt.php',
+                url: 'layout/php/action/power.php',
                 data: $(this).serialize(),
                 dataType: "json",
                 success: function(data) {

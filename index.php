@@ -100,11 +100,9 @@
 
     <?php include 'layout/home.php';?>
 
-
-
-
-    <?php include 'layout/details_power.php';?>
     <?php include 'layout/details_uses.php';?>
+    <?php include 'layout/details_power.php';?>
+ 
 
     <?php include 'layout/output_power.php';?>
     <?php include 'layout/output_uses.php';?>
@@ -116,27 +114,7 @@
     <?php include 'layout/output_details_uses.php';?>
     <?php include 'layout/calculation_uses.php';?>
 
-    <!-- start subscription -->
-    <!-- <section class="service-section overflow-hidden" id="contact">
-        <div class="container">
-            <div class="row align-items-center bg-light rounded p-4">
-                <div class="col-lg-6">
-                    <h5 class="text-primary mb-3">Recent</h5>
-                    <h3 class="mb-4">5000<sup>+</sup> Project <br> all over the world</h3>
-                    <h6 class="text-muted fw-normal">Join the community now !</h6>
-                    <form class="mt-4">
-                        <input type="email" class="form-control" placeholder="enter email">
-                        <a href="#" class="btn btn-primary mt-3">Submit <i data-feather="send"
-                                class="icon-xxs icon"></i></a>
-                    </form>
-                </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <img class="img-fluid mt-sm-0 mt-5" src="images/subscribe-img.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- end subscription -->
+ 
 
 
 

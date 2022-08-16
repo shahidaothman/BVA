@@ -255,6 +255,9 @@
                 $("#tariff_power").val("default_power").change();
                 $('#go_uses').show();
                 $('#go_power').hide();
+                $('#calculate_power').hide();
+                
+
                 $("#max_demand").attr('readonly', false);
                 $("#peak_usage").attr('readonly', false);
                 $("#offpeak").attr('readonly', false);
@@ -265,6 +268,7 @@
                 $("#tariff_uses").val("default_uses").change();
                 $('#go_uses').hide();
                 $('#go_power').show();
+                $('#calculate_uses').hide();
                 $("#max_demand").attr('readonly', true);
                 $("#peak_usage").attr('readonly', true);
                 $("#offpeak").attr('readonly', true);

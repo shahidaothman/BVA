@@ -23,7 +23,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Year of Lease</label>
                            <div class="input-group">
-                               <input class="form-control" placeholder="Insert Year of Lease" type="number" min="1" max="10" name="uyl" id="uyl" required>
+                               <input class="form-control" placeholder="Insert Year of Lease" type="number" min="1" max="10" name="uyl" id="uyl" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">Year</span>
                                </div>
@@ -32,7 +32,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Capacity</label>
                            <div class="input-group">
-                               <input type="number" min="0" max="20" class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" required>
+                               <input type="number" min="0" max="20" class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWp</span>
                                </div>
@@ -41,7 +41,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Panel Cost</label>
                            <div class="input-group">
-                               <input type="text" class="form-control" id="uspc" name="uspc" placeholder="Insert Solar Panel Cost" required>
+                               <input type="text" class="form-control" id="uspc" name="uspc" placeholder="Insert Solar Panel Cost" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -59,7 +59,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Price</label>
                            <div class="input-group">
-                               <input type="text" class="form-control" id="ubp" name="ubp" placeholder="Insert battery Price" required>
+                               <input type="text" class="form-control" id="ubp" name="ubp" placeholder="Insert battery Price" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -68,7 +68,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Shipment Cost </label>
                            <div class="input-group">
-                               <input type="number" min="0" max="10" value="5.8" class="form-control" id="" placeholder="" required>
+                               <input type="number" min="0" max="10" value="6" name="uscb" class="form-control" id="uscb" placeholder="" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">%</span>
                                </div>
@@ -77,7 +77,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Import Duty</label>
                            <div class="input-group">
-                               <input type="number" min="1" max="10" value="5" class="form-control" id="uscb" name="uscb" placeholder="" required>
+                               <input type="number" min="1" max="10" value="5" class="form-control" id="uid" name="uid" placeholder="" required>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">%</span>
                                </div>
@@ -151,7 +151,7 @@
            </div>
            <button type="submit" id="calculate_uses" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
            </button>
-           </form>
+           <!-- </form> -->
        </div>
    </section>
 
@@ -165,8 +165,8 @@
                // Basic
                var utariff = $('#tariff_uses').find('option:selected').attr("name");
                var umd = $('#max_demand').val();
-               var upu =  parseFloat($('#peak_usage').val());
-               var uopu =  parseFloat($('#offpeak').val());
+               var upu = parseFloat($('#peak_usage').val());
+               var uopu = parseFloat($('#offpeak').val());
                var usc = $('#usc').val();
                var uyl = $('#uyl').val();
                var unu = $('#unu').val();
@@ -175,8 +175,8 @@
                var ubs = $('#ubs').val();
                var unmd = $('#unmd').val();
 
-            
-               var umac = uopu + upu ;
+
+               var umac = uopu + upu;
 
 
                //    Output
@@ -200,4 +200,6 @@
 
        })
    </script>
+
+
    <!-- end feature -->
