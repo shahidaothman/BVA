@@ -10,23 +10,23 @@
           <div class="row">
               <h6 class="my-4">Parameter Summary</h6>
               <div class="col-4">
-                  <p>Tariff:</p>
-                  <p>Avg Consumption Monthly:</p>
-                  <p>Solar Capacity:</p>
-                  <p>Solar panel Cost:</p>
+                  <p class="fw-bold">Tariff :<span id="s_utariff" class="fw-500"></span></p>
+                  <p class="fw-bold">Avg Consumption Monthly:<span id="s_umac" class="fw-500"></span></p>
+                  <p class="fw-bold">Solar Capacity:<span id="s_usc" class="fw-500"></span></p>
+                  <p class="fw-bold">Solar panel Cost:<span id="s_uspc" class="fw-500"></span></p>
               </div>
               <div class="col-4">
-                  <p>Max Demand:</p>
-                  <p>Peak Usage:</p>
-                  <p>Off Peak Usage:</p>
-                  <p>New Max Demand:</p>
+                  <p class="fw-bold">Max Demand:<span id="s_umd" class="fw-500"></span></p>
+                  <p class="fw-bold">Peak Usage:<span id="s_upu" class="fw-500"></span></p>
+                  <p class="fw-bold">Off Peak Usage:<span id="s_uopu" class="fw-500"></span></p>
+                  <p class="fw-bold">New Max Demand:<span id="s_unmd" class="fw-500"></span></p>
               </div>
 
               <div class="col-4">
-              <p> Battery Size:</p>
-              <p>Battery Price:</p>
-                  <p>Year Leased:</p>
-                  <p>Unit Installed:</p>
+                  <p class="fw-bold"> Battery Size:<span id="s_ubs" class="fw-500"></span></p>
+                  <p class="fw-bold">Battery Price:<span id="s_ubp" class="fw-500"></span></p>
+                  <p class="fw-bold">Year Leased:<span id="s_uyl" class="fw-500"></span></p>
+                  <p class="fw-bold">Unit Installed:<span id="s_unu" class="fw-500"></span></p>
               </div>
 
           </div>
@@ -77,7 +77,7 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Investment Cost</h6>
                                       <p class="text-muted mb-4" id="investment_cost_uses">
-                                       
+
                                       </p>
 
                                   </div>
@@ -86,7 +86,7 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Total Saving</h6>
                                       <p class="text-muted mb-4" id="total_saving_uses">
-                                        
+
                                       </p>
                                   </div>
                               </div>
@@ -95,8 +95,8 @@
                                       <h6 class="my-4">Payback</h6>
                                       <p class="text-muted mb-4">
                                       <p class="text-muted mb-4" id="payback_uses">
-                                        
-                                        </p>
+
+                                      </p>
                                       </p>
                                   </div>
                               </div>
@@ -104,8 +104,8 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Verdict</h6>
                                       <p class="text-muted mb-4" id="verdict_uses">
-                                        
-                                        </p>
+
+                                      </p>
                                   </div>
                               </div>
                           </div>
@@ -273,14 +273,14 @@
 
                           </div>
                       </div>
-                  
+
                   </div>
               </div>
           </div>
 
           <div class="row">
               <div class="mt-5">
-                  <a href="#oduses" id="go_details_uses"  class="btn btn-success lh-base mb-4">More Details</a>
+                  <a href="#oduses" id="go_details_uses" class="btn btn-success lh-base mb-4">More Details</a>
               </div>
           </div>
       </div>

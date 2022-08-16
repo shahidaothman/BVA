@@ -152,7 +152,7 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Peak Demand</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="p_demand" placeholder="Insert Peak Demand">
+                    <input type="text" class="form-control" id="max_demand" placeholder="Insert Peak Demand">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -161,7 +161,7 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Peak Usage</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="p_peak" placeholder="Insert Peak Usage">
+                    <input type="text" class="form-control" id="peak_usage" placeholder="Insert Peak Usage">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -170,7 +170,7 @@
             <div class="col-md-6 mb-3">
                 <label class="fw-medium form-label" for="name">Off Peak Usage</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="p_offpeak" placeholder="Insert Off Peak Usage">
+                    <input type="text" class="form-control" id="offpeak" placeholder="Insert Off Peak Usage">
                     <div class="input-group-prepend">
                         <span class="input-group-text">kWh</span>
                     </div>
@@ -206,9 +206,9 @@
                 $('#go_uses').show();
                 $('#go_power').hide();
 
-                $( "#p_demand" ).attr('readonly', false);
-                $( "#p_peak" ).attr('readonly', false);
-                $( "#p_offpeak" ).attr('readonly', false);
+                $( "#max_demand" ).attr('readonly', false);
+                $( "#peak_usage" ).attr('readonly', false);
+                $( "#offpeak" ).attr('readonly', false);
 
 
             } else {
@@ -216,9 +216,9 @@
                 $("#tariff_uses").val("default_uses").change();
                 $('#go_uses').hide();
                 $('#go_power').show();
-                $( "#p_demand" ).attr('readonly', true);
-                $( "#p_peak" ).attr('readonly', true);
-                $( "#p_offpeak" ).attr('readonly', true);
+                $( "#max_demand" ).attr('readonly', true);
+                $( "#peak_usage" ).attr('readonly', true);
+                $( "#offpeak" ).attr('readonly', true);
 
             }
 

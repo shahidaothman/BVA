@@ -83,19 +83,16 @@
                           <tr>
                               <th scope="col">System Cost</th>
                               <th scope="col"> <span id="pnp"></span>USES</th>
-
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
                               <th scope="row">Solar Capacity(kWh)</th>
                               <td id="t_sc"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Solar Panel (US$)</th>
                               <td id="t_sp"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Battery Size (kWh)</th>
@@ -105,51 +102,40 @@
                           <tr>
                               <th scope="row">Battery Price (US$)</th>
                               <td id="t_bp"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Shipment Cost for Battery Storage</th>
                               <td id="t_scb"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Import Duty for Battery (US$)</th>
                               <td id="t_scb"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Ground Transport/Warehouse Storage (US$)</th>
                               <td id="t_scb"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Battery Installation Fee (US$)
                               </th>
                               <td id="t_scb"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">System Maintenance and Tech Support (US$)</th>
                               <td id="t_sm"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">System Insurance (US$)</th>
                               <td id="t_si"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Part Sparing/ Helpdesk and Backend Support (US$)</th>
                               <td id="t_ps"></td>
-
                           </tr>
                           <tr>
                               <th scope="row">Total System Cost x Years</th>
                               <td id="t_tsc"></td>
                           </tr>
-
-
-
                       </tbody>
                   </table>
               </div>
@@ -169,51 +155,43 @@
                               <!-- <tr>
                                   <td>Year 1 (Deposit 10%)</td>
                                   <td  id="t_vld"></td>       
-
                               </tr>
                               <tr>
                                   <td>Year 2</td>
                                   <td  id="t_vl"></td>       
                               </tr> -->
-
                           </thead>
                           <tbody id="exampleid">
-
                           </tbody>
                       </table>
                   </div>
               </div>
               <div class="col-md-6">
-                  <h6 class="my-4"> Powervault Consumption Table</h6>
+                  <h6 class="my-4"> USES Consumption Table</h6>
                   <div class="row service rounded active px-4 py-md-4 py-3 ms-1">
                       <table class="table  table-striped ">
                           <thead>
                               <tr>
                                   <th scope="col">System Cost</th>
                                   <th scope="col"> <span id="onp"></span>USES</th>
-
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
                                   <th scope="row">Monthly Average Consumption (kWh)</th>
                                   <td id="t_mac"></td>
-
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation RE (kWh)</th>
                                   <td id="t_mgr"></td>
-
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation Grid (kWH)</th>
                                   <td id="t_mgg"></td>
-
                               </tr>
                           </tbody>
                       </table>
                   </div>
-
               </div>
           </div>
 
