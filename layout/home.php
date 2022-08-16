@@ -84,107 +84,109 @@
         </div>
 
 
-        <form method="get" id="calculate_watt">
-            <div class="row">
-                <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
-                <div class="col-md-6 mb-3">
-                    <?php include 'php/dd_country.php'; ?>
-                </div>
-                <!-- end col -->
-                <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="email">Region</label>
-                    <select class="form-select form-control" aria-label="Default select example" placeholder="Your email" readonly>
-                        <option value="1">--Select Region--</option>
-                    </select>
-                    <!-- <input type="email" class="form-control" placeholder="Your email" id="email"> -->
-                </div>
-                <!-- end col -->
+        <!-- <form method="get" id="calculate_watt"> -->
+        <form method='get' id='calculate_watt'>
+
+        <div class="row">
+            <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
+            <div class="col-md-6 mb-3">
+                <?php include 'php/dd_country.php'; ?>
             </div>
-
-            <div class="row my-3">
-                <label class="fw-medium form-label" for="email">Select Product</label>
-                <div class="col-6">
-                    <div class="category" id="r_uses">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-uses" value="uses">
-                            <label class="form-check-label">USES</label>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-6">
-                    <div class="category" id="r_power">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-power" value="power">
-                            <label class="form-check-label">Powervault</label>
-                        </div>
-                    </div>
-                </div>
+            <!-- end col -->
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium form-label" for="email">Region</label>
+                <select class="form-select form-control" aria-label="Default select example" placeholder="Your email" readonly>
+                    <option value="1">--Select Region--</option>
+                </select>
+                <!-- <input type="email" class="form-control" placeholder="Your email" id="email"> -->
             </div>
+            <!-- end col -->
+        </div>
 
-            <!-- uses -->
-            <div class="row  hide box uses">
-                <div class="col-md-6  ">
-                    <label class="fw-medium form-label">Tariff Group</label>
-                    <?php include 'php/dd_u_tariff.php'; ?>
+        <div class="row my-3">
+            <label class="fw-medium form-label" for="email">Select Product</label>
+            <div class="col-6">
+                <div class="category" id="r_uses">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="category" id="product-uses" value="uses">
+                        <label class="form-check-label">USES</label>
+                    </div>
                 </div>
+
             </div>
-
-            <!-- powervault -->
-            <div class="row hide box power">
-                <div class="col-md-6 ">
-                    <label class="fw-medium form-label">Tariff Group</label>
-                    <?php include 'php/dd_p_tariff.php'; ?>
-                </div>
-            </div>
-
-
-
-            <div class="row my-4">
-                <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Monthly Average Consumption</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="mac" name="mac" placeholder="Insert Monthly Average Consumption">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">kWh</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Max Demand</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="max_demand" placeholder="Insert Max Demand">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">kWh</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Peak Usage</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="peak_usage" placeholder="Insert Peak Usage">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">kWh</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Off Peak Usage</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="offpeak" placeholder="Insert Off Peak Usage">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">kWh</span>
-                        </div>
+            <div class="col-6">
+                <div class="category" id="r_power">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="category" id="product-power" value="power">
+                        <label class="form-check-label">Powervault</label>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <a href="#duses" id="go_uses" class="btn btn-primary hide mt-4">Begin Simulation<i data-feather="arrow-right" class="icon-xs icon"></i> </a>
-            <a href="#dpower" id="go_power" class="btn btn-primary hide mt-4">Begin Simulation<i data-feather="arrow-right" class="icon-xs icon"></i> </a>
-            <!-- <button  type="submit" id="go_power" class="btn btn-primary hide mt-4">Begin eSimulation<i data-feather="arrow-right" class="icon-xs icon"></i>
+        <!-- uses -->
+        <div class="row  hide box uses">
+            <div class="col-md-6  ">
+                <label class="fw-medium form-label">Tariff Group</label>
+                <?php include 'php/dd_u_tariff.php'; ?>
+            </div>
+        </div>
+
+        <!-- powervault -->
+        <div class="row hide box power">
+            <div class="col-md-6 ">
+                <label class="fw-medium form-label">Tariff Group</label>
+                <?php include 'php/dd_p_tariff.php'; ?>
+            </div>
+        </div>
+
+
+
+        <div class="row my-4">
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium form-label" for="name">Monthly Average Consumption</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="mac" name="mac" placeholder="Insert Monthly Average Consumption">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">kWh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium form-label" for="name">Max Demand</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="max_demand" placeholder="Insert Max Demand">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">kWh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium form-label" for="name">Peak Usage</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="peak_usage" placeholder="Insert Peak Usage">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">kWh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-medium form-label" for="name">Off Peak Usage</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="offpeak" placeholder="Insert Off Peak Usage">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">kWh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#duses" id="go_uses" class="btn btn-primary hide mt-4">Begin Simulation<i data-feather="arrow-right" class="icon-xs icon"></i> </a>
+        <a href="#dpower" id="go_power" class="btn btn-primary hide mt-4">Begin Simulation<i data-feather="arrow-right" class="icon-xs icon"></i> </a>
+        <!-- <button  type="submit" id="go_power" class="btn btn-primary hide mt-4">Begin eSimulation<i data-feather="arrow-right" class="icon-xs icon"></i>
 </button> -->
 
-            <!-- </form> -->
+        <!-- </form> -->
     </div>
     <!-- end container -->
 </section>
@@ -195,6 +197,16 @@
 <!-- radio click -->
 <script>
     $(document).ready(function() {
+        $('input[type=radio][name=category]').change(function () {
+            if (this.value == 'uses') {
+                alert("Allot Thai Gayo Bhai");
+            } else if (this.value == 'power') {
+                alert("Transfer Thai Gayo");
+            }
+        });
+    });
+
+    $(document).ready(function() {
         $("#r_power").click(function() {
             $("#r_power").css({
                 "background-color": "#57c297",
@@ -204,6 +216,8 @@
                 "background-color": "white",
                 "color": "black"
             });
+            $("#id_form").replaceWith("<form method='get' id='calculate_watt'>");
+
             $("#product-power").click();
 
         });
@@ -220,6 +234,7 @@
                 "color": "black"
             });
             // $("#product-uses").prop("checked", true);
+            $("#id_form").replaceWith("<form method='get' id='calculate_uses'>");
             $("#product-uses").click();
         });
     });
@@ -257,7 +272,7 @@
                 $("#peak_usage").attr('readonly', true);
                 $("#offpeak").attr('readonly', true);
                 $("#mac").attr('readonly', false);
-                
+
 
             }
 
@@ -288,7 +303,7 @@
         });
 
         $("#go_details_uses").click(function() {
-                $('#oduses').show();
+            $('#oduses').show();
             $('#odpower').hide();
         });
     });

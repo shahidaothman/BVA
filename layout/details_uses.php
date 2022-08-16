@@ -149,8 +149,9 @@
                    </div>
                </div>
            </div>
-           <a href="#ouses" id="calculate_uses" class="btn btn-primary mt-4">Calculate <i data-feather="arrow-right" class="icon-xs icon"></i>
-           </a>
+           <button type="submit" id="calculate_uses" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
+           </button>
+           </form>
        </div>
    </section>
 
