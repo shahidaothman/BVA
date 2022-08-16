@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8" />
     <title>BVA</title>
@@ -22,6 +23,29 @@
     <!-- css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- feather icon -->
+    <script src="assets/js/feather.js"></script>
+
+    <!-- client-slider -->
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/tiny.init.js"></script>
+
+    <!-- moving letter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="assets/js/text-animation.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- end servies -->
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="67">
@@ -102,7 +126,8 @@
 
     <?php include 'layout/details_uses.php';?>
     <?php include 'layout/details_power.php';?>
-    <!-- </form> -->
+
+    </form>
 
     <?php include 'layout/output_power.php';?>
     <?php include 'layout/output_uses.php';?>
@@ -180,20 +205,6 @@
     </div>
     <!-- end modal -->
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- feather icon -->
-    <script src="assets/js/feather.js"></script>
-
-    <!-- client-slider -->
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/tiny.init.js"></script>
-
-    <!-- moving letter -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="assets/js/text-animation.init.js"></script>
-
-    <script src="assets/js/app.js"></script>
 
     <!-- button click -->
     <script>

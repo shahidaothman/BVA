@@ -149,9 +149,9 @@
                    </div>
                </div>
            </div>
-           <!-- <button type="submit" id="calculate_uses" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
+           <button type="submit" id="calculate_uses" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
            </button>
-           </form> -->
+           <!-- </form> -->
        </div>
    </section>
 

@@ -120,7 +120,7 @@
 </button> -->
            <button type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
            </button>
-           </form>
+           <!-- </form> -->
        </div>
    </section>
 
