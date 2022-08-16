@@ -336,7 +336,6 @@
 <script>
 
 $(document).on("click", ":submit", function(e){
-
     var submit_value = $(this).val();
 
     if (submit_value == 'calculate_power'){
