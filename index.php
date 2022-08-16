@@ -111,8 +111,10 @@
 
 
     <?php include 'layout/output_details_power.php';?>
+    <?php include 'layout/calculation_power.php';?>
 
     <?php include 'layout/output_details_uses.php';?>
+    <?php include 'layout/calculation_uses.php';?>
 
     <!-- start subscription -->
     <!-- <section class="service-section overflow-hidden" id="contact">
