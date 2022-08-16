@@ -365,7 +365,7 @@
 
           <div class="row">
               <div class="mt-5">
-                  <a href="#odpower" id="go_details" class="btn btn-success lh-base mb-4">More Details</a>
+                  <a href="#odpower" id="go_details_power" class="btn btn-success lh-base mb-4">More Details</a>
               </div>
           </div>
 

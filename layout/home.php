@@ -280,9 +280,14 @@
 <script>
     $(document).ready(function() {
 
-        $("#go_details").click(function() {
+        $("#go_details_power").click(function() {
             $('#oduses').hide();
             $('#odpower').show();
+        });
+
+        $("#go_details_uses").click(function() {
+                $('#oduses').show();
+            $('#odpower').hide();
         });
     });
 </script>
