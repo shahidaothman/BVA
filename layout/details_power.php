@@ -127,9 +127,9 @@
    <script>
        $(document).ready(function() {
            $("#calculate_power").click(function() {
-               $("#table_test").empty();
-               $("#t_projection").empty();
-               $("#exampleid").empty();
+            //    $("#table_test").empty();
+            //    $("#t_projection").empty();
+            //    $("#exampleid").empty();
 
 
                // Basic

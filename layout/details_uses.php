@@ -158,9 +158,9 @@
    <script>
        $(document).ready(function() {
            $("#calculate_uses").click(function() {
-               //    $("#table_test").empty();
-               //    $("#t_projection").empty();
-               //    $("#exampleid").empty();
+                //   $("#table_test").empty();
+                //   $("#t_projection").empty();
+                //   $("#exampleid").empty();
 
                // Basic
                var utariff = $('#tariff_uses').find('option:selected').attr("name");
