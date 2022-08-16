@@ -23,7 +23,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Year of Lease</label>
                            <div class="input-group">
-                               <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" required>
+                               <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">Year</span>
                                </div>
@@ -32,7 +32,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Capacity</label>
                            <div class="input-group">
-                               <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" required>
+                               <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWp</span>
                                </div>
@@ -41,7 +41,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Panel Cost</label>
                            <div class="input-group">
-                               <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" required>
+                               <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -59,7 +59,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Price</label>
                            <div class="input-group">
-                               <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" required>
+                               <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -118,7 +118,7 @@
                </a> -->
            <!-- <button  type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
 </button> -->
-           <button type="submit" id="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
+           <button type="submit" id="calculate_power" value="calculate_power" class="btn btn-primary mt-4">Calculate<i data-feather="arrow-right" class="icon-xs icon"></i>
            </button>
            <!-- </form> -->
        </div>
