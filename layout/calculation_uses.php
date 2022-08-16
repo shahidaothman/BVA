@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // var test = 0.048 * 200;
-    
+   
         $('#c_uses').submit(function(e) {    
-        
+         alert("here");
             // console.log($(this).serialize());
             e.preventDefault();
             $.ajax({

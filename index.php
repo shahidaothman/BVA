@@ -102,7 +102,7 @@
 
     <?php include 'layout/details_uses.php';?>
     <?php include 'layout/details_power.php';?>
- 
+    <!-- </form> -->
 
     <?php include 'layout/output_power.php';?>
     <?php include 'layout/output_uses.php';?>

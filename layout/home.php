@@ -213,7 +213,7 @@
 //             $('form').attr('id') = res;
             // $('calculate_form').attr("id", res);
 
-            $("#c_uses").attr("id", "c_power");
+            // $("#c_power").attr("id", "c_power");
 
             $("#product-power").click();
 
@@ -230,7 +230,7 @@
                 "background-color": "white",
                 "color": "black"
             });
-            $("#c_power").attr("id", "c_uses");
+            // $("#c_power").attr("id", "c_uses");
             // $("#calculate_power").attr("id", "calculate_uses");
             $("#product-uses").click();
         });
