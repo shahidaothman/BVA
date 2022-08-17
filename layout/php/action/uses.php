@@ -34,11 +34,74 @@ if (!$conn) {
         //--------------CALCULATE BILL-----------------------------//
         //---------------------------------------------------------//
 
+        // current bill calculation
+        $query_uses = "SELECT * FROM uses_tariff WHERE tariff_id =  '" . $tariff . "' ";
+        $result_tariff = mysqli_query($conn, $query_uses);
+
+        if (mysqli_num_rows($result_tariff) > 0) {
+            // echo "here";
+            while ($row = mysqli_fetch_array($result_tariff)) {
+                // foreach ($result_tariff as $row) {
+                $md_usd = $row['max_demand'];
+                $pu_usd = $row['peak_usage'];
+                $of_usd = $row['off_peak_usage'];
+                //   echo $md_usd;
+
+            }
+
+            //   $total_bulanan = 12 * $total;
+            //   $total_tahunan = 12 * $total * 25;
+
+
+        } else {
+            echo "No matching records are found.";
+        }
+
+        // total current bil
+        $md_cost = $umd * $md_usd;
+        $pu_cost = $upu * $pu_usd;
+        $of_cost = $uopu *  $of_usd;
+        $nmd_cost = $unmd *  $md_usd;
+        $vutcb = (($md_cost) + ($pu_cost) + ($of_cost)) * 12  * 15;
+
+        // new bill
+        $vutnb =  (($nmd_cost) + ($upu - ($usc * 5 * 30)) + ($uopu * $of_usd)) * 12  * 15;
+
+        // investment cost
+        $vubs = ($ubs * $unu);
+        $vubp = ($ubp * $unu);
+        $vuscbs = ($ubp * $uscb);
+        $vuid = ($uid * $ubp);
+        $vugt = ($ugt * $ubp);
+        $vubi = ($ubi * $ubp);
+        $vusi = ($uspc + $ubp) * $usif;
+        $vups = ($uspc + $ubp) * $ubsf;
+
+        $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * $uyl)) - ($umt * 2);
+
+        // system cost include leasing
+        $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;
+
+        $vuld = $vutscy * 0.1;
+        $vul = ($vutscy - $vuld) / ($uyl - 1);
+
+        //    saving
+        $vas = $vutcb - ($vutnb + $vul);
+
+
+
+        //---------------------------------------------------------//
+        //--------------Tariff Comparison USES------------------//
+        //---------------------------------------------------------//
+        $vnpu =  $upu - $unmd;
+
+
         //---------------------------------------------------------//
         //--------------OUTPUT-----------------------------//
         //---------------------------------------------------------//
         $result_1 = array(
             // "test" => $md,
+            "tariff" => $tariff,
             "solar_capacity" => $usc,
             "solar_panel" => $uspc,
             "battery_size" => $ubs,
@@ -52,13 +115,32 @@ if (!$conn) {
             "back_end" => $ubsf,
             "year" => $uyl,
             "no_uses" => $unu,
-
+            "new_max_demand" => $unmd,
+            "new_peak_usage" =>  $vnpu,
+,
             "mac" => $umac,
             "mgre" => $umge,
-            "mgg" => $umgg,            
+            "mgg" => $umgg,
 
-            "total_cost" => $usc,
+            "total_curent_bill" => $vutcb,
+            "total_new_bill" => $vutnb,
+            "total_investment" => $vutsc,
+            "total_saving" => $vas,
+            "payback" => $vutsc,
+            "verdict" => $vutsc,
             "total_cost_year" => $usc,
+
+            "md_usd" => $md_usd,
+            "pu_usd" => $pu_usd,
+            "of_usd" => $of_usd,
+           
+
+            "md_cost" => $md_cost,
+            "pu_cost" => $pu_cost,
+            "of_cost" => $of_cost,
+            "nmd_cost" => $nmd_cost,
+
+          
         );
 
         echo json_encode($result_1);

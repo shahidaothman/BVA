@@ -179,15 +179,15 @@
                           <tbody>
                               <tr>
                                   <th scope="row">Monthly Average Consumption (kWh)</th>
-                                  <td id="t_mac"></td>
+                                  <td id="t_umac"></td>
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation RE (kWh)</th>
-                                  <td id="t_mgr"></td>
+                                  <td id="t_umgr"></td>
                               </tr>
                               <tr>
                                   <th scope="row">Monthly Generation Grid (kWH)</th>
-                                  <td id="t_mgg"></td>
+                                  <td id="t_umgg"></td>
                               </tr>
                           </tbody>
                       </table>

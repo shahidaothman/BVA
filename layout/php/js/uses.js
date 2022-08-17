@@ -1,5 +1,5 @@
 function uses() {
-    $('#calculate_form').submit(function(e) {
+    $('#calculate_form').submit(function (e) {
         // console.log($(this).serialize());
         e.preventDefault();
         $.ajax({
@@ -7,8 +7,8 @@ function uses() {
             url: 'layout/php/action/uses.php',
             data: $(this).serialize(),
             dataType: "json",
-            success: function(data) {
-
+            success: function (data) {
+                console.log(data);
                 $('#t_usc').html(data.solar_capacity);
                 $('#t_uspc').html(data.solar_panel);
                 $('#t_ubs').html(data.battery_size);
@@ -25,8 +25,30 @@ function uses() {
                 $('#t_umgg').html(data.mgg);
                 $('#t_umac').html(data.mac);
                 $('#t_umgr').html(data.mgre);
-                
-                console.log (data);
+
+                $('#current_bill_uses').html(data.total_curent_bill);
+                $('#new_bill_uses').html(data.total_new_bill);
+                $('#investment_cost_uses').html(data.total_investment);
+                $('#total_saving_uses').html(data.total_saving);
+
+
+
+
+                $('#t_utariff').append("<tr>\
+                <td>Max Demand Peak Period </td>\
+                <td>" + data.md_usd + "</td>\
+                <td>" + data.md_cost + "</td>\
+                <td>" + data.new_max_demand + "</td>\
+                <td>" + data.nmd_cost + "</td>\
+                </tr>\
+                <tr>\
+                <td>Peak Usage </td>\
+                <td>" + data.md_usd + "</td>\
+                <td>" + data.md_cost + "</td>\
+                <td>" + data.new_max_demand + "</td>\
+                <td>" + data.nmd_cost + "</td>\
+                </tr>");
+
                 window.location.href = "#ouses";
             }
         });

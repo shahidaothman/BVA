@@ -20,9 +20,13 @@ tariff_power / tariff_id - Tariff Group
 [I] ubsf - Backend Support Fee %
 [Z6_New] unmd - New Max Demand
 
+vnpu = new value peak usage;
+
 umge - value monthly generation RE
 umgg - value tariff after uses(Monthly Generation Grid (kWH))
 
+vutcb = value total current bill 
+vutnb = value total new bill
 
 vubp = value battery price
 vubs = value battery size
@@ -32,11 +36,11 @@ vugt = value ground transport/warehouse storage
 vubi = value battery installation
 vusi = value system insurance
 vups = value part sparing or helpdesk and backend support
-vutsc = value total system cost
+vutsc = value total system cost [total investment cost]
 vutscy = value total system cost years (include leasing charge)
 vuld = Leasing Deposit
 vul = Leasing Cost
-vupu = value Peak Usage
+vas = annual saving
 
 <!-- investment -->
 [D] vubs = (ubs * unu)
