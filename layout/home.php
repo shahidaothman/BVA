@@ -144,7 +144,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="name">Monthly Average Consumption</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="mac" name="mac" placeholder="Insert Monthly Average Consumption">
+                        <input type="text" class="form-control" id="mac" name="mac" placeholder="Insert Monthly Average Consumption" required>
                         <div class="input-group-prepend">
                             <span class="input-group-text">kWh</span>
                         </div>

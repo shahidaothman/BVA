@@ -6,7 +6,7 @@ $resultt = mysqli_query($conn, $sqlt);
 
 ?>
 
-<select class="form-select form-control" id="tariff_power" name="tariff_power">
+<select class="form-select form-control" id="tariff_power" name="tariff_power" required>
 <option value="">---Pelase select tariff---</option>          
     <?php
          while ($row = mysqli_fetch_array($resultt)) {
