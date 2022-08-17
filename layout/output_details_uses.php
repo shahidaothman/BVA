@@ -88,53 +88,53 @@
                       <tbody>
                           <tr>
                               <th scope="row">Solar Capacity(kWh)</th>
-                              <td id="t_sc"></td>
+                              <td id="t_usc"></td>
                           </tr>
                           <tr>
                               <th scope="row">Solar Panel (US$)</th>
-                              <td id="t_sp"></td>
+                              <td id="t_uspc"></td>
                           </tr>
                           <tr>
                               <th scope="row">Battery Size (kWh)</th>
-                              <td id="t_bs"></td>
+                              <td id="t_ubs"></td>
 
                           </tr>
                           <tr>
                               <th scope="row">Battery Price (US$)</th>
-                              <td id="t_bp"></td>
+                              <td id="t_ubp"></td>
                           </tr>
                           <tr>
                               <th scope="row">Shipment Cost for Battery Storage</th>
-                              <td id="t_scb"></td>
+                              <td id="t_uscb"></td>
                           </tr>
                           <tr>
                               <th scope="row">Import Duty for Battery (US$)</th>
-                              <td id="t_scb"></td>
+                              <td id="t_uid"></td>
                           </tr>
                           <tr>
                               <th scope="row">Ground Transport/Warehouse Storage (US$)</th>
-                              <td id="t_scb"></td>
+                              <td id="t_ugt"></td>
                           </tr>
                           <tr>
                               <th scope="row">Battery Installation Fee (US$)
                               </th>
-                              <td id="t_scb"></td>
+                              <td id="t_ubi"></td>
                           </tr>
                           <tr>
                               <th scope="row">System Maintenance and Tech Support (US$)</th>
-                              <td id="t_sm"></td>
+                              <td id="t_umt"></td>
                           </tr>
                           <tr>
                               <th scope="row">System Insurance (US$)</th>
-                              <td id="t_si"></td>
+                              <td id="t_usif"></td>
                           </tr>
                           <tr>
                               <th scope="row">Part Sparing/ Helpdesk and Backend Support (US$)</th>
-                              <td id="t_ps"></td>
+                              <td id="t_ubsf"></td>
                           </tr>
                           <tr>
                               <th scope="row">Total System Cost x Years</th>
-                              <td id="t_tsc"></td>
+                              <td id="t_vutsc"></td>
                           </tr>
                       </tbody>
                   </table>

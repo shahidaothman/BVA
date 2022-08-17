@@ -22,6 +22,8 @@ tariff_power / tariff_id - Tariff Group
 
 umge - value monthly generation RE
 umgg - value tariff after uses(Monthly Generation Grid (kWH))
+
+
 vubp = value battery price
 vubs = value battery size
 vuscbs = value shipment cost for battery storage
@@ -55,4 +57,3 @@ vupu = value Peak Usage
 
 [FCB2Depo] vuld = vutscy * 0.1
 [FCB2] vul = (vutscy - vuld) / (uyl - 1)
-
