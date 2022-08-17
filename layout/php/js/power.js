@@ -1,5 +1,5 @@
 function power() {
-$('#c_power').submit(function(e) {
+$('#calculate_form').submit(function(e) {
     
     // console.log($(this).serialize());
     e.preventDefault();

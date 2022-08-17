@@ -86,8 +86,8 @@
         </div>
 
 
-        <!-- <form method="get" name="calculate_form" id="c_power"> -->
-        <form method="get" name="calculate_form" class="save" id="c_power">
+        <!-- <form method="get" name="calculate_form" id="calculate_form"> -->
+        <form method="get" name="calculate_form" class="save" id="calculate_form">
 
             <div class="row">
                 <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
@@ -110,7 +110,7 @@
                 <div class="col-6">
                     <div class="category" id="r_uses">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-uses" value="uses">
+                            <input class="form-check-input" type="radio" name="category" id="product-uses" value="uses">
                             <label class="form-check-label">USES</label>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                 <div class="col-6">
                     <div class="category" id="r_power">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="product-power" value="power">
+                            <input class="form-check-input" type="radio" name="category" id="product-power" value="power">
                             <label class="form-check-label">Powervault</label>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="name">Max Demand</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="max_demand" placeholder="Insert Max Demand">
+                        <input type="text" class="form-control" id="max_demand" name="max_demand" placeholder="Insert Max Demand">
                         <div class="input-group-prepend">
                             <span class="input-group-text">kWh</span>
                         </div>
@@ -166,7 +166,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="name">Peak Usage</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="peak_usage" placeholder="Insert Peak Usage">
+                        <input type="text" class="form-control" id="peak_usage" name="peak_usage" placeholder="Insert Peak Usage">
                         <div class="input-group-prepend">
                             <span class="input-group-text">kWh</span>
                         </div>
@@ -175,7 +175,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="name">Off Peak Usage</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="offpeak" placeholder="Insert Off Peak Usage">
+                        <input type="text" class="form-control" id="offpeak" name="offpeak"  placeholder="Insert Off Peak Usage">
                         <div class="input-group-prepend">
                             <span class="input-group-text">kWh</span>
                         </div>
@@ -217,7 +217,7 @@
             //             $('form').attr('id') = res;
             // $('calculate_form').attr("id", res);
 
-            // $("#c_power").attr("id", "c_power");
+            // $("#calculate_form").attr("id", "calculate_form");
 
             $("#product-power").click();
 
@@ -234,7 +234,7 @@
                 "background-color": "white",
                 "color": "black"
             });
-            // $("#c_power").attr("id", "c_uses");
+            // $("#calculate_form").attr("id", "c_uses");
             // $("#calculate_power").attr("id", "calculate_uses");
             $("#product-uses").click();
         });

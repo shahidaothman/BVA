@@ -84,7 +84,7 @@
         </div>
 
 
-        <form method="get" name="calculate_form" id="c_power">
+        <form method="get" name="calculate_form" id="calculate_form">
             <div class="row">
                 <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
                 <div class="col-md-6 mb-3">
@@ -213,7 +213,7 @@
 //             $('form').attr('id') = res;
             // $('calculate_form').attr("id", res);
 
-            // $("#c_power").attr("id", "c_power");
+            // $("#calculate_form").attr("id", "calculate_form");
 
             $("#product-power").click();
 
@@ -230,7 +230,7 @@
                 "background-color": "white",
                 "color": "black"
             });
-            // $("#c_power").attr("id", "c_uses");
+            // $("#calculate_form").attr("id", "c_uses");
             // $("#calculate_power").attr("id", "calculate_uses");
             $("#product-uses").click();
         });
