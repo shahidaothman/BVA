@@ -60,7 +60,7 @@
                       </tr>
                   </thead>
                   <div id="table_header">
-                      <tbody id="table_test">
+                      <tbody id="t_utariff">
                       </tbody>
                   </div>
 
@@ -161,7 +161,7 @@
                                   <td  id="t_vl"></td>       
                               </tr> -->
                           </thead>
-                          <tbody id="exampleid">
+                          <tbody id="table_uintsallment">
                           </tbody>
                       </table>
                   </div>
@@ -216,7 +216,7 @@
                               <th class="b_lgrey" scope="col">Leasing</th>
                           </tr>
                       </thead>
-                      <tbody id="t_projection">
+                      <tbody id="t_uprojection">
 
                       </tbody>
                   </table>

@@ -261,6 +261,7 @@
                 $('#go_power').hide();
                 $('#calculate_power').hide();
                 $('#calculate_uses').show();
+                
 
                 $("#max_demand").attr('readonly', false);
                 $("#peak_usage").attr('readonly', false);
@@ -282,6 +283,9 @@
                 $("#max_demand").attr("required", true);
                 $("#peak_usage").attr("required", true);
                 $("#offpeak").attr("required", true);
+
+               
+            $('#odpower').hide();
 
             } else {
 
@@ -310,6 +314,9 @@
                 $("#max_demand").attr("required", false);
                 $("#peak_usage").attr("required", false);
                 $("#offpeak").attr("required", false);
+
+                $('#oduses').hide();
+          
 
             }
 
