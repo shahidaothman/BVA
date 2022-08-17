@@ -61,7 +61,10 @@ if (!$conn) {
         $md_cost = $umd * $md_usd;
         $pu_cost = $upu * $pu_usd;
         $of_cost = $uopu *  $of_usd;
+
         $nmd_cost = $unmd *  $md_usd;
+
+
         $vutcb = (($md_cost) + ($pu_cost) + ($of_cost)) * 12  * 15;
 
         // new bill
@@ -93,8 +96,8 @@ if (!$conn) {
         //---------------------------------------------------------//
         //--------------Tariff Comparison USES------------------//
         //---------------------------------------------------------//
-        $vnpu =  $upu - $unmd;
-
+        $vnpu =  $upu - ($usc * 5 * 30) ;
+$vpnu_cost = ($vnpu * $pu_usd);
 
         //---------------------------------------------------------//
         //--------------OUTPUT-----------------------------//
@@ -115,9 +118,11 @@ if (!$conn) {
             "back_end" => $ubsf,
             "year" => $uyl,
             "no_uses" => $unu,
+            "peak_usage" =>   $upu,
+            "max_demand" => $umd,
             "new_max_demand" => $unmd,
             "new_peak_usage" =>  $vnpu,
-,
+
             "mac" => $umac,
             "mgre" => $umge,
             "mgg" => $umgg,
@@ -139,6 +144,7 @@ if (!$conn) {
             "pu_cost" => $pu_cost,
             "of_cost" => $of_cost,
             "nmd_cost" => $nmd_cost,
+            "npu_cost" => $vpnu_cost,
 
           
         );

@@ -8,6 +8,7 @@ function uses() {
             data: $(this).serialize(),
             dataType: "json",
             success: function (data) {
+                $("#t_utariff").empty();
                 console.log(data);
                 $('#t_usc').html(data.solar_capacity);
                 $('#t_uspc').html(data.solar_panel);
@@ -37,16 +38,18 @@ function uses() {
                 $('#t_utariff').append("<tr>\
                 <td>Max Demand Peak Period </td>\
                 <td>" + data.md_usd + "</td>\
+                <td>" + data.max_demand + "</td>\
                 <td>" + data.md_cost + "</td>\
                 <td>" + data.new_max_demand + "</td>\
                 <td>" + data.nmd_cost + "</td>\
                 </tr>\
                 <tr>\
                 <td>Peak Usage </td>\
-                <td>" + data.md_usd + "</td>\
-                <td>" + data.md_cost + "</td>\
-                <td>" + data.new_max_demand + "</td>\
-                <td>" + data.nmd_cost + "</td>\
+                <td>" + data.pu_usd + "</td>\
+                <td>" + data.peak_usage + "</td>\
+                <td>" + data.pu_cost + "</td>\
+                <td>" + data.new_peak_usage + "</td>\
+                <td>" + data.npu_cost + "</td>\
                 </tr>");
 
                 window.location.href = "#ouses";
