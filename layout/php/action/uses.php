@@ -96,8 +96,13 @@ if (!$conn) {
         //---------------------------------------------------------//
         //--------------Tariff Comparison USES------------------//
         //---------------------------------------------------------//
-        $vnpu =  $upu - ($usc * 5 * 30) ;
-$vpnu_cost = ($vnpu * $pu_usd);
+        $vnpu =  $upu - ($usc * 5 * 30);
+        $vpnu_cost = ($vnpu * $pu_usd);
+
+        $total_eu = $umd + $upu + $uopu;
+        $total_bill =    $md_cost +  $pu_cost +  $of_cost;
+        $total_new_eu =  $unmd + $vnpu + $uopu;
+        $total_new_bill = $nmd_cost + $vpnu_cost + $of_cost;
 
         //---------------------------------------------------------//
         //--------------OUTPUT-----------------------------//
@@ -120,6 +125,7 @@ $vpnu_cost = ($vnpu * $pu_usd);
             "no_uses" => $unu,
             "peak_usage" =>   $upu,
             "max_demand" => $umd,
+            "offpeak" => $uopu,
             "new_max_demand" => $unmd,
             "new_peak_usage" =>  $vnpu,
 
@@ -138,7 +144,7 @@ $vpnu_cost = ($vnpu * $pu_usd);
             "md_usd" => $md_usd,
             "pu_usd" => $pu_usd,
             "of_usd" => $of_usd,
-           
+
 
             "md_cost" => $md_cost,
             "pu_cost" => $pu_cost,
@@ -146,7 +152,10 @@ $vpnu_cost = ($vnpu * $pu_usd);
             "nmd_cost" => $nmd_cost,
             "npu_cost" => $vpnu_cost,
 
-          
+            "total_eu" => $total_eu,
+            "total_bill" => $total_bill, 
+            "total_new_eu" => $total_new_eu ,
+            "total_new_bill_tariff" => $total_new_bill,
         );
 
         echo json_encode($result_1);

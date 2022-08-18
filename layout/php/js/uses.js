@@ -50,6 +50,22 @@ function uses() {
                 <td>" + data.pu_cost + "</td>\
                 <td>" + data.new_peak_usage + "</td>\
                 <td>" + data.npu_cost + "</td>\
+                </tr>\
+                <tr>\
+                <p>HELLLOOO</p>\
+                <td> Off Peak Usage </td>\
+                <td>" + data.of_usd + "</td>\
+                <td>" + data.offpeak + "</td>\
+                <td>" + data.of_cost + "</td>\
+                <td>" + data.offpeak + "</td>\
+                <td>" + data.of_cost + "</td>\
+                </tr>\
+                <tr>\
+                <th>Total</th>\
+                <td>" + data.total_eu + "</td>\
+                <td>" + data.total_bill + "</td>\
+                <td>" + data.total_new_eu + "</td>\
+                <td>" + data.total_new_bill_tariff + "</td>\
                 </tr>");
 
                 window.location.href = "#ouses";
