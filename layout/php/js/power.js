@@ -81,6 +81,9 @@ function power() {
                 var tic5 = data.investment_5;
                 var tic10 = data.investment_10;
                 var overall = data.system_cost;
+
+
+
                 $('#1y_ic').html(tic1 + ' ' + 'USD');
                 if (year <= 2) {
 
@@ -105,8 +108,9 @@ function power() {
 
                 }
 
-
-
+                // projection
+                const con_array = [];
+                const f_year = [];
                 while (y <= 25) {
                     if (y == 1) {
                         var c = saving_1year + payback;
@@ -117,6 +121,7 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing_depo + "</td>\
                             <td>" + saving_1year + "</td>\
+                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -130,6 +135,10 @@ function power() {
                         $('#1y_ts').html(saving_1year + ' ' + 'USD');
                         $('#1y_lease').html(leasing_depo + ' ' + 'USD');
 
+
+                        const master = { payback: payback, year: y};
+                        f_year.push(master);
+                        con_array.push(payback);       
                         y++;
 
                     } else if (y <= year) {
@@ -141,6 +150,7 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing + "</td>\
                             <td>" + saving_year + "</td>\
+                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -171,6 +181,10 @@ function power() {
                             $('#10y_ts').html(fsaving + ' ' + 'USD');
                             $('#10y_lease').html(fslease + ' ' + 'USD');
                         }
+
+                        const master = { payback: payback, year: y};
+                        f_year.push(master);
+                        con_array.push(payback);       
                         y++;
 
                     } else if (y > year) {
@@ -184,6 +198,7 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing + "</td>\
                             <td>" + saving_nyear + "</td>\
+                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -228,13 +243,18 @@ function power() {
                         }
 
 
+                        const master = { payback: payback, year: y};
+                        f_year.push(master);
 
+                        con_array.push(payback);                        
                         y++;
 
                     }
 
                 }
 
+           
+              
                 var fswop = parseFloat(sum_wop.toFixed(2));
                 var fswp = parseFloat(sum_wp.toFixed(2));
                 var fslease = parseFloat(sum_lease.toFixed(2));
@@ -247,11 +267,43 @@ function power() {
                             <th>" + fslease + "</th>\
                             <th>" + fsaving + "</th>\
                               </tr>");
-                // output payback 
 
-                console.log(sum_payback);
+                // calculate year payback
+                 var largest= fslease;
+                // console.log(con_array.payback);
+                // for (i=0; i<=largest;i++){
+                //     if (con_array.payback[i]>largest) {
+                //         // var largest = con_array[i];
+                //         console.log (con_array.year[i])
+                //         return false;
+                //     }
+                // }
+
+             
+                for (i=0; i<=largest;i++){
+                    if (con_array[i]>largest) {
+                        // var largest = con_array[i];
+                        var number = con_array[i];
+                     console.log (con_array[i])
+                     break;
+                    } 
+                   
+                }
+
+ console.log( number)
+
+ var item = f_year.find(item => item.payback === number);
+ console.log(item.year);
+        
+                
+//    console.log(con_array);
+      
+
+
+                // output payback 
+                // console.log(sum_payback);
                 if (sum_payback >= fslease) {
-                    $('#payback_power').html("Payback");
+                    $('#payback_power').html(item.year +" "+ "Year");
                     $('#verdict_power').html(" <span class='text-success'> Viable </span>");
                 }
 
