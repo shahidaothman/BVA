@@ -104,7 +104,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Number of Powervault to install</label>
                            <div class="input-group">
-                               <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" required>
+                               <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" readonly>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">unit</span>
                                </div>

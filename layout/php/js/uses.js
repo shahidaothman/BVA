@@ -9,6 +9,8 @@ function uses() {
             dataType: "json",
             success: function (data) {
                 $("#t_utariff").empty();
+                $("#table_uintsallment").empty();
+                $('#t_uprojection').empty();
                 console.log(data);
                 $('#t_usc').html(data.solar_capacity);
                 $('#t_uspc').html(data.solar_panel);
@@ -27,47 +29,136 @@ function uses() {
                 $('#t_umac').html(data.mac);
                 $('#t_umgr').html(data.mgre);
 
-                $('#current_bill_uses').html(data.total_curent_bill);
-                $('#new_bill_uses').html(data.total_new_bill);
+                $('#current_bill_uses').html(data.total_curent_bill_y);
+                $('#new_bill_uses').html(data.total_new_bill_y);
                 $('#investment_cost_uses').html(data.total_investment);
                 $('#total_saving_uses').html(data.total_saving);
 
 
+                // tariff table
 
-
-                $('#t_utariff').append("<tr>\
+                $('#t_utariff').append(`<tr>\
                 <td>Max Demand Peak Period </td>\
-                <td>" + data.md_usd + "</td>\
-                <td>" + data.max_demand + "</td>\
-                <td>" + data.md_cost + "</td>\
-                <td>" + data.new_max_demand + "</td>\
-                <td>" + data.nmd_cost + "</td>\
+                <td>${data.md_usd}</td>\
+                <td>${data.max_demand}</td>\
+                <td>${data.md_cost}</td>\
+                <td>${data.new_max_demand}</td>\
+                <td>${data.nmd_cost}</td>\
                 </tr>\
                 <tr>\
                 <td>Peak Usage </td>\
-                <td>" + data.pu_usd + "</td>\
-                <td>" + data.peak_usage + "</td>\
-                <td>" + data.pu_cost + "</td>\
-                <td>" + data.new_peak_usage + "</td>\
-                <td>" + data.npu_cost + "</td>\
+                <td>${data.pu_usd}</td>\
+                <td>${data.peak_usage}</td>\
+                <td>${data.pu_cost}</td>\
+                <td>${data.new_peak_usage}</td>\
+                <td>${data.npu_cost}</td>\
                 </tr>\
                 <tr>\
-                <p>HELLLOOO</p>\
-                <td> Off Peak Usage </td>\
-                <td>" + data.of_usd + "</td>\
-                <td>" + data.offpeak + "</td>\
-                <td>" + data.of_cost + "</td>\
-                <td>" + data.offpeak + "</td>\
-                <td>" + data.of_cost + "</td>\
+                  <td> Off Peak Usage </td>\
+                <td>${data.of_usd}</td>\
+                <td>${data.offpeak}</td>\
+                <td>${data.of_cost}</td>\
+                <td>${data.offpeak}</td>\
+                <td>${data.of_cost}</td>\
                 </tr>\
                 <tr>\
-                <th>Total</th>\
-                <td>" + data.total_eu + "</td>\
-                <td>" + data.total_bill + "</td>\
-                <td>" + data.total_new_eu + "</td>\
-                <td>" + data.total_new_bill_tariff + "</td>\
-                </tr>");
+                <th colspan="2">Total</th>\
+                <th>${data.total_eu}</th>\
+                <th>${data.total_bill}</th>\
+                <th>${data.total_new_eu}</th>\
+                <th>${data.total_new_bill_tariff}</th>\
+                </tr>`);
 
+                // installment table
+                var year = data.year;
+                var leasing = data.installment_year;
+                var leasing_depo = data.installment_depo
+                var x = 1;
+
+                while (x <= year) {
+
+                    if (x == 1) {
+                        $('#table_uintsallment').append("<tr>\
+                                <td>Year " + x + " (Deposit 10%)</td>\
+                                <td>" + leasing_depo + "</td>\
+                                </tr>");
+                        x++;
+                    } else if (x <= year) {
+                        $('#table_uintsallment').append("<tr>\
+                                <td>Year " + x + "</td>\
+                                <td>" + leasing + "</td>\
+                                </tr>");
+                        x++;
+
+                    }
+                }
+
+                // projection table
+
+                var y = 1;
+                var monthly = data.total_curent_bill_m;
+                var monthly_lease = data.total_new_bill_m;
+                var saving_1year = monthly - monthly_lease - leasing_depo;
+                var saving_year = monthly - monthly_lease - leasing;
+
+                var payback = 0;
+
+
+                while (y <= 15) {
+                    if (y == 1) {
+                        var c = saving_1year + payback;
+                        var payback = parseFloat(c.toFixed(2));
+                        $('#t_uprojection').append("<tr>\
+                                <td> " + y + "</td>\
+                                <td>" + monthly + "</td>\
+                                <td>" + monthly_lease + "</td>\
+                                <td>" + leasing_depo + "</td>\
+                                <td>" + saving_1year + "</td>\
+                                <td>" + payback + "</td>\
+                                </tr>");
+
+
+
+                        y++;
+
+                    } else if (y <= year) {
+                        var c = saving_year + payback;
+                        var payback = parseFloat(c.toFixed(2));
+                        $('#t_uprojection').append("<tr>\
+                                <td> " + y + "</td>\
+                                <td>" + monthly + "</td>\
+                                <td>" + monthly_lease + "</td>\
+                                <td>" + leasing + "</td>\
+                                <td>" + saving_year + "</td>\
+                                <td>" + payback + "</td>\
+                                </tr>");
+
+
+
+                        y++;
+
+                    } else if (y > year) {
+                        var saving_nyear = monthly - monthly_lease - 0;
+                        var c = saving_nyear + payback;
+                        var payback = parseFloat(c.toFixed(2));
+                        var leasing = 0;
+                        $('#t_uprojection').append("<tr>\
+                                <td> " + y + "</td>\
+                                <td>" + monthly + "</td>\
+                                <td>" + monthly_lease + "</td>\
+                                <td>" + leasing + "</td>\
+                                <td>" + saving_nyear + "</td>\
+                                <td>" + payback + "</td>\
+                                </tr>");
+
+
+                        y++;
+
+                    }
+
+                }
+
+                // go to next page
                 window.location.href = "#ouses";
             }
         });

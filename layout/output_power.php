@@ -102,15 +102,17 @@
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Payback</h6>
                                       <p class="text-muted mb-4">
-                                         NA
+                                      <p class="text-muted mb-4" id="payback_power">
+                                          
+                                      </p>
                                       </p>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-4 py-3 active">
                                       <h6 class="my-4">Verdict</h6>
-                                      <p class="text-danger mb-4">
-                                         Not Recommended
+                                      <p class=" mb-4" id="verdict_power">
+                                      
                                       </p>
                                   </div>
                               </div>

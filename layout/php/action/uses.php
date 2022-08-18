@@ -64,11 +64,12 @@ if (!$conn) {
 
         $nmd_cost = $unmd *  $md_usd;
 
-
-        $vutcb = (($md_cost) + ($pu_cost) + ($of_cost)) * 12  * 15;
+        $vutcb_m = (($md_cost) + ($pu_cost) + ($of_cost)) * 12 ;
+        $vutcb = $vutcb_m * 15;
 
         // new bill
-        $vutnb =  (($nmd_cost) + ($upu - ($usc * 5 * 30)) + ($uopu * $of_usd)) * 12  * 15;
+        $vutnb_m =  (($nmd_cost) + ($upu - ($usc * 5 * 30)) + ($uopu * $of_usd)) * 12 ;
+        $vutnb = $vutnb_m * 15;
 
         // investment cost
         $vubs = ($ubs * $unu);
@@ -85,8 +86,7 @@ if (!$conn) {
         // system cost include leasing
         $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;
 
-        $vuld = $vutscy * 0.1;
-        $vul = ($vutscy - $vuld) / ($uyl - 1);
+ 
 
         //    saving
         $vas = $vutcb - ($vutnb + $vul);
@@ -103,6 +103,16 @@ if (!$conn) {
         $total_bill =    $md_cost +  $pu_cost +  $of_cost;
         $total_new_eu =  $unmd + $vnpu + $uopu;
         $total_new_bill = $nmd_cost + $vpnu_cost + $of_cost;
+
+        //---------------------------------------------------------//
+        //--------------------Installment-------------------------//
+        //--------------------------------------------------------//
+        $vuld = $vutscy * 0.1;
+        $vul = ($vutscy - $vuld) / ($uyl - 1);
+
+    //   $vld = $vtscy * 0.1;
+    //     $vl = ($vtscy - $vld) / ($pyl - 1);
+
 
         //---------------------------------------------------------//
         //--------------OUTPUT-----------------------------//
@@ -133,8 +143,10 @@ if (!$conn) {
             "mgre" => $umge,
             "mgg" => $umgg,
 
-            "total_curent_bill" => $vutcb,
-            "total_new_bill" => $vutnb,
+            "total_curent_bill_m" => $vutcb_m,
+            "total_new_bill_m" => $vutnb_m,
+            "total_curent_bill_y" => $vutcb,
+            "total_new_bill_y" => $vutnb,
             "total_investment" => $vutsc,
             "total_saving" => $vas,
             "payback" => $vutsc,
@@ -144,7 +156,6 @@ if (!$conn) {
             "md_usd" => $md_usd,
             "pu_usd" => $pu_usd,
             "of_usd" => $of_usd,
-
 
             "md_cost" => $md_cost,
             "pu_cost" => $pu_cost,
@@ -156,6 +167,12 @@ if (!$conn) {
             "total_bill" => $total_bill, 
             "total_new_eu" => $total_new_eu ,
             "total_new_bill_tariff" => $total_new_bill,
+
+            "installment_depo" =>  $vuld,
+            "installment_year" =>   $vul,
+
+
+
         );
 
         echo json_encode($result_1);

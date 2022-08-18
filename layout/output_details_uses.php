@@ -207,7 +207,7 @@
                               <th class="b_lgrey" scope="col">Current Expenses</th>
                               <th class="b_lgrey" scope="col" colspan="2">New Expenses</th>
                               <th class="b_lgrey" scope="col" rowspan="2">Saving</th>
-                              <!-- <th scope="col" rowspan="2">Payback Value</th> -->
+                              <th scope="col" rowspan="2">Payback Value</th>
                               <!-- <th scope="col" rowspan="2">Payback</th> -->
                           </tr>
                           <tr>

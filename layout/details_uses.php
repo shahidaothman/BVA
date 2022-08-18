@@ -32,7 +32,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Capacity</label>
                            <div class="input-group">
-                               <input type="number" min="0" max="20" class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
+                               <input type="text"  class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWp</span>
                                </div>
