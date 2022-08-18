@@ -121,7 +121,6 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing_depo + "</td>\
                             <td>" + saving_1year + "</td>\
-                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -150,7 +149,6 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing + "</td>\
                             <td>" + saving_year + "</td>\
-                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -198,7 +196,6 @@ function power() {
                             <td>" + monthly_lease + "</td>\
                             <td>" + leasing + "</td>\
                             <td>" + saving_nyear + "</td>\
-                            <td>" + payback + "</td>\
                             </tr>");
 
                         sum_wop += monthly;
@@ -284,16 +281,16 @@ function power() {
                     if (con_array[i]>largest) {
                         // var largest = con_array[i];
                         var number = con_array[i];
-                     console.log (con_array[i])
+                    //  console.log (con_array[i])
                      break;
                     } 
                    
                 }
 
- console.log( number)
+//  console.log( number)
 
  var item = f_year.find(item => item.payback === number);
- console.log(item.year);
+//  console.log(item.year);
         
                 
 //    console.log(con_array);
