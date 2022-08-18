@@ -136,6 +136,11 @@
                               <th scope="row">Total System Cost x Years</th>
                               <td id="t_vutsc"></td>
                           </tr>
+
+                          <tr>
+                              <th scope="row">Total System Cost x Years (Include leasing charge)</th>
+                              <td id="t_vutscy"></td>
+                          </tr>
                       </tbody>
                   </table>
               </div>

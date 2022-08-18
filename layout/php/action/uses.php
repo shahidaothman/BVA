@@ -10,19 +10,19 @@ if (!$conn) {
         $uopu = $_GET['offpeak'];
         $tariff = $_GET['tariff_uses'];
         // details
-        $usc = $_GET['usc'];
+        $usc = $_GET['usc'] / 100;
         $uyl = $_GET['uyl'];
         $unu = $_GET['unu'];
         $ubp = $_GET['ubp'];
-        $uscb = $_GET['uscb'];
-        $uid = $_GET['uid'];
-        $ugt = $_GET['ugt'];
-        $ubi = $_GET['ubi'];
+        $uscb = $_GET['uscb'] / 100;
+        $uid = $_GET['uid'] / 100;
+        $ugt = $_GET['ugt'] / 100;
+        $ubi = $_GET['ubi'] / 100;
         $uspc = $_GET['uspc'];
         $ubs = $_GET['ubs'];
         $umt = $_GET['umt'];
-        $usif = $_GET['usif'];
-        $ubsf = $_GET['ubsf'];
+        $usif = $_GET['usif'] / 100;
+        $ubsf = $_GET['ubsf'] / 100;
         $unmd = $_GET['unmd'];
 
         // calculation
@@ -64,11 +64,11 @@ if (!$conn) {
 
         $nmd_cost = $unmd *  $md_usd;
 
-        $vutcb_m = (($md_cost) + ($pu_cost) + ($of_cost)) * 12 ;
+        $vutcb_m = (($md_cost) + ($pu_cost) + ($of_cost)) * 12;
         $vutcb = $vutcb_m * 15;
 
         // new bill
-        $vutnb_m =  (($nmd_cost) + ($upu - ($usc * 5 * 30)) + ($uopu * $of_usd)) * 12 ;
+        $vutnb_m =  (($nmd_cost) + (($upu - $umge) * $pu_usd) + ($uopu * $of_usd)) * 12;
         $vutnb = $vutnb_m * 15;
 
         // investment cost
@@ -86,7 +86,7 @@ if (!$conn) {
         // system cost include leasing
         $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;
 
- 
+
 
         //    saving
         $vas = $vutcb - ($vutnb + $vul);
@@ -110,8 +110,8 @@ if (!$conn) {
         $vuld = $vutscy * 0.1;
         $vul = ($vutscy - $vuld) / ($uyl - 1);
 
-    //   $vld = $vtscy * 0.1;
-    //     $vl = ($vtscy - $vld) / ($pyl - 1);
+        //   $vld = $vtscy * 0.1;
+        //     $vl = ($vtscy - $vld) / ($pyl - 1);
 
 
         //---------------------------------------------------------//
@@ -148,9 +148,10 @@ if (!$conn) {
             "total_curent_bill_y" => $vutcb,
             "total_new_bill_y" => $vutnb,
             "total_investment" => $vutsc,
+            "total_investment_lease" => $vutscy,
             "total_saving" => $vas,
-            "payback" => $vutsc,
-            "verdict" => $vutsc,
+            // "payback" => $vutsc,
+            // "verdict" => $vutsc,
             "total_cost_year" => $usc,
 
             "md_usd" => $md_usd,
@@ -164,8 +165,8 @@ if (!$conn) {
             "npu_cost" => $vpnu_cost,
 
             "total_eu" => $total_eu,
-            "total_bill" => $total_bill, 
-            "total_new_eu" => $total_new_eu ,
+            "total_bill" => $total_bill,
+            "total_new_eu" => $total_new_eu,
             "total_new_bill_tariff" => $total_new_bill,
 
             "installment_depo" =>  $vuld,

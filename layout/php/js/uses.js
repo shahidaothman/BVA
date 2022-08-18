@@ -23,8 +23,9 @@ function uses() {
                 $('#t_umt').html(data.system_maintenance);
                 $('#t_usif').html(data.system_insurance);
                 $('#t_ubsf').html(data.back_end);
-                $('#t_vutsc').html(data.total_cost);
-
+                $('#t_vutsc').html(data.total_investment);
+                $('#t_vutscy').html(data.total_investment_lease);
+                
                 $('#t_umgg').html(data.mgg);
                 $('#t_umac').html(data.mac);
                 $('#t_umgr').html(data.mgre);

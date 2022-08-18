@@ -32,7 +32,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Solar Capacity</label>
                            <div class="input-group">
-                               <input type="text"  class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
+                               <input type="number"  class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWp</span>
                                </div>
@@ -50,7 +50,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Size</label>
                            <div class="input-group">
-                               <input type="text" class="form-control" id="ubs" name="ubs" placeholder="" value="14" required>
+                               <input type="text" class="form-control" id="ubs" name="ubs" placeholder="" value="207" required>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWh</span>
                                </div>
@@ -68,7 +68,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Shipment Cost </label>
                            <div class="input-group">
-                               <input type="number" min="0" max="10" value="6" name="uscb" class="form-control" id="uscb" placeholder="" >
+                               <input type="text" value="5.5" name="uscb" class="form-control" id="uscb" placeholder="" >
                                <div class="input-group-prepend">
                                    <span class="input-group-text">%</span>
                                </div>
@@ -131,7 +131,7 @@
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">New Max Demand</label>
                            <div class="input-group">
-                               <input type="number" min="1" max="6" class="form-control" value="1" id="unmd" name="unmd" placeholder="" required>
+                               <input type="number"  class="form-control" value="1" id="unmd" name="unmd" placeholder="" required>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kW</span>
                                </div>
