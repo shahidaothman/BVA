@@ -30,12 +30,10 @@ function uses() {
                 $('#t_umac').html(data.mac);
                 $('#t_umgr').html(data.mgre);
 
-                $('#current_bill_uses').html(data.total_curent_bill_y);
-                $('#new_bill_uses').html(data.total_new_bill_y);
-                $('#investment_cost_uses').html(data.total_investment);
-                $('#total_saving_uses').html(data.total_saving);
-
-
+                $('#current_bill_uses').html(data.total_curent_bill_y + ' ' + 'USD');
+                $('#new_bill_uses').html(data.total_new_bill_y + ' ' + 'USD');
+                $('#investment_cost_uses').html(data.total_investment + ' ' + 'USD');
+              
                 // tariff table
 
                 $('#t_utariff').append(`<tr>\
@@ -287,6 +285,7 @@ function uses() {
                     $('#verdict_uses').html("<span class='text-danger'> Not Recommended </span>");
                 }
 
+                $('#total_saving_uses').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                 // go to next page
                 window.location.href = "#ouses";
             }
