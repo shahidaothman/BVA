@@ -25,7 +25,7 @@ function uses() {
                 $('#t_ubsf').html(data.back_end);
                 $('#t_vutsc').html(data.total_investment);
                 $('#t_vutscy').html(data.total_investment_lease);
-                
+
                 $('#t_umgg').html(data.mgg);
                 $('#t_umac').html(data.mac);
                 $('#t_umgr').html(data.mgre);
@@ -93,7 +93,12 @@ function uses() {
 
                     }
                 }
+                // card
+                var tic1 = data.investment_1;
+                var tic5 = data.investment_5;
+                var tic10 = data.investment_10;
 
+                var investment = data.total_investment;
                 // projection table
 
                 var y = 1;
@@ -109,6 +114,23 @@ function uses() {
                 var sum_ulease = 0;
                 var sum_usave = 0;
                 var sum_upayback = 0;
+
+
+                var tic1 = data.investment_1;
+                var tic5 = data.investment_5;
+                var tic10 = data.investment_10;
+            
+                $('#1y_uic').html(tic1 + ' ' + 'USD');
+                if (year <= 5) {
+                    $('#5y_uic').html(tic5 + ' ' + 'USD');
+                    $('#10y_uic').html(tic5 + ' ' + 'USD');
+                    $('#15y_uic').html(tic5 + ' ' + 'USD');
+
+                } else if (year == 10) {
+                    $('#5y_uic').html(tic5 + ' ' + 'USD');
+                    $('#10y_uic').html(tic10 + ' ' + 'USD');
+                    $('#15y_uic').html(tic10 + ' ' + 'USD');
+                }
 
                 const uses_array = [];
                 const fu_year = [];
@@ -126,17 +148,22 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
-                                sum_uwop += monthly;
-                                sum_uwp += monthly_lease;
-                                sum_ulease += leasing_depo;
-                                sum_usave += saving_1year;
-                                sum_upayback += payback;
+                        $('#1y_unb').html(monthly_lease);
+                        // $('#1y_uic').html(data.mgg);
+                        $('#1y_uts').html(saving_1year);
+                        $('#1y_ulease').html(leasing_depo);
 
-                                const master = { payback: payback, year: y };
-                                fu_year.push(master);
-                                uses_array.push(payback);
+                        sum_uwop += monthly;
+                        sum_uwp += monthly_lease;
+                        sum_ulease += leasing_depo;
+                        sum_usave += saving_1year;
+                        sum_upayback += payback;
 
-                               
+                        const master = { payback: payback, year: y };
+                        fu_year.push(master);
+                        uses_array.push(payback);
+
+
                         y++;
 
                     } else if (y <= year) {
@@ -151,15 +178,15 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
-                                sum_uwop += monthly;
-                                sum_uwp += monthly_lease;
-                                sum_ulease += leasing;
-                                sum_usave += saving_year;
-                                sum_upayback += payback;
+                        sum_uwop += monthly;
+                        sum_uwp += monthly_lease;
+                        sum_ulease += leasing;
+                        sum_usave += saving_year;
+                        sum_upayback += payback;
 
-                                const master = { payback: payback, year: y };
-                                fu_year.push(master);
-                                uses_array.push(payback);
+                        const master = { payback: payback, year: y };
+                        fu_year.push(master);
+                        uses_array.push(payback);
 
                         y++;
 
@@ -177,15 +204,15 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
-                                sum_uwop += monthly;
-                                sum_uwp += monthly_lease;
-                                sum_ulease += leasing;
-                                sum_usave += saving_nyear;
-                                sum_upayback += payback;
+                        sum_uwop += monthly;
+                        sum_uwp += monthly_lease;
+                        sum_ulease += leasing;
+                        sum_usave += saving_nyear;
+                        sum_upayback += payback;
 
-                                const master = { payback: payback, year: y };
-                                fu_year.push(master);
-                                uses_array.push(payback);
+                        const master = { payback: payback, year: y };
+                        fu_year.push(master);
+                        uses_array.push(payback);
                         y++;
 
                     }
@@ -208,11 +235,10 @@ function uses() {
                 for (i = 0; i <= largest; i++) {
                     if (uses_array[i] > largest) {
                         var number = uses_array[i];
-                      
                         break;
                     }
                 }
-//    console.log (number);
+                //    console.log (number);
                 var item = fu_year.find(item => item.payback === number);
                 // console.log (item.year);
                 if (sum_upayback >= sum_ulease) {

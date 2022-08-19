@@ -83,6 +83,10 @@ if (!$conn) {
 
         $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * $uyl)) - ($umt * 2);
 
+        $vutsc1 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 1 )) - ($umt * 2);
+        $vutsc5 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 5 )) - ($umt * 2);
+        $vutsc10 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 10 )) - ($umt * 2);
+
         // system cost include leasing
         $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;
 
@@ -161,6 +165,10 @@ if (!$conn) {
             // "payback" => $vutsc,
             // "verdict" => $vutsc,
             "total_cost_year" => $usc,
+
+            "total_investment_1" => $vutsc1,
+            "total_investment_5" => $vutsc5,
+            "total_investment_10" => $vutsc10,
 
             "md_usd" => $md_usd,
             "pu_usd" => $pu_usd,
