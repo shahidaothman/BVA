@@ -94,11 +94,34 @@ function uses() {
                     }
                 }
                 // card
-                var tic1 = data.investment_1;
-                var tic5 = data.investment_5;
-                var tic10 = data.investment_10;
+                var tic1 = data.total_investment_1;
+                var tic5 = data.total_investment_5;
+                var tic10 = data.total_investment_10;
+                var overall = data.total_investment;
 
-                var investment = data.total_investment;
+                $('#1y_uic').html(tic1 + ' ' + 'USD');
+                if (year > 1 && year < 5) {
+                    $('#5y_uic').html(overall + ' ' + 'USD');
+                    $('#10y_uic').html(overall + ' ' + 'USD');
+                    $('#15y_uic').html(overall + ' ' + 'USD');
+
+                }
+                else if (year == 5) {
+                    $('#5y_uic').html(tic5 + ' ' + 'USD');
+                    $('#10y_uic').html(tic5 + ' ' + 'USD');
+                    $('#15y_uic').html(tic5 + ' ' + 'USD');
+                }
+                else if (year > 5 && year < 10) {
+                    $('#5y_uic').html(tic5 + ' ' + 'USD');
+                    $('#10y_uic').html(overall + ' ' + 'USD');
+                    $('#15y_uic').html(overall + ' ' + 'USD');
+                }
+                else if (year == 10) {
+                    $('#5y_uic').html(tic5 + ' ' + 'USD');
+                    $('#10y_uic').html(tic10 + ' ' + 'USD');
+                    $('#15y_uic').html(tic10 + ' ' + 'USD');
+                }
+
                 // projection table
 
                 var y = 1;
@@ -116,21 +139,9 @@ function uses() {
                 var sum_upayback = 0;
 
 
-                var tic1 = data.investment_1;
-                var tic5 = data.investment_5;
-                var tic10 = data.investment_10;
-            
-                $('#1y_uic').html(tic1 + ' ' + 'USD');
-                if (year <= 5) {
-                    $('#5y_uic').html(tic5 + ' ' + 'USD');
-                    $('#10y_uic').html(tic5 + ' ' + 'USD');
-                    $('#15y_uic').html(tic5 + ' ' + 'USD');
 
-                } else if (year == 10) {
-                    $('#5y_uic').html(tic5 + ' ' + 'USD');
-                    $('#10y_uic').html(tic10 + ' ' + 'USD');
-                    $('#15y_uic').html(tic10 + ' ' + 'USD');
-                }
+
+
 
                 const uses_array = [];
                 const fu_year = [];
@@ -148,10 +159,9 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
-                        $('#1y_unb').html(monthly_lease);
-                        // $('#1y_uic').html(data.mgg);
-                        $('#1y_uts').html(saving_1year);
-                        $('#1y_ulease').html(leasing_depo);
+                        $('#1y_unb').html(monthly_lease + ' ' + 'USD');
+                        $('#1y_uts').html(saving_1year + ' ' + 'USD');
+                        $('#1y_ulease').html(leasing_depo + ' ' + 'USD');
 
                         sum_uwop += monthly;
                         sum_uwp += monthly_lease;
@@ -162,7 +172,6 @@ function uses() {
                         const master = { payback: payback, year: y };
                         fu_year.push(master);
                         uses_array.push(payback);
-
 
                         y++;
 
@@ -183,6 +192,17 @@ function uses() {
                         sum_ulease += leasing;
                         sum_usave += saving_year;
                         sum_upayback += payback;
+
+                        if (y == 5) {
+                            $('#5y_unb').html(sum_uwp + ' ' + 'USD');
+                            $('#5y_uts').html(sum_usave + ' ' + 'USD');
+                            $('#5y_ulease').html(sum_ulease + ' ' + 'USD');
+
+                        } else if (y == 10) {
+                            $('#10y_unb').html(sum_uwp + ' ' + 'USD');
+                            $('#10y_uts').html(sum_usave + ' ' + 'USD');
+                            $('#10y_ulease').html(sum_ulease + ' ' + 'USD');
+                        }
 
                         const master = { payback: payback, year: y };
                         fu_year.push(master);
@@ -210,13 +230,25 @@ function uses() {
                         sum_usave += saving_nyear;
                         sum_upayback += payback;
 
+                        if (y == 5) {
+                            $('#5y_unb').html(sum_uwp + ' ' + 'USD');
+                            $('#5y_uts').html(sum_usave + ' ' + 'USD');
+                            $('#5y_ulease').html(sum_ulease + ' ' + 'USD');
+                        } else if (y == 10) {
+                            $('#10y_unb').html(sum_uwp + ' ' + 'USD');
+                            $('#10y_uts').html(sum_usave + ' ' + 'USD');
+                            $('#10y_ulease').html(sum_ulease + ' ' + 'USD');
+                        } else if (y == 15) {
+                            $('#15y_unb').html(sum_uwp + ' ' + 'USD');
+                            $('#15y_uts').html(sum_usave + ' ' + 'USD');
+                            $('#15y_ulease').html(sum_ulease + ' ' + 'USD');
+                        }
+
                         const master = { payback: payback, year: y };
                         fu_year.push(master);
                         uses_array.push(payback);
                         y++;
-
                     }
-
                 }
 
                 $('#t_uprojection').append("<tr class='b_green'>\
@@ -237,15 +269,19 @@ function uses() {
                         var number = uses_array[i];
                         break;
                     }
+                    else {
+                        var number = 0;
+                    }
                 }
                 //    console.log (number);
-                var item = fu_year.find(item => item.payback === number);
+
                 // console.log (item.year);
-                if (sum_upayback >= sum_ulease) {
+                if (number != 0) {
+                    var item = fu_year.find(item => item.payback === number);
                     $('#payback_uses').html(item.year + " " + "Year");
                     $('#verdict_uses').html(" <span class='text-success'> Viable </span>");
                 }
-                else if (sum_upayback < sum_ulease) {
+                else if (number == 0) {
                     $('#payback_uses').html("Not Yet");
                     $('#verdict_uses').html("<span class='text-danger'> Not Recommended </span>");
                 }

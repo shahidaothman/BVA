@@ -81,11 +81,12 @@ if (!$conn) {
         $vusi = ($uspc + $ubp) * $usif;
         $vups = ($uspc + $ubp) * $ubsf;
 
-        $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * $uyl)) - ($umt * 2);
+        // $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * $uyl)) - ($umt * 2);
+        $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * $uyl)) - ($umt * 2);
 
-        $vutsc1 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 1 )) - ($umt * 2);
-        $vutsc5 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 5 )) - ($umt * 2);
-        $vutsc10 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * 10 )) - ($umt * 2);
+        $vutsc1 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 1 )) - ($umt * 2);
+        $vutsc5 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 5 )) - ($umt * 2);
+        $vutsc10 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 10 )) - ($umt * 2);
 
         // system cost include leasing
         $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;

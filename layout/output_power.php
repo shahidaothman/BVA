@@ -24,7 +24,7 @@
 
               <div class="col-4">
                   <p class="fw-bold">Year Leased : <span id="s_yl" class="fw-500"></span></p>
-                  <p class="fw-bold">Unit Installed : <span id="s_np" class="fw-500"></span></p>
+                  <!-- <p class="fw-bold">Unit Installed : <span id="s_np" class="fw-500"></span></p> -->
               </div>
 
           </div>
