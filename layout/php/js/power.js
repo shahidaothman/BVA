@@ -108,7 +108,7 @@ function power() {
 
                 }
 
-                // projection
+
                 const con_array = [];
                 const f_year = [];
                 while (y <= 25) {
@@ -135,9 +135,9 @@ function power() {
                         $('#1y_lease').html(leasing_depo + ' ' + 'USD');
 
 
-                        const master = { payback: payback, year: y};
+                        const master = { payback: payback, year: y };
                         f_year.push(master);
-                        con_array.push(payback);       
+                        con_array.push(payback);
                         y++;
 
                     } else if (y <= year) {
@@ -180,9 +180,9 @@ function power() {
                             $('#10y_lease').html(fslease + ' ' + 'USD');
                         }
 
-                        const master = { payback: payback, year: y};
+                        const master = { payback: payback, year: y };
                         f_year.push(master);
-                        con_array.push(payback);       
+                        con_array.push(payback);
                         y++;
 
                     } else if (y > year) {
@@ -240,18 +240,17 @@ function power() {
                         }
 
 
-                        const master = { payback: payback, year: y};
+                        const master = { payback: payback, year: y };
                         f_year.push(master);
-
-                        con_array.push(payback);                        
+                        con_array.push(payback);
                         y++;
 
                     }
 
                 }
 
-           
-              
+
+
                 var fswop = parseFloat(sum_wop.toFixed(2));
                 var fswp = parseFloat(sum_wp.toFixed(2));
                 var fslease = parseFloat(sum_lease.toFixed(2));
@@ -265,8 +264,10 @@ function power() {
                             <th>" + fsaving + "</th>\
                               </tr>");
 
+
                 // calculate year payback
-                 var largest= fslease;
+
+                var largest = fslease;
                 // console.log(con_array.payback);
                 // for (i=0; i<=largest;i++){
                 //     if (con_array.payback[i]>largest) {
@@ -276,34 +277,28 @@ function power() {
                 //     }
                 // }
 
-             
-                for (i=0; i<=largest;i++){
-                    if (con_array[i]>largest) {
+
+                for (i = 0; i <= largest; i++) {
+                    if (con_array[i] > largest) {
                         // var largest = con_array[i];
                         var number = con_array[i];
-                    //  console.log (con_array[i])
-                     break;
-                    } 
-                   
+                        //  console.log (con_array[i])
+                        break;
+                    }
+
                 }
 
-//  console.log( number)
+                //  console.log( number)
 
- var item = f_year.find(item => item.payback === number);
-//  console.log(item.year);
-        
-                
-//    console.log(con_array);
-      
-
-
+                var item = f_year.find(item => item.payback === number);
+                //  console.log(item.year);
+                //    console.log(con_array);
                 // output payback 
                 // console.log(sum_payback);
                 if (sum_payback >= fslease) {
-                    $('#payback_power').html(item.year +" "+ "Year");
+                    $('#payback_power').html(item.year + " " + "Year");
                     $('#verdict_power').html(" <span class='text-success'> Viable </span>");
                 }
-
                 else if (sum_payback < fslease) {
                     $('#payback_power').html("Not Yet");
                     $('#verdict_power').html("<span class='text-danger'> Not Recommended </span>");

@@ -104,6 +104,14 @@ function uses() {
 
                 var payback = 0;
 
+                var sum_uwop = 0;
+                var sum_uwp = 0;
+                var sum_ulease = 0;
+                var sum_usave = 0;
+                var sum_upayback = 0;
+
+                const uses_array = [];
+                const fu_year = [];
 
                 while (y <= 15) {
                     if (y == 1) {
@@ -118,8 +126,17 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
+                                sum_uwop += monthly;
+                                sum_uwp += monthly_lease;
+                                sum_ulease += leasing_depo;
+                                sum_usave += saving_1year;
+                                sum_upayback += payback;
 
+                                const master = { payback: payback, year: y };
+                                fu_year.push(master);
+                                uses_array.push(payback);
 
+                               
                         y++;
 
                     } else if (y <= year) {
@@ -134,7 +151,15 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
+                                sum_uwop += monthly;
+                                sum_uwp += monthly_lease;
+                                sum_ulease += leasing;
+                                sum_usave += saving_year;
+                                sum_upayback += payback;
 
+                                const master = { payback: payback, year: y };
+                                fu_year.push(master);
+                                uses_array.push(payback);
 
                         y++;
 
@@ -152,11 +177,51 @@ function uses() {
                                 <td>" + payback + "</td>\
                                 </tr>");
 
+                                sum_uwop += monthly;
+                                sum_uwp += monthly_lease;
+                                sum_ulease += leasing;
+                                sum_usave += saving_nyear;
+                                sum_upayback += payback;
 
+                                const master = { payback: payback, year: y };
+                                fu_year.push(master);
+                                uses_array.push(payback);
                         y++;
 
                     }
 
+                }
+
+                $('#t_uprojection').append("<tr class='b_green'>\
+                <th> Total (USD) </th>\
+                <th>" + sum_uwop + "</th>\
+                <th>" + sum_uwp + "</th>\
+                <th>" + sum_ulease + "</th>\
+                <th>" + sum_usave + "</th>\
+                <th>" + sum_upayback + "</th>\
+                  </tr>");
+
+                //   calculate payback
+                // console.log(fu_year);
+                // console.log(uses_array);
+                var largest = sum_ulease;
+                for (i = 0; i <= largest; i++) {
+                    if (uses_array[i] > largest) {
+                        var number = uses_array[i];
+                      
+                        break;
+                    }
+                }
+//    console.log (number);
+                var item = fu_year.find(item => item.payback === number);
+                // console.log (item.year);
+                if (sum_upayback >= sum_ulease) {
+                    $('#payback_uses').html(item.year + " " + "Year");
+                    $('#verdict_uses').html(" <span class='text-success'> Viable </span>");
+                }
+                else if (sum_upayback < sum_ulease) {
+                    $('#payback_uses').html("Not Yet");
+                    $('#verdict_uses').html("<span class='text-danger'> Not Recommended </span>");
                 }
 
                 // go to next page
