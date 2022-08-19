@@ -150,17 +150,18 @@ function uses() {
                     if (y == 1) {
                         var c = saving_1year + payback;
                         var payback = parseFloat(c.toFixed(2));
+
+                        var ls1y = parseFloat(saving_1year.toFixed(2));
                         $('#t_uprojection').append("<tr>\
                                 <td> " + y + "</td>\
                                 <td>" + monthly + "</td>\
                                 <td>" + monthly_lease + "</td>\
                                 <td>" + leasing_depo + "</td>\
-                                <td>" + saving_1year + "</td>\
-                                <td>" + payback + "</td>\
+                                <td>" + ls1y + "</td>\
                                 </tr>");
 
                         $('#1y_unb').html(monthly_lease + ' ' + 'USD');
-                        $('#1y_uts').html(saving_1year + ' ' + 'USD');
+                        $('#1y_uts').html(ls1y + ' ' + 'USD');
                         $('#1y_ulease').html(leasing_depo + ' ' + 'USD');
 
                         sum_uwop += monthly;
@@ -178,30 +179,31 @@ function uses() {
                     } else if (y <= year) {
                         var c = saving_year + payback;
                         var payback = parseFloat(c.toFixed(2));
+
+                        var lsy = parseFloat(saving_year.toFixed(2));
                         $('#t_uprojection').append("<tr>\
                                 <td> " + y + "</td>\
                                 <td>" + monthly + "</td>\
                                 <td>" + monthly_lease + "</td>\
                                 <td>" + leasing + "</td>\
-                                <td>" + saving_year + "</td>\
-                                <td>" + payback + "</td>\
+                                <td>" + lsy + "</td>\
                                 </tr>");
 
                         sum_uwop += monthly;
                         sum_uwp += monthly_lease;
                         sum_ulease += leasing;
-                        sum_usave += saving_year;
+                        sum_usave += lsy;
                         sum_upayback += payback;
 
                         if (y == 5) {
-                            $('#5y_unb').html(sum_uwp + ' ' + 'USD');
-                            $('#5y_uts').html(sum_usave + ' ' + 'USD');
-                            $('#5y_ulease').html(sum_ulease + ' ' + 'USD');
+                            $('#5y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
 
                         } else if (y == 10) {
-                            $('#10y_unb').html(sum_uwp + ' ' + 'USD');
-                            $('#10y_uts').html(sum_usave + ' ' + 'USD');
-                            $('#10y_ulease').html(sum_ulease + ' ' + 'USD');
+                            $('#10y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
                         }
 
                         const master = { payback: payback, year: y };
@@ -215,33 +217,33 @@ function uses() {
                         var c = saving_nyear + payback;
                         var payback = parseFloat(c.toFixed(2));
                         var leasing = 0;
+                        var lnsy = parseFloat(saving_nyear.toFixed(2));
                         $('#t_uprojection').append("<tr>\
                                 <td> " + y + "</td>\
                                 <td>" + monthly + "</td>\
                                 <td>" + monthly_lease + "</td>\
                                 <td>" + leasing + "</td>\
-                                <td>" + saving_nyear + "</td>\
-                                <td>" + payback + "</td>\
+                                <td>" + lnsy + "</td>\
                                 </tr>");
 
                         sum_uwop += monthly;
                         sum_uwp += monthly_lease;
                         sum_ulease += leasing;
-                        sum_usave += saving_nyear;
+                        sum_usave += lnsy;
                         sum_upayback += payback;
 
                         if (y == 5) {
-                            $('#5y_unb').html(sum_uwp + ' ' + 'USD');
-                            $('#5y_uts').html(sum_usave + ' ' + 'USD');
-                            $('#5y_ulease').html(sum_ulease + ' ' + 'USD');
+                            $('#5y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
                         } else if (y == 10) {
-                            $('#10y_unb').html(sum_uwp + ' ' + 'USD');
-                            $('#10y_uts').html(sum_usave + ' ' + 'USD');
-                            $('#10y_ulease').html(sum_ulease + ' ' + 'USD');
+                            $('#10y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
                         } else if (y == 15) {
-                            $('#15y_unb').html(sum_uwp + ' ' + 'USD');
-                            $('#15y_uts').html(sum_usave + ' ' + 'USD');
-                            $('#15y_ulease').html(sum_ulease + ' ' + 'USD');
+                            $('#15y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
+                            $('#15y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+                            $('#15y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
                         }
 
                         const master = { payback: payback, year: y };
@@ -253,11 +255,10 @@ function uses() {
 
                 $('#t_uprojection').append("<tr class='b_green'>\
                 <th> Total (USD) </th>\
-                <th>" + sum_uwop + "</th>\
-                <th>" + sum_uwp + "</th>\
-                <th>" + sum_ulease + "</th>\
-                <th>" + sum_usave + "</th>\
-                <th>" + sum_upayback + "</th>\
+                <th>" + parseFloat(sum_uwop.toFixed(2)) + "</th>\
+                <th>" + parseFloat(sum_uwp .toFixed(2))+ "</th>\
+                <th>" + parseFloat(sum_ulease.toFixed(2))+ "</th>\
+                <th>" + parseFloat(sum_usave.toFixed(2)) + "</th>\
                   </tr>");
 
                 //   calculate payback
