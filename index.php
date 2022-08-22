@@ -13,7 +13,6 @@
     <meta name="description" content="Premium Bootstrap 5 Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
     <meta content="Themesdesign" name="author" />
-
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
@@ -43,8 +42,9 @@
       <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+
   <!-- end servies -->
 </head>
 

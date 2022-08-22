@@ -65,6 +65,9 @@
         background: #b9b9b9 !important;
     }
 
+    .fa {
+        display: -webkit-inline-box !important;
+    }
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
@@ -93,13 +96,16 @@
 
             <div class="row">
                 <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
-                
+
                 <div class="col-md-6 mb-3">
                     <?php include 'php/dd_country.php'; ?>
                 </div>
                 <!-- end col -->
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="email">Region</label><a data-toggle="tooltip" title="Some countries regulate their electricity by region.">?</a>
+                    <label class="fw-medium form-label" for="email">Region</label>
+                    <a  class="text-success">
+                        <i class="fa fa-question-circle-o" data-bs-toggle="tooltip" title="Some countries regulate their electricity by region." data-placement="top"></i>
+                    </a>
 
                     <select class="form-select form-control" aria-label="Default select example" placeholder="Your email" readonly>
                         <option value="1">--Select Region--</option>
@@ -159,7 +165,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Max Demand</label><a data-toggle="tooltip" title="Highest level of electrical demand monitored in a particular period usually for a month period.">?</a>
+                    <label class="fw-medium form-label" for="name">Max Demand</label>
+                    <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Highest level of electrical demand monitored in a particular period usually for a month period." data-placement="top"></i>
                     <div class="input-group">
                         <input type="text" class="form-control" id="max_demand" name="max_demand" placeholder="Insert Max Demand">
                         <div class="input-group-prepend">
@@ -168,7 +175,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Peak Usage</label><a data-toggle="tooltip" title="Electricity Usage from 0800 to 2200 hrs (Malaysia)">?</a>
+                    <label class="fw-medium form-label" for="name">Peak Usage</label>
+                    <a  class="text-success">
+                        <i class="fa fa-question-circle-o"  data-bs-toggle="tooltip" title="Electricity Usage from 0800 to 2200 hrs (Malaysia)" data-placement="top"></i>
+                    </a>
                     <div class="input-group">
                         <input type="text" class="form-control" id="peak_usage" name="peak_usage" placeholder="Insert Peak Usage">
                         <div class="input-group-prepend">
@@ -177,9 +187,12 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Off Peak Usage</label><a data-toggle="tooltip" title="Electricity Usage from 2200 hrs to 0800 hrs (Malaysia)">?</a>
+                    <label class="fw-medium form-label" for="name">Off Peak Usage</label>
+                    <a class="text-success">
+                        <i class="fa fa-question-circle-o" data-bs-toggle="tooltip" title="Electricity Usage from 2200 hrs to 0800 hrs (Malaysia)" data-placement="top"></i>
+                    </a>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="offpeak" name="offpeak"  placeholder="Insert Off Peak Usage">
+                        <input type="text" class="form-control" id="offpeak" name="offpeak" placeholder="Insert Off Peak Usage">
                         <div class="input-group-prepend">
                             <span class="input-group-text">kWh</span>
                         </div>
@@ -265,7 +278,7 @@
                 $('#go_power').hide();
                 $('#calculate_power').hide();
                 $('#calculate_uses').show();
-                
+
 
                 $("#max_demand").attr('readonly', false);
                 $("#peak_usage").attr('readonly', false);
@@ -288,8 +301,8 @@
                 $("#peak_usage").attr("required", true);
                 $("#offpeak").attr("required", true);
 
-               
-            $('#odpower').hide();
+
+                $('#odpower').hide();
 
             } else {
 
@@ -320,7 +333,7 @@
                 $("#offpeak").attr("required", false);
 
                 $('#oduses').hide();
-          
+
 
             }
 
@@ -383,24 +396,30 @@
         var submit_value = $(this).val();
 
         if (submit_value == 'calculate_power') {
-           
-          power();
-      
+
+            power();
+
 
 
         } else if (submit_value == 'calculate_uses') {
 
-          uses();
+            uses();
 
         }
 
     });
 
-    $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+    // $(function() {
+    //     $('[data-bs-toggle="tooltip"]').tooltip()
+    // })
 </script>
 
+
+<script>
+    $(document).ready(function() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+</script>
 <!-- <script>
     $(document).ready(function() {
         $("#calculate_power").click(function() {
