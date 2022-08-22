@@ -21,7 +21,7 @@
                    <!-- <h5 class="text-muted fw-normal">We're always here to help you.</h5> -->
                    <div class="row my-5">
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Year of Lease</label>
+                           <label class="fw-medium form-label">Year of Lease</label><a  data-toggle="tooltip" title="Base on 10% of the battery price">?</a>
                            <div class="input-group">
                                <input class="form-control" id="yl" name="pyl" placeholder="Insert Year of Lease" type="number" min="2" max="10" >
                                <div class="input-group-prepend">
@@ -30,7 +30,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Solar Capacity</label>
+                           <label class="fw-medium form-label">Solar Capacity</label><a  data-toggle="tooltip" title="">?</a>
                            <div class="input-group">
                                <input type="number" min="0" max="20" class="form-control" id="psc" name="psc" placeholder="Insert Solar Capacity" >
                                <div class="input-group-prepend">
@@ -39,7 +39,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Solar Panel Cost</label>
+                           <label class="fw-medium form-label">Solar Panel Cost</label><a data-toggle="tooltip" title="">?</a>
                            <div class="input-group">
                                <input type="text" class="form-control" id="spc" name="pspc" placeholder="Insert Solar Panel Cost" >
                                <div class="input-group-prepend">
@@ -48,7 +48,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Battery Size</label>
+                           <label class="fw-medium form-label">Battery Size</label><a data-toggle="tooltip" title="Capacity battery base on standard model">?</a>
                            <div class="input-group">
                                <input type="text" class="form-control" id="bs" name="pbs" placeholder="" value="14" required>
                                <div class="input-group-prepend">
@@ -57,7 +57,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Battery Price</label>
+                           <label class="fw-medium form-label">Battery Price</label><a  data-toggle="tooltip" title="Base Selling Price for Product without shipping charge">?</a>
                            <div class="input-group">
                                <input type="text" class="form-control" name="pbp" id="bp" placeholder="Insert battery Price" >
                                <div class="input-group-prepend">
@@ -66,7 +66,11 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Shipment Cost for Battery</label>
+                           <label class="fw-medium form-label">Shipment Cost for Battery</label><a data-toggle="tooltip" title="Shipment Cost: 
+- Base on 5.5% (est. RM6.1/kg) of the battery price
+-including logistic documentation
+- shipment by sea
+- shipment insurance">?</a>
                            <div class="input-group">
                                <input type="number" min="0" max="3" value="3" class="form-control" id="scb" name="pscb" placeholder="" required>
                                <div class="input-group-prepend">
@@ -75,7 +79,8 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Maintenance & Tech Support Fee</label>
+                           <label class="fw-medium form-label">Maintenance & Tech Support Fee</label><a data-toggle="tooltip" title="- Preventive Maintenance Technician = 4X /year ( including checking system performance/installation condition/cabling inspection/cleaning PV panel)
+- Breakdown & Troubleshooting = 2X/year (including repair any faulty parts/system checking and verification/replace any faulty battery/data condition)">?</a>
                            <div class="input-group">
                                <input type="number" min="0" max="400" value="311" class="form-control" id="mt" name="pmt" placeholder="" required>
                                <div class="input-group-prepend">
@@ -84,7 +89,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">System Insurance Fee</label>
+                           <label class="fw-medium form-label">System Insurance Fee</label><a data-toggle="tooltip" title="Insurance base on 3% standard practice of total price Solar & Battery">?</a>
                            <div class="input-group">
                                <input type="number" min="0" max="20" class="form-control" value="3" id="sif" name="psif" placeholder="" required>
                                <div class="input-group-prepend">
@@ -93,7 +98,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Backend Support Fee</label>
+                           <label class="fw-medium form-label">Backend Support Fee</label><a data-toggle="tooltip" title="">?</a>
                            <div class="input-group">
                                <input ttype="number" min="0" max="20" class="form-control" value="11" id="bsf" name="pbsf" placeholder="" required>
                                <div class="input-group-prepend">
@@ -102,7 +107,7 @@
                            </div>
                        </div>
                        <div class="col-md-4 mb-3">
-                           <label class="fw-medium form-label">Number of Powervault to install</label>
+                           <label class="fw-medium form-label">Number of Powervault to install</label><a data-toggle="tooltip" title="Base on requirement of customer needed">?</a>
                            <div class="input-group">
                                <input type="number" min="1" max="2" name="pnp" class="form-control" value="1" id="np" placeholder="" readonly>
                                <div class="input-group-prepend">

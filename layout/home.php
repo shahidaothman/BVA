@@ -1,5 +1,6 @@
 <script type="text/javascript" src="layout/php/js/power.js"></script>
 <script type="text/javascript" src="layout/php/js/uses.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- start hero -->
 <style>
     .myDiv {
@@ -63,6 +64,7 @@
     .b_dgrey {
         background: #b9b9b9 !important;
     }
+
 </style>
 <section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
     <div class="container">
@@ -91,12 +93,14 @@
 
             <div class="row">
                 <h4 class="fw-semibold my-4">Select Product for Analysis</h4>
+                
                 <div class="col-md-6 mb-3">
                     <?php include 'php/dd_country.php'; ?>
                 </div>
                 <!-- end col -->
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="email">Region</label>
+                    <label class="fw-medium form-label" for="email">Region</label><a data-toggle="tooltip" title="Some countries regulate their electricity by region.">?</a>
+
                     <select class="form-select form-control" aria-label="Default select example" placeholder="Your email" readonly>
                         <option value="1">--Select Region--</option>
                     </select>
@@ -155,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Max Demand</label>
+                    <label class="fw-medium form-label" for="name">Max Demand</label><a data-toggle="tooltip" title="Highest level of electrical demand monitored in a particular period usually for a month period.">?</a>
                     <div class="input-group">
                         <input type="text" class="form-control" id="max_demand" name="max_demand" placeholder="Insert Max Demand">
                         <div class="input-group-prepend">
@@ -164,7 +168,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Peak Usage</label>
+                    <label class="fw-medium form-label" for="name">Peak Usage</label><a data-toggle="tooltip" title="Electricity Usage from 0800 to 2200 hrs (Malaysia)">?</a>
                     <div class="input-group">
                         <input type="text" class="form-control" id="peak_usage" name="peak_usage" placeholder="Insert Peak Usage">
                         <div class="input-group-prepend">
@@ -173,7 +177,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="fw-medium form-label" for="name">Off Peak Usage</label>
+                    <label class="fw-medium form-label" for="name">Off Peak Usage</label><a data-toggle="tooltip" title="Electricity Usage from 2200 hrs to 0800 hrs (Malaysia)">?</a>
                     <div class="input-group">
                         <input type="text" class="form-control" id="offpeak" name="offpeak"  placeholder="Insert Off Peak Usage">
                         <div class="input-group-prepend">
@@ -391,6 +395,10 @@
         }
 
     });
+
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
 
 <!-- <script>
