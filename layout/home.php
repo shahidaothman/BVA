@@ -29,10 +29,14 @@
     }
 
     #exTab3 .nav-pills>li {
-        border-radius: 4px 4px 0 0;
-        border: 1px solid;
-        padding: 10px;
-        margin: 1px;
+        border-radius: 7px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 7px;
+    width: 70px;
+    text-align: center;
+    border-color: gainsboro;
+    margin-left: 0px;
     }
 
     #exTab3 .nav-pills>li>a {
@@ -68,8 +72,30 @@
     .fa {
         display: -webkit-inline-box !important;
     }
+
+    .rounded {
+        border-radius: 0.95rem!important;
+    }
+
+    /* .bgs {
+        background: #1A5E59;
+    color: white;
+    }
+
+    .bgf {
+        background: #9b0505;
+    color: white;
+    } */
+
+    /* .bgy {
+        background-image: linear-gradient(to bottom right, #6cca8f, #ffec81) !important;
+    } */
+
+    /* .bg-green-light {
+        background:  #e5f1ea !important;
+    } */
 </style>
-<section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" style="background-image: url(images/hero-1-bg.png);" id="home">
+<section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden"  id="home">
     <div class="container">
         <div class="row align-items-center text-center text-lg-start">
             <div class="col-lg-10 mt-4 pt-2">

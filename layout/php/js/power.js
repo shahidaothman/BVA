@@ -373,6 +373,12 @@ function power() {
                 //    }
 
                 $('#total_saving').html(fsaving + ' ' + 'USD');
+
+            if (fsaving > 0) {
+                $('#card_pts').css({"backgroundColor" : "#1A5E59", "color": "white"});
+            } else {
+                $('#card_pts').css({"backgroundColor" : "#9b0505", "color": "white"});
+            }
                 window.location.href = "#opower";
 
             }
