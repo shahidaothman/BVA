@@ -1,5 +1,5 @@
   <!-- start services -->
-  <section class="section hide" id="opower">
+  <section class="section hide" id="opower" style="background: aliceblue;">
       <div class="container">
           <div class="row justify-content-center text-center">
               <div class="col-12 mb-4">

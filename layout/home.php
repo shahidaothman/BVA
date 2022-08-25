@@ -40,7 +40,7 @@
     }
 
     #exTab3 .nav-pills>li>a {
-        color: #2dbc9d;
+        color: #1a5e59;
     }
 
     #exTab3 .tab-content {
@@ -50,7 +50,7 @@
     }
 
     #exTab3 .nav-pills>li.active {
-        background-color: #2dbc9d;
+        background-color: #1a5e59;
     }
 
     #exTab3 .nav-pills>li.active>a {
@@ -58,7 +58,8 @@
     }
 
     .b_green {
-        background: #12cc9a;
+        background: #1a5e59;
+    color: white;
     }
 
     .b_lgrey {
@@ -76,6 +77,9 @@
     .rounded {
         border-radius: 0.95rem!important;
     }
+    .text-success {
+    color: #1a5e59 !important;
+}
 
     /* .bgs {
         background: #1A5E59;
@@ -244,7 +248,7 @@
     $(document).ready(function() {
         $("#r_power").click(function() {
             $("#r_power").css({
-                "background-color": "#57c297",
+                "background-color": "#1a5e59",
                 "color": "white"
             });
             $("#r_uses").css({
@@ -270,7 +274,7 @@
     $(document).ready(function() {
         $("#r_uses").click(function() {
             $("#r_uses").css({
-                "background-color": "#57c297",
+                "background-color": "#1a5e59",
                 "color": "white"
             });
             $("#r_power").css({
