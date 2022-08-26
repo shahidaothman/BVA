@@ -73,7 +73,7 @@
                                       <p class="my-4">Total Saving</p>
                                       <h4 class="mb-2" id="total_saving_my">
                                       </h4>
-                                      <h6 class="mb-4 grey" id="total_saving">
+                                      <h6 class="mb-4" id="total_saving">
                                       </h6>
                                   </div>
                               </div>
