@@ -83,6 +83,10 @@
         color: #1a5e59 !important;
     }
 
+    .grey {
+        color: lightslategrey !important;
+    }
+
     /* .bgs {
         background: #1A5E59;
     color: white;

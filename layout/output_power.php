@@ -45,7 +45,7 @@
                                       <p class="my-4">Total Current Bill</p>
                                       <h4 class=" mb-2" id="current_bill_my">
                                       </h4>
-                                      <h6 class=" mb-4" id="current_bill">
+                                      <h6 class="mb-4 grey" id="current_bill">
                                       </h6>
                                   </div>
                               </div>
@@ -54,7 +54,7 @@
                                       <p class="my-4">Total New Bill</p>
                                       <h4 class="mb-2" id="new_bill_my">
                                       </h4>
-                                      <h6 class="mb-4" id="new_bill">
+                                      <h6 class="mb-4 grey" id="new_bill">
                                       </h6>
                                   </div>
                               </div>
@@ -63,7 +63,7 @@
                                       <p class="my-4">Total Investment Cost</p>
                                       <h4 class="mb-2" id="investment_cost_my">
                                       </h4>
-                                      <h6 class="mb-4" id="investment_cost">
+                                      <h6 class="mb-4 grey" id="investment_cost">
                                       </h6>
 
                                   </div>
@@ -73,7 +73,7 @@
                                       <p class="my-4">Total Saving</p>
                                       <h4 class="mb-2" id="total_saving_my">
                                       </h4>
-                                      <h6 class="mb-4" id="total_saving">
+                                      <h6 class="mb-4 grey" id="total_saving">
                                       </h6>
                                   </div>
                               </div>
