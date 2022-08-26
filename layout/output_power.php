@@ -33,7 +33,6 @@
 
           <div class="row ">
               <div id="exTab3" class=" row container  mb-5">
-
                   <div class="tab-content clearfix col-11">
                       <!-- ------------------------------------------ -->
                       <!--  Overall   -->
@@ -42,14 +41,14 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">Overall Summary</h6>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active ">
+                                  <div class="service rounded px-4 py-md-2 py-3 active ">
                                       <p class="my-4">Total Current Bill</p>
                                       <h4 class=" mb-4" id="current_bill">
                                       </h4>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill</p>
                                       <h4 class="mb-4" id="new_bill">
 
@@ -58,7 +57,7 @@
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost</p>
                                       <h4 class="mb-4" id="investment_cost">
 
@@ -66,8 +65,8 @@
 
                                   </div>
                               </div>
-                              <div class="col-md-4 mt-4 pt-2" >
-                                  <div class="service rounded px-4 py-md-4 py-3 active" id="card_pts">
+                              <div class="col-md-4 mt-4 pt-2">
+                                  <div class="service rounded px-4 py-md-2 py-3 active" id="card_pts">
                                       <p class="my-4">Total Saving</p>
                                       <h4 class="mb-4" id="total_saving">
 
@@ -75,7 +74,7 @@
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Payback</p>
 
                                       <h4 class="mb-4" id="payback_power">
@@ -84,11 +83,11 @@
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Verdict</p>
                                       <h4 class=" mb-4" id="verdict_power">
 
-</h4>
+                                      </h4>
                                   </div>
                               </div>
                           </div>
@@ -100,7 +99,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">1 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 1 Year</p>
                                       <h4 class="mb-4" id="1y_nb">
 
@@ -109,7 +108,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 1 Year</p>
                                       <h4 class="mb-4" id="1y_ic">
 
@@ -118,7 +117,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 1 Year</p>
                                       <h4 class="mb-4" id="1y_ts">
 
@@ -126,7 +125,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="1y_lease">
 
@@ -140,7 +139,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">5 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 5 Year</p>
                                       <h4 class="mb-4" id="5y_nb">
 
@@ -149,7 +148,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 5 Year</p>
                                       <h4 class="mb-4" id="5y_ic">
 
@@ -158,7 +157,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 5 Year</p>
                                       <h4 class="mb-4" id="5y_ts">
 
@@ -166,7 +165,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="5y_lease">
 
@@ -181,7 +180,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">10 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 10 Year</p>
                                       <h4 class="mb-4" id="10y_nb">
 
@@ -190,7 +189,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 10 Year</p>
                                       <h4 class="mb-4" id="10y_ic">
                                       </h4>
@@ -198,7 +197,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 10 Year</p>
                                       <h4 class="mb-4" id="10y_ts">
 
@@ -206,7 +205,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="10y_lease">
 
@@ -220,7 +219,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">15 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 15 Year</p>
                                       <h4 class="mb-4" id="15y_nb">
 
@@ -229,7 +228,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 15 Year</p>
                                       <h4 class="mb-4" id="15y_ic">
 
@@ -238,7 +237,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 15 Year</p>
                                       <h4 class="mb-4" id="15y_ts">
 
@@ -246,7 +245,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="15y_lease">
 
@@ -260,7 +259,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">20 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 20 Year</p>
                                       <h4 class="mb-4" id="20y_nb">
 
@@ -269,7 +268,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 20 Year</p>
                                       <h4 class="mb-4" id="20y_ic">
 
@@ -278,7 +277,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 20 Year</p>
                                       <h4 class="mb-4" id="20y_ts">
 
@@ -286,7 +285,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="20y_lease">
 
@@ -301,7 +300,7 @@
                           <div class="row">
                               <h6 class="mb-2 mt-4">25 Year Projection</h6>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total New Bill For 25 Year</p>
                                       <h4 class="mb-4" id="25y_nb">
 
@@ -310,7 +309,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Investment Cost For 25 Year</p>
                                       <h4 class="mb-4" id="25y_ic">
 
@@ -319,7 +318,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Total Saving For 25 Year</p>
                                       <h4 class="mb-4" id="25y_ts">
 
@@ -327,7 +326,7 @@
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-4 py-3 active">
+                                  <div class="service rounded px-4 py-md-2 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
                                       <h4 class="mb-4" id="25y_lease">
                                       </h4>

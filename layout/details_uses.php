@@ -14,7 +14,7 @@
                        <div class="col-9">
                            <h3 class="fw-semibold lh-base mb-4">USES CALCULATOR</h3>
                        </div>
-                       <div class="col-3 right"> <a href="#feature" class="btn btn-danger lh-base mb-4">Reset
+                       <div class="col-3 right"> <a href="index.php" class="btn btn-danger lh-base mb-4">Reset
                            </a></div>
                    </div>
 
@@ -24,7 +24,7 @@
                            <label class="fw-medium form-label">Year of Lease</label>
                            <!-- <a data-toggle="tooltip" title="">?</a> -->
                            <div class="input-group">
-                               <input class="form-control" placeholder="Insert Year of Lease" type="number" min="1" max="10" name="uyl" id="uyl" >
+                               <input class="form-control" placeholder="Insert Year of Lease" type="number" min="1" max="10" name="uyl" id="uyl">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">Year</span>
                                </div>
@@ -34,7 +34,7 @@
                            <label class="fw-medium form-label">Solar Capacity</label>
                            <!-- <a data-toggle="tooltip" title="">?</a> -->
                            <div class="input-group">
-                               <input type="number"  class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc" >
+                               <input type="number" class="form-control" id="usc" placeholder="Insert Solar Capacity" name="usc">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kWp</span>
                                </div>
@@ -44,7 +44,7 @@
                            <label class="fw-medium form-label">Solar Panel Cost</label>
                            <!-- <a  data-toggle="tooltip" title="">?</a> -->
                            <div class="input-group">
-                               <input type="text" class="form-control" id="uspc" name="uspc" placeholder="Insert Solar Panel Cost" >
+                               <input type="text" class="form-control" id="uspc" name="uspc" placeholder="Insert Solar Panel Cost">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -52,7 +52,7 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Size</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Capacity of the battery base on standard model"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Capacity of the battery base on standard model"></i>
                            <div class="input-group">
                                <input type="text" class="form-control" id="ubs" name="ubs" placeholder="" value="207" required>
                                <div class="input-group-prepend">
@@ -62,13 +62,13 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Price</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Base Selling Price for Product without shipping charge Shipment Cost: 
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Base Selling Price for Product without shipping charge Shipment Cost: 
 - Base on 5.5% (est. RM6.1/kg) of the battery price
 -including logistic documentation
 - shipment by sea
 - shipment insurance"></i>
                            <div class="input-group">
-                               <input type="text" class="form-control" id="ubp" name="ubp" placeholder="Insert battery Price" >
+                               <input type="text" class="form-control" id="ubp" name="ubp" placeholder="Insert battery Price">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">USD</span>
                                </div>
@@ -76,9 +76,9 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Shipment Cost </label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Electricity Usage from 2200 hrs to 0800 hrs (Malaysia)"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Electricity Usage from 2200 hrs to 0800 hrs (Malaysia)"></i>
                            <div class="input-group">
-                               <input type="text" value="5.5" name="uscb" class="form-control" id="uscb" placeholder="" >
+                               <input type="text" value="5.5" name="uscb" class="form-control" id="uscb" placeholder="">
                                <div class="input-group-prepend">
                                    <span class="input-group-text">%</span>
                                </div>
@@ -86,7 +86,7 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Import Duty</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Base on import duty exercise 6% for energy storage (to be validated)"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Base on import duty exercise 6% for energy storage (to be validated)"></i>
                            <div class="input-group">
                                <input type="number" min="1" max="10" value="5" class="form-control" id="uid" name="uid" placeholder="" required>
                                <div class="input-group-prepend">
@@ -96,7 +96,7 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Ground Transport/Warehouse Storage</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title=" 1% of the product price"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title=" 1% of the product price"></i>
                            <div class="input-group">
                                <input type="number" min="0" max="20" value="3" class="form-control" id="ugt" name="ugt" placeholder="" required>
                                <div class="input-group-prepend">
@@ -106,7 +106,7 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Battery Installation Fee</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Base on 10% of the battery price"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Base on 10% of the battery price"></i>
                            <div class="input-group">
                                <input type="number" min="1" max="10" value="1" class="form-control" id="ubi" name="ubi" placeholder="" required>
                                <div class="input-group-prepend">
@@ -127,7 +127,7 @@
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">System Insurance Fee</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Insurance base on 3% standard practice of total price Solar & Battery
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Insurance base on 3% standard practice of total price Solar & Battery
 Coverage including ;
 - excessive warranty cost for large claims or serial defects
 - Backend Support Fee"></i>
@@ -152,7 +152,7 @@ Coverage including ;
                            <label class="fw-medium form-label">New Max Demand</label>
                            <!-- <a data-toggle="tooltip" title="">?</a> -->
                            <div class="input-group">
-                               <input type="number"  class="form-control" value="1" id="unmd" name="unmd" placeholder="" required>
+                               <input type="number" class="form-control" value="1" id="unmd" name="unmd" placeholder="" required>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">kW</span>
                                </div>
@@ -160,9 +160,9 @@ Coverage including ;
                        </div>
                        <div class="col-md-4 mb-3">
                            <label class="fw-medium form-label">Number of USES to install</label>
-                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip"  title="Base on requirement of customer needed"></i>
+                           <i class="fa fa-question-circle-o text-success" data-bs-toggle="tooltip" title="Base on requirement of customer needed"></i>
                            <div class="input-group">
-                               <input type="number" min="1" max="6" class="form-control" value="1" id="unu" name="unu" placeholder="" required>
+                               <input type="number" min="1" max="6" class="form-control" value="1" id="unu" name="unu" placeholder="" readonly>
                                <div class="input-group-prepend">
                                    <span class="input-group-text">unit</span>
                                </div>
@@ -180,9 +180,9 @@ Coverage including ;
    <script>
        $(document).ready(function() {
            $("#calculate_uses").click(function() {
-                //   $("#table_test").empty();
-                //   $("#t_projection").empty();
-                //   $("#exampleid").empty();
+               //   $("#table_test").empty();
+               //   $("#t_projection").empty();
+               //   $("#exampleid").empty();
 
                // Basic
                var utariff = $('#tariff_uses').find('option:selected').attr("name");

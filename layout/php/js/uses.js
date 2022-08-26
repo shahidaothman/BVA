@@ -286,8 +286,20 @@ function uses() {
                 }
 
                 $('#total_saving_uses').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
+
+
+                if (sum_usave > 0) {
+                    $('#card_uts').css({"backgroundColor" : "#1A5E59", "color": "white"});
+                } else {
+                    $('#card_uts').css({"backgroundColor" : "#9b0505", "color": "white"});
+                }
+
+
                 // go to next page
                 window.location.href = "#ouses";
+
+
+                
             }
         });
     });

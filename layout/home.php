@@ -30,13 +30,14 @@
 
     #exTab3 .nav-pills>li {
         border-radius: 7px;
-    border: 1px solid;
-    padding: 10px;
-    margin: 7px;
-    width: 70px;
-    text-align: center;
-    border-color: gainsboro;
-    margin-left: 0px;
+        border: 1px solid;
+        padding: 8px;
+        margin: 5px;
+        width: 70px;
+        text-align: center;
+        border-color: gainsboro;
+        margin-left: 0px;
+
     }
 
     #exTab3 .nav-pills>li>a {
@@ -59,7 +60,7 @@
 
     .b_green {
         background: #1a5e59;
-    color: white;
+        color: white;
     }
 
     .b_lgrey {
@@ -75,11 +76,12 @@
     }
 
     .rounded {
-        border-radius: 0.95rem!important;
+        border-radius: 0.95rem !important;
     }
+
     .text-success {
-    color: #1a5e59 !important;
-}
+        color: #1a5e59 !important;
+    }
 
     /* .bgs {
         background: #1A5E59;
@@ -99,7 +101,7 @@
         background:  #e5f1ea !important;
     } */
 </style>
-<section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden"  id="home">
+<section class="hero-1 bg-white position-relative py-4 my-5 align-items-center justify-content-center overflow-hidden" id="home">
     <div class="container">
         <div class="row align-items-center text-center text-lg-start">
             <div class="col-lg-10 mt-4 pt-2">
@@ -133,7 +135,7 @@
                 <!-- end col -->
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="email">Region</label>
-                    <a  class="text-success">
+                    <a class="text-success">
                         <i class="fa fa-question-circle-o" data-bs-toggle="tooltip" title="Some countries regulate their electricity by region." data-placement="top"></i>
                     </a>
 
@@ -206,8 +208,8 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="fw-medium form-label" for="name">Peak Usage</label>
-                    <a  class="text-success">
-                        <i class="fa fa-question-circle-o"  data-bs-toggle="tooltip" title="Electricity Usage from 0800 to 2200 hrs (Malaysia)" data-placement="top"></i>
+                    <a class="text-success">
+                        <i class="fa fa-question-circle-o" data-bs-toggle="tooltip" title="Electricity Usage from 0800 to 2200 hrs (Malaysia)" data-placement="top"></i>
                     </a>
                     <div class="input-group">
                         <input type="text" class="form-control" id="peak_usage" name="peak_usage" placeholder="Insert Peak Usage">
@@ -256,6 +258,8 @@
                 "color": "black"
             });
 
+
+
             // var str = $('form').attr('id');
 
             // var res = str.replace(str, "calculate_uses");
@@ -265,6 +269,10 @@
             // $('calculate_form').attr("id", res);
 
             // $("#calculate_form").attr("id", "calculate_form");
+            $('#mac').val('');
+            $('#max_demand').val('');
+            $('#peak_usage').val('');
+            $('#offpeak').val('');
 
             $("#product-power").click();
 
@@ -281,6 +289,12 @@
                 "background-color": "white",
                 "color": "black"
             });
+
+            // $('#mac').removeAttr('value');
+            $('#mac').val('');
+            $('#max_demand').val('');
+            $('#peak_usage').val('');
+            $('#offpeak').val('');
             // $("#calculate_form").attr("id", "c_uses");
             // $("#calculate_power").attr("id", "calculate_uses");
             $("#product-uses").click();
