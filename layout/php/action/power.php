@@ -226,16 +226,16 @@ if (!$conn) {
         $vtscpy = (($pspc + $vbp + $vscbs) + ($pmt + $vsi + $vps));
         $vtsc = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * $pyl));
 
-       
-            $vtsc1 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 1));
-      
-            $vtsc5 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 5));
-      
-            $vtsc10 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 10));
-     
-            $fvtsc1 = round($vtsc1, 2);
-            $fvtsc5 = round($vtsc5, 2);
-            $fvtsc10 = round($vtsc10, 2);
+
+        $vtsc1 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 1));
+
+        $vtsc5 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 5));
+
+        $vtsc10 = (($pspc + $vbp + $vscbs) + (($pmt + $vsi + $vps) * 10));
+
+        $fvtsc1 = round($vtsc1, 2);
+        $fvtsc5 = round($vtsc5, 2);
+        $fvtsc10 = round($vtsc10, 2);
         //---------------------------------------------------------//
         //--------------CALCULATE TOTAL SAVING ----------------//
         //---------------------------------------------------------//
@@ -323,7 +323,7 @@ if (!$conn) {
                     $usage =  $line_1["tariff_usage"];
                 }
 
-                $test_1[] = array('group' => $t_group, 'usage' => $usage, 'rate' => $usd, 'total_rate' => round($t_usd,2) );
+                $test_1[] = array('group' => $t_group, 'usage' => $usage, 'rate' => $usd, 'total_rate' => round($t_usd, 2));
                 // }
                 // else {
                 //     echo "end";
@@ -361,6 +361,21 @@ if (!$conn) {
 
         $fvtscy = round($vtscy, 2);
 
+        //---------------------------------------------------------//
+        //---------------------------CURRENCY -----------------------//
+        //---------------------------------------------------------//
+        // current bill calculation
+        $query_currency = "SELECT * FROM currency WHERE currency_name =  'MYR' ";
+        $result_currency = mysqli_query($conn, $query_currency);
+
+        if (mysqli_num_rows($result_currency) > 0) {
+            // echo "here";
+            while ($row_currency = mysqli_fetch_array($result_currency)) {
+                $currency = $row_currency['usd_rate'];
+            }
+        } else {
+            echo "No matching records are found.";
+        }
 
 
         //---------------------------------------------------------//
@@ -410,6 +425,9 @@ if (!$conn) {
             "table" => $test,
             "table_1" => $test_1,
             "table_2" => $test_1,
+
+            // currency
+            "currency" => $currency,
         );
         // $json = json_encode($result);
         echo json_encode($result);

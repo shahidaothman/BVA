@@ -9,6 +9,7 @@ function power() {
             data: $(this).serialize(),
             dataType: "json",
             success: function (data) {
+                console.log(data);
                 $("#table_test").empty();
                 $("#t_projection").empty();
                 $("#exampleid").empty();
@@ -16,6 +17,15 @@ function power() {
                 $('#new_bill').html(data.new_total_tahunan + ' ' + 'USD');
                 $('#investment_cost').html(data.system_cost + ' ' + 'USD');
                 // $('#total_saving').html(data.leasing_cost + ' ' + 'USD');
+
+                // myr
+                var cb = parseFloat((data.total_tahunan / data.currency).toFixed(2));
+                var nb = parseFloat((data.new_total_tahunan  / data.currency).toFixed(2));
+                var ic = parseFloat((data.system_cost  / data.currency).toFixed(2));
+
+                $('#current_bill_my').html(' MYR ' + cb + ' ');
+                $('#new_bill_my').html(' MYR ' + nb + ' ');
+                $('#investment_cost_my').html(' MYR ' + ic + ' ');
                 // table
                 $('#t_sc').html(data.solar_capacity);
                 $('#t_sp').html(data.solar_panel_cost);
@@ -374,11 +384,16 @@ function power() {
 
                 $('#total_saving').html(fsaving + ' ' + 'USD');
 
-            if (fsaving > 0) {
-                $('#card_pts').css({"backgroundColor" : "#1A5E59", "color": "white"});
-            } else {
-                $('#card_pts').css({"backgroundColor" : "#9b0505", "color": "white"});
-            }
+
+                var ts = parseFloat((fsaving / data.currency).toFixed(2));
+                $('#total_saving_my').html(' MYR ' + ts + ' ');
+
+                if (fsaving > 0) {
+                    $('#card_pts').css({"backgroundColor" : "#1A5E59", "color": "white"});
+                } else {
+                    $('#card_pts').css({"backgroundColor" : "#9b0505", "color": "white"});
+                }
+
                 window.location.href = "#opower";
 
             }
