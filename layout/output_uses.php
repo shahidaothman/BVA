@@ -46,53 +46,51 @@
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Current Bill</p>
-                                      <h4 class=" mb-4" id="current_bill_uses">
-
+                                      <h4 class="mb-2" id="current_bill_uses_my">
                                       </h4>
-
+                                      <p class="mb-4 grey" id="current_bill_uses">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total New Bill</p>
-                                      <h4 class=" mb-4" id="new_bill_uses">
-
+                                      <h4 class="mb-2" id="new_bill_uses_my">
                                       </h4>
-
+                                      <p class="mb-4 grey" id="new_bill_uses">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Investment Cost</p>
-                                      <h4 class=" mb-4" id="investment_cost_uses">
-
+                                      <h4 class="mb-2" id="investment_cost_uses_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="investment_cost_uses">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active" id="card_uts">
                                       <p class="my-4">Total Saving</p>
-                                      <h4 class=" mb-4" id="total_saving_uses">
-
+                                      <h4 class="mb-2" id="total_saving_uses_my">
                                       </h4>
+                                      <p class="mb-4" id="total_saving_uses">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-3 py-3 active">
+                                  <div class="service rounded px-4 py-md-4 py-3 active">
                                       <p class="my-4">Payback</p>
-
                                       <h4 class=" mb-4" id="payback_uses">
-
                                       </h4>
-
                                   </div>
                               </div>
                               <div class="col-md-4 mt-4 pt-2">
-                                  <div class="service rounded px-4 py-md-3 py-3 active">
+                                  <div class="service rounded px-4 py-md-4 py-3 active">
                                       <p class="my-4">Verdict</p>
                                       <h4 class=" mb-4" id="verdict_uses">
-
                                       </h4>
                                   </div>
                               </div>
@@ -107,38 +105,39 @@
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total New Bill For 1 Year</p>
-                                      <h4 class=" mb-4" id="1y_unb">
-
+                                      <h4 class="mb-2" id="1y_unb_my">
                                       </h4>
-
+                                      <p class="mb-4 grey" id="1y_unb">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Investment Cost For 1 Year</p>
-                                      <h4 class=" mb-4" id="1y_uic">
-
+                                      <h4 class="mb-2" id="1y_uic_my">
                                       </h4>
-
+                                      <p class="mb-4 grey" id="1y_uic">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Saving For 1 Year</p>
-                                      <h4 class=" mb-4" id="1y_uts">
-
+                                      <h4 class="mb-2" id="1y_uts_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="1y_uts">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
-                                      <h4 class=" mb-4" id="1y_ulease">
-
+                                      <h4 class="mb-2" id="1y_ulease_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="1y_ulease">
+                                      </p>
                                   </div>
                               </div>
-
                           </div>
                       </div>
                       <div class="tab-pane" id="5yu">
@@ -147,35 +146,38 @@
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total New Bill For 5 Year</p>
-                                      <h4 class=" mb-4" id="5y_unb">
-
+                                      <h4 class="mb-2" id="5y_unb_my">
                                       </h4>
-
+                                      <p class="mb-4 grey" id="5y_unb">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Investment Cost For 5 Year</p>
-                                      <h4 class=" mb-4" id="5y_uic">
-
+                                      <h4 class="mb-2" id="5y_uic_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="5y_uic">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Saving For 5 Year</p>
-                                      <h4 class=" mb-4" id="5y_uts">
-
+                                      <h4 class="mb-2" id="5y_uts_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="5y_uts">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
-                                      <h4 class=" mb-4" id="5y_ulease">
-
+                                      <h4 class="mb-2" id="5y_ulease_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="5y_ulease">
+                                      </p>
                                   </div>
                               </div>
 
@@ -188,34 +190,39 @@
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total New Bill For 10 Year</p>
-                                      <h4 class=" mb-4" id="10y_unb">
-
+                                      <h4 class="mb-2" id="10y_unb_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="10y_unb">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Investment Cost For 10 Year</p>
-                                      <h4 class=" mb-4" id="10y_uic">
+                                      <h4 class="mb-2" id="10y_uic_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="10y_uic">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Saving For 10 Year</p>
-                                      <h4 class=" mb-4" id="10y_uts">
-
+                                      <h4 class="mb-2" id="10y_uts_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="10y_uts">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
-                                      <h4 class=" mb-4" id="10y_ulease">
-
+                                      <h4 class="mb-2" id="10y_ulease_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="10y_ulease">
+                                      </p>
                                   </div>
                               </div>
 
@@ -227,35 +234,39 @@
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total New Bill For 15 Year</p>
-                                      <h4 class=" mb-4" id="15y_unb">
-
+                                      <h4 class="mb-2" id="15y_unb_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="15y_unb">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Investment Cost For 15 Year</p>
-                                      <h4 class=" mb-4" id="15y_uic">
-
+                                      <h4 class="mb-2" id="15y_uic_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="15y_uic">
+                                      </p>
 
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Total Saving For 15 Year</p>
-                                      <h4 class=" mb-4" id="15y_uts">
-
+                                      <h4 class="mb-2" id="15y_uts_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="15y_uts">
+                                      </p>
                                   </div>
                               </div>
                               <div class="col-md-6 mt-4 pt-2">
                                   <div class="service rounded px-4 py-md-3 py-3 active">
                                       <p class="my-4">Current Lease per Year</p>
-                                      <h4 class=" mb-4" id="15y_ulease">
-
+                                      <h4 class="mb-2" id="15y_ulease_my">
                                       </h4>
+                                      <p class="mb-4 grey" id="15y_ulease">
+                                      </p>
                                   </div>
                               </div>
 

@@ -84,9 +84,9 @@ if (!$conn) {
         // $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($mt + $vusi + $vups) * $uyl)) - ($umt * 2);
         $vutsc = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * $uyl)) - ($umt * 2);
 
-        $vutsc1 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 1 )) - ($umt * 2);
-        $vutsc5 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 5 )) - ($umt * 2);
-        $vutsc10 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 10 )) - ($umt * 2);
+        $vutsc1 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 1)) - ($umt * 2);
+        $vutsc5 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 5)) - ($umt * 2);
+        $vutsc10 = (($uspc + $vubp + $vuscbs + $vuid + $vugt + $vubi) + (($umt + $vusi + $vups) * 10)) - ($umt * 2);
 
         // system cost include leasing
         $vutscy =  (($vutsc * 0.03) * $uyl) + $vutsc;
@@ -114,11 +114,28 @@ if (!$conn) {
         //     $vl = ($vtscy - $vld) / ($pyl - 1);
 
 
-     //---------------------------------------------------------//
+        //---------------------------------------------------------//
         //--------------------SAVING OUTPUT ON CARD -------------------//
         //--------------------------------------------------------//
- //    saving
- $vas = $vutcb - ($vutnb + $vul);
+        //    saving
+        $vas = $vutcb - ($vutnb + $vul);
+
+        //---------------------------------------------------------//
+        //---------------------------CURRENCY -----------------------//
+        //---------------------------------------------------------//
+        // current bill calculation
+        $query_currency = "SELECT * FROM currency WHERE currency_name =  'MYR' ";
+        $result_currency = mysqli_query($conn, $query_currency);
+
+        if (mysqli_num_rows($result_currency) > 0) {
+            // echo "here";
+            while ($row_currency = mysqli_fetch_array($result_currency)) {
+                $currency = $row_currency['usd_rate'];
+            }
+        } else {
+            echo "No matching records are found.";
+        }
+
         //---------------------------------------------------------//
         //--------------OUTPUT-----------------------------//
         //---------------------------------------------------------//
@@ -130,66 +147,67 @@ if (!$conn) {
             // "battery_size" => $ubs,
             "battery_size" => $vubs,
             // "battery_price" => $ubp,
-            "battery_price" => round($vubp,2),
+            "battery_price" => round($vubp, 2),
             // "shipment_cost" => $uscb,
-            "shipment_cost" => round($vuscbs,2),
+            "shipment_cost" => round($vuscbs, 2),
             // "import_duty" => $uid,
-            "import_duty" => round($vuid,2),
+            "import_duty" => round($vuid, 2),
             // "ground_transport" => $ugt,
-            "ground_transport" => round($vugt,2),
+            "ground_transport" => round($vugt, 2),
             // "installation_fee" => $ubi,
-            "installation_fee" => round($vubi,2),
+            "installation_fee" => round($vubi, 2),
             "system_maintenance" => $umt,
             // "system_insurance" => $usif,
-            "system_insurance" =>  round($vusi,2),
+            "system_insurance" =>  round($vusi, 2),
             // "back_end" => $ubsf,
-            "back_end" => round($vups,2),
+            "back_end" => round($vups, 2),
             "year" => $uyl,
             "no_uses" => $unu,
             "peak_usage" =>   $upu,
             "max_demand" => $umd,
             "offpeak" => $uopu,
             "new_max_demand" => $unmd,
-            "new_peak_usage" =>  round($vnpu,2),
+            "new_peak_usage" =>  round($vnpu, 2),
 
             "mac" => $umac,
             "mgre" => $umge,
             "mgg" => $umgg,
 
-            "total_curent_bill_m" => round($vutcb_m,2),
-            "total_new_bill_m" => round($vutnb_m,2),
-            "total_curent_bill_y" => round($vutcb,2),
-            "total_new_bill_y" => round($vutnb,2),
-            "total_investment" => round($vutsc,2),
-            "total_investment_lease" => round($vutscy,2),
-            "total_saving" => round($vas,2),
+            "total_curent_bill_m" => round($vutcb_m, 2),
+            "total_new_bill_m" => round($vutnb_m, 2),
+            "total_curent_bill_y" => round($vutcb, 2),
+            "total_new_bill_y" => round($vutnb, 2),
+            "total_investment" => round($vutsc, 2),
+            "total_investment_lease" => round($vutscy, 2),
+            "total_saving" => round($vas, 2),
             // "payback" => $vutsc,
             // "verdict" => $vutsc,
-            "total_cost_year" => round($usc,2),
+            "total_cost_year" => round($usc, 2),
 
-            "total_investment_1" => round($vutsc1,2),
-            "total_investment_5" => round($vutsc5,2),
-            "total_investment_10" => round($vutsc10,2),
+            "total_investment_1" => round($vutsc1, 2),
+            "total_investment_5" => round($vutsc5, 2),
+            "total_investment_10" => round($vutsc10, 2),
 
             "md_usd" => $md_usd,
             "pu_usd" => $pu_usd,
             "of_usd" => $of_usd,
 
-            "md_cost" => round($md_cost,2),
-            "pu_cost" => round($pu_cost,2),
-            "of_cost" => round($of_cost,2),
-            "nmd_cost" => round($nmd_cost,2),
-            "npu_cost" => round($vpnu_cost,2),
+            "md_cost" => round($md_cost, 2),
+            "pu_cost" => round($pu_cost, 2),
+            "of_cost" => round($of_cost, 2),
+            "nmd_cost" => round($nmd_cost, 2),
+            "npu_cost" => round($vpnu_cost, 2),
 
-            "total_eu" => round($total_eu,2),
-            "total_bill" => round($total_bill,2),
-            "total_new_eu" => round($total_new_eu,2),
-            "total_new_bill_tariff" => round($total_new_bill,2),
+            "total_eu" => round($total_eu, 2),
+            "total_bill" => round($total_bill, 2),
+            "total_new_eu" => round($total_new_eu, 2),
+            "total_new_bill_tariff" => round($total_new_bill, 2),
 
-            "installment_depo" =>  round($vuld,2),
-            "installment_year" =>   round($vul,2),
+            "installment_depo" =>  round($vuld, 2),
+            "installment_year" =>   round($vul, 2),
 
-
+            // currency
+            "currency" => $currency,
 
         );
 

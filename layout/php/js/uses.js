@@ -33,7 +33,15 @@ function uses() {
                 $('#current_bill_uses').html(data.total_curent_bill_y + ' ' + 'USD');
                 $('#new_bill_uses').html(data.total_new_bill_y + ' ' + 'USD');
                 $('#investment_cost_uses').html(data.total_investment + ' ' + 'USD');
-              
+
+                // myr
+                var cb = parseFloat((data.total_curent_bill_y / data.currency).toFixed(2));
+                var nb = parseFloat((data.total_new_bill_y / data.currency).toFixed(2));
+                var ic = parseFloat((data.total_investment / data.currency).toFixed(2));
+                $('#current_bill_uses_my').html(' MYR ' + cb + ' ');
+                $('#new_bill_uses_my').html(' MYR ' + nb + ' ');
+                $('#investment_cost_uses_my').html(' MYR ' + ic + ' ');
+                
                 // tariff table
 
                 $('#t_utariff').append(`<tr>\
@@ -97,27 +105,46 @@ function uses() {
                 var tic10 = data.total_investment_10;
                 var overall = data.total_investment;
 
+                var save1_my = parseFloat((tic1 / data.currency).toFixed(2));
+                var overall_my = parseFloat((overall / data.currency).toFixed(2));
+                var save5_my = parseFloat((tic5 / data.currency).toFixed(2));
+                var save10_my = parseFloat((tic10 / data.currency).toFixed(2));
+
+                $('#1y_uic_my').html(' MYR ' + save1_my + ' ');
+
                 $('#1y_uic').html(tic1 + ' ' + 'USD');
                 if (year > 1 && year < 5) {
                     $('#5y_uic').html(overall + ' ' + 'USD');
                     $('#10y_uic').html(overall + ' ' + 'USD');
                     $('#15y_uic').html(overall + ' ' + 'USD');
+                    $('#5y_uic_my').html(' MYR ' + overall_my + ' ');
+                    $('#10y_uic_my').html(' MYR ' + overall_my + ' ');
+                    $('#15y_uic_my').html(' MYR ' + overall_my + ' ');
 
                 }
                 else if (year == 5) {
                     $('#5y_uic').html(tic5 + ' ' + 'USD');
                     $('#10y_uic').html(tic5 + ' ' + 'USD');
                     $('#15y_uic').html(tic5 + ' ' + 'USD');
+                    $('#5y_uic_my').html(' MYR ' + save5_my + ' ');
+                    $('#10y_uic_my').html(' MYR ' + save5_my + ' ');
+                    $('#15y_uic_my').html(' MYR ' + save5_my + ' ');
                 }
                 else if (year > 5 && year < 10) {
                     $('#5y_uic').html(tic5 + ' ' + 'USD');
                     $('#10y_uic').html(overall + ' ' + 'USD');
                     $('#15y_uic').html(overall + ' ' + 'USD');
+                    $('#5y_uic_my').html(' MYR ' + save5_my + ' ');
+                    $('#10y_uic_my').html(' MYR ' + save10_my + ' ');
+                    $('#15y_uic_my').html(' MYR ' + save10_my + ' ');
                 }
                 else if (year == 10) {
                     $('#5y_uic').html(tic5 + ' ' + 'USD');
                     $('#10y_uic').html(tic10 + ' ' + 'USD');
                     $('#15y_uic').html(tic10 + ' ' + 'USD');
+                    $('#5y_uic_my').html(' MYR ' + save5_my + ' ');
+                    $('#10y_uic_my').html(' MYR ' + save10_my + ' ');
+                    $('#15y_uic_my').html(' MYR ' + save10_my + ' ');
                 }
 
                 // projection table
@@ -162,6 +189,14 @@ function uses() {
                         $('#1y_uts').html(ls1y + ' ' + 'USD');
                         $('#1y_ulease').html(leasing_depo + ' ' + 'USD');
 
+                        var nb1_my = parseFloat((monthly_lease / data.currency).toFixed(2));
+                        var ts1_my = parseFloat((ls1y / data.currency).toFixed(2));
+                        var lease1_my = parseFloat((leasing_depo / data.currency).toFixed(2));
+
+                        $('#1y_unb_my').html(' MYR ' + nb1_my + ' ');
+                        $('#1y_uts_my').html(' MYR ' + ts1_my + ' ');
+                        $('#1y_ulease_my').html(' MYR ' + lease1_my + ' ');
+
                         sum_uwop += monthly;
                         sum_uwp += monthly_lease;
                         sum_ulease += leasing_depo;
@@ -193,15 +228,25 @@ function uses() {
                         sum_usave += lsy;
                         sum_upayback += payback;
 
+                        var nb_my = parseFloat((sum_uwp / data.currency).toFixed(2));
+                        var ts_my = parseFloat((sum_usave / data.currency).toFixed(2));
+                        var lease_my = parseFloat((sum_ulease / data.currency).toFixed(2));
+
                         if (y == 5) {
                             $('#5y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
                             $('#5y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                             $('#5y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_unb_my').html(' MYR ' + nb_my + ' ');
+                            $('#5y_uts_my').html(' MYR ' + ts_my + ' ');
+                            $('#5y_ulease_my').html(' MYR ' + lease_my + ' ');
 
                         } else if (y == 10) {
                             $('#10y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
                             $('#10y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                             $('#10y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_unb_my').html(' MYR ' + nb_my + ' ');
+                            $('#10y_uts_my').html(' MYR ' + ts_my + ' ');
+                            $('#10y_ulease_my').html(' MYR ' + lease_my + ' ');
                         }
 
                         const master = { payback: payback, year: y };
@@ -230,18 +275,31 @@ function uses() {
                         sum_usave += lnsy;
                         sum_upayback += payback;
 
+                        var nb_my = parseFloat((sum_uwp / data.currency).toFixed(2));
+                        var ts_my = parseFloat((sum_usave / data.currency).toFixed(2));
+                        var lease_my = parseFloat((sum_ulease / data.currency).toFixed(2));
+
                         if (y == 5) {
                             $('#5y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
                             $('#5y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                             $('#5y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
+                            $('#5y_unb_my').html(' MYR ' + nb_my + ' ');
+                            $('#5y_uts_my').html(' MYR ' + ts_my + ' ');
+                            $('#5y_ulease_my').html(' MYR ' + lease_my + ' ');
                         } else if (y == 10) {
                             $('#10y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
                             $('#10y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                             $('#10y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
+                            $('#10y_unb_my').html(' MYR ' + nb_my + ' ');
+                            $('#10y_uts_my').html(' MYR ' + ts_my + ' ');
+                            $('#10y_ulease_my').html(' MYR ' + lease_my + ' ');
                         } else if (y == 15) {
                             $('#15y_unb').html(parseFloat(sum_uwp.toFixed(2)) + ' ' + 'USD');
                             $('#15y_uts').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
                             $('#15y_ulease').html(parseFloat(sum_ulease.toFixed(2)) + ' ' + 'USD');
+                            $('#15y_unb_my').html(' MYR ' + nb_my + ' ');
+                            $('#15y_uts_my').html(' MYR ' + ts_my + ' ');
+                            $('#15y_ulease_my').html(' MYR ' + lease_my + ' ');
                         }
 
                         const master = { payback: payback, year: y };
@@ -254,8 +312,8 @@ function uses() {
                 $('#t_uprojection').append("<tr class='b_green'>\
                 <th> Total (USD) </th>\
                 <th>" + parseFloat(sum_uwop.toFixed(2)) + "</th>\
-                <th>" + parseFloat(sum_uwp .toFixed(2))+ "</th>\
-                <th>" + parseFloat(sum_ulease.toFixed(2))+ "</th>\
+                <th>" + parseFloat(sum_uwp.toFixed(2)) + "</th>\
+                <th>" + parseFloat(sum_ulease.toFixed(2)) + "</th>\
                 <th>" + parseFloat(sum_usave.toFixed(2)) + "</th>\
                   </tr>");
 
@@ -286,12 +344,13 @@ function uses() {
                 }
 
                 $('#total_saving_uses').html(parseFloat(sum_usave.toFixed(2)) + ' ' + 'USD');
-
+                var ts = parseFloat((sum_usave / data.currency).toFixed(2));
+                $('#total_saving_uses_my').html(' MYR ' + ts + ' ');
 
                 if (sum_usave > 0) {
-                    $('#card_uts').css({"backgroundColor" : "#1A5E59", "color": "white"});
+                    $('#card_uts').css({ "backgroundColor": "#1A5E59", "color": "white" });
                 } else {
-                    $('#card_uts').css({"backgroundColor" : "#9b0505", "color": "white"});
+                    $('#card_uts').css({ "backgroundColor": "#9b0505", "color": "white" });
                 }
 
 
@@ -299,7 +358,7 @@ function uses() {
                 window.location.href = "#ouses";
 
 
-                
+
             }
         });
     });
